@@ -1,0 +1,48 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.app-container {
+  display: flex; /* Flex 컨테이너로 설정 */
+  height: 100vh; /* 화면 전체 높이를 사용하려면 설정 (선택 사항) */
+}
+
+.header-section, .portfolio-section {
+  flex: 1; /* 각 섹션이 동일한 비율로 공간을 차지하도록 설정 */
+  /* 또는 고정 너비를 원한다면 아래 주석을 해제하여 사용 */
+  /* width: 50%; */
+}
