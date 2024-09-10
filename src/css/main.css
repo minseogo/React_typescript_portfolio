@@ -66,7 +66,38 @@ a:hover {
 }
 
 
-
+.info_font{
+  font-size: 14px;
+}
+.portfolio-info .bi{
+  font-size: 23px;
+}
+.dash {
+  position: relative; /* .dash 요소에 상대적 위치 지정 */
+  display: inline-block; /* h1의 크기에 맞춰 .dash 크기 조정 */
+}
+.dash_f{
+  position: relative; /* .dash 요소에 상대적 위치 지정 */
+  display: inline-block; /* h1의 크기에 맞춰 .dash 크기 조정 */
+}
+.dash_f::before {
+  content: '';
+  position: absolute;
+  left: -15.3%;
+  top: 56.4%;
+  width: 20px;
+  height: 2px;
+  background: #000;
+}
+.dash::before {
+  content: '';
+  position: absolute;
+  left: -19%;
+  top: 64%;
+  width: 20px;
+  height: 2px;
+  background: #000;
+}
 /* PHP Email Form Messages
 ------------------------------*/
 .php-email-form .error-message {
@@ -747,6 +778,7 @@ a:hover {
 .skills > h2{
   font-size: 18px;
   font-weight: 500;
+  color: black;
 }
 .resume .resume-title {
   color: black;
@@ -764,12 +796,12 @@ a:hover {
 }
 
 .resume .resume-item h4 {
-  line-height: 18px;
-  font-size: 13px;
+  line-height: 16px;
+  font-size: 11px;
   font-weight: 400;
   text-transform: uppercase;
   color: black;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 
 .resume .resume-item h5 {
@@ -795,10 +827,10 @@ a:hover {
 .resume .resume-item::before {
   content: "";
   position: absolute;
-  width: 16px;
-  height: 16px;
+  width: 11px;
+  height: 11px;
   border-radius: 50px;
-  left: -9px;
+  left: -6px;
   top: 0;
   background: white;
   border: 1px solid black;
@@ -1301,4 +1333,241 @@ a:hover {
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+/*--------------------------------------------------------------
+# 반응형
+--------------------------------------------------------------*/
+@media(max-width:1440px){
+  .hello > h3{
+    font-size: 35px;
+    font-weight: 500;
+  }
+}
+@media(max-width:1024px){
+  .hello > h3{
+    font-size: 24px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .skills-content .reactlogo {
+    width: 2rem;
+  }
+  .skills-content .figmalogo {
+    width: 2rem;
+  }
+  .skills-content img {
+    width: 70px;
+  }
+}
+@media(max-width:990px){
+  .skills > h2{
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .resume .resume-title{
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .info_font{
+    font-size: 11px;
+  }
+  .portfolio-info > p {
+    font-size: 12px;
+  }
+  .portfolio-info h4 {
+    font-size: 20px;
+  }
+  .portfolio-info .bi{
+    font-size: 20px;
+  }
+}
+@media(max-width:758px){
+  .hello > h3{
+    font-size: 18px;
+  }
+  .sitename{
+    font-size: 24px;
+  }
+  .dash > h1{
+    font-size: 24px;
+  }
+  .portfolio-info > p{
+    font-size: 10px;
+  }
+  .portfolio-info h4 {
+    font-size: 17px !important;
+  }
+  .dash_f::before{
+    display: none;
+  }
+  .dash::before{
+    display: none;
+  }
+  .personal{
+    font-size: 8px;
+    font-weight: 500;
+  }
+  .skills-content .reactlogo{
+    width: 26px;
+  }
+  .skills-content .figmalogo{
+    width: 25px;
+  }
+  .skills-content img{
+    width: 70px;
+  }
+  .portfolio-info .bi{
+    font-size: 17px;
+  }
+}
+@media (max-width: 575px) {
+  .profile-img {
+    position: relative;
+  }
+  .hello {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    color: #fff;
+  }
+  .profile-img img {
+    width: 100%;
+    height: auto;
+  }
+  .hello > h3{
+    font-size: 40px;
+    letter-spacing: 3px;
+    line-height: 55px;
+  }
+  .info_font{
+    font-size: 17px;
+  }
+  .personal{
+    font-size: 15px;
+    font-weight: 400;
+  }
+  .skills > h2{
+    font-size: 25px;
+    font-weight: 400;
+  }
+  .skills-content .reactlogo{
+    width: 4rem;
+  }
+  .skills-content .figmalogo {
+    width: 4rem;
+  }
+  .skills-content img {
+    width: 9rem;
+  }
+  .resume .resume-title{
+    color: black;
+    font-size: 25px;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .resume .resume-item h4{
+    line-height: 16px;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: black;
+    margin-bottom: 0px;
+  }
+  .resume .resume-item h5{
+    font-size: 14px;
+    padding: 5px 15px;
+    display: inline-block;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+  .lo_font{
+    font-size: 12px;
+  }
+  .resume .resume-item::before{
+    display: none;
+  }
+  .resume .resume-item{
+    padding: 0 0 0 0; 
+    margin-top: 0px;
+    border-left: none;
+  }
+  .sitename{
+    font-size: 30px;
+  }
+  .dash > h1{
+    font-size: 30px;
+  }
+}
+@media(max-width:400px){
+  .skills-content .reactlogo{
+    width: 40px;
+  }
+  .skills-content .figmalogo{
+    width: 40px;
+  }
+  .skills-content img{
+    width: 100px;
+  }
+  .hello{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    color: #fff;
+  }
+}
+@media(max-width:320px){
+  .skills-content .reactlogo{
+    width: 40px;
+  }
+  .skills-content .figmalogo{
+    width: 40px;
+  }
+  .skills-content img{
+    width: 100px;
+  }
+  .hello{
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    color: #fff;
+  }
+  .hello > h3{
+    font-size: 30px;
+    letter-spacing: 3px;
+    line-height: 37px;
+  }
+  .info_font{
+    font-size: 15px;
+  }
+  .personal{
+    font-size: 13px;
+    font-weight: 400;
+  }
+  .work{
+    margin-right: 0px;
+  }
+  .resume .resume-item h4{
+    line-height: 16px;
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: black;
+    margin-bottom: 0px;
+  }
+  .lo_font{
+    font-size: 11px;
+  }
 }

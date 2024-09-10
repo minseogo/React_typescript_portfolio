@@ -46,3 +46,9 @@
   /* 또는 고정 너비를 원한다면 아래 주석을 해제하여 사용 */
   /* width: 50%; */
 }
+
+@media (max-width: 575px) {
+  .app-container {
+    flex-direction: column; /* 화면 크기가 575px 이하일 때 세로 나열 */
+  }
+}
