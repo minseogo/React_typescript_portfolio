@@ -64,40 +64,6 @@ a:hover {
   color: color-mix(in srgb, var(--accent-color), transparent 25%);
   text-decoration: none;
 }
-
-
-.info_font{
-  font-size: 14px;
-}
-.portfolio-info .bi{
-  font-size: 23px;
-}
-.dash {
-  position: relative; /* .dash 요소에 상대적 위치 지정 */
-  display: inline-block; /* h1의 크기에 맞춰 .dash 크기 조정 */
-}
-.dash_f{
-  position: relative; /* .dash 요소에 상대적 위치 지정 */
-  display: inline-block; /* h1의 크기에 맞춰 .dash 크기 조정 */
-}
-.dash_f::before {
-  content: '';
-  position: absolute;
-  left: -15.3%;
-  top: 56.4%;
-  width: 20px;
-  height: 2px;
-  background: #000;
-}
-.dash::before {
-  content: '';
-  position: absolute;
-  left: -19%;
-  top: 64%;
-  width: 20px;
-  height: 2px;
-  background: #000;
-}
 /* PHP Email Form Messages
 ------------------------------*/
 .php-email-form .error-message {
@@ -1353,9 +1319,46 @@ a:hover {
   width: 2rem;
 }
 } */
-
+.info_font{
+  font-size: 14px;
+}
+.portfolio-info .bi{
+  font-size: 23px;
+}
+.portfolio-info img{
+  vertical-align: top;
+}
+.dash {
+  position: relative; 
+  display: inline-block; 
+}
+.dash_f{
+  position: relative; 
+  display: inline-block;
+}
+.dash_f::before {
+  content: '';
+  position: absolute;
+  left: -15.3%;
+  top: 56.4%;
+  width: 20px;
+  height: 2px;
+  background: #000;
+}
+.dash::before {
+  content: '';
+  position: absolute;
+  left: -19%;
+  top: 64%;
+  width: 20px;
+  height: 2px;
+  background: #000;
+}
 .icon-size{
-  width: 30px;
+  width: 25px;
+}
+.cafe24-size {
+  width: 95px; 
 }
 /*--------------------------------------------------------------
 # 반응형

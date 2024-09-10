@@ -37,14 +37,16 @@ const Portfolio: React.FC = () => {
               </div>
               <div className="portfolio-info mb-5">
                 <div className='d-flex flex-row justify-content-between align-items-center'>
-                  <h4 className='mb-0'>
+                  <h4 className='mb-0 d-flex'>
                     {item.title} 
-                    {item.icon.split('|').map((icon, i) => ( <img key={i} src={`/img/${icon}`} alt={`icon-${i}`} className="icon-size"  /> ))}
-
+                    <div className='ms-2'>
+                      {item.icon.split('|').map((icon, i) => ( <img key={i} src={`/img/${icon}`} alt={`icon-${i}`} className={icon === 'Cafe24.png' ? 'cafe24-size' : 'icon-size'}  /> ))}
+                    </div>  
                     {/* {
                       item.icon.split('|').map( i => <img src={i} alt={i} ></img> )
                     } */}
                   </h4>
+
                     <a href={item.link} className="details-link" target="_blank" rel="noopener noreferrer">
                       <i className="bi bi-link-45deg text-black"></i>
                     </a>
