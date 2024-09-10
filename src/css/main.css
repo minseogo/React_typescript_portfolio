@@ -1334,6 +1334,9 @@ a:hover {
 .starter-section {
   /* Add your styles here */
 }
+.info_btns {
+ font-size: 10px;
+}
 /*--------------------------------------------------------------
 # 반응형
 --------------------------------------------------------------*/
@@ -1504,6 +1507,9 @@ a:hover {
   .dash > h1{
     font-size: 30px;
   }
+  .info_btns {
+    font-size: 13px;
+   }
 }
 @media(max-width:440px){
   .skills-content .reactlogo{

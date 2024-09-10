@@ -48,8 +48,10 @@ const Header: React.FC = () => {
                             <li>gominseo1112@gmail.com</li>
                             <li>https://github.com/minseogo</li>
                         </ul>
+                        <button className='info_btns border-1 bg-white text-black' onClick={() => window.open('https://github.com/minseogo', '_blank')}>Git Hub</button>
+                        <button className='info_btns border-1 bg-white text-black ms-2' onClick={() => window.open('https://www.figma.com/design/chnxRjxPKX40REZtT5p6Sl/%EB%AF%BC%EC%84%9C?node-id=0-1&t=BJScLCAEXnBR6d5a-1', '_blank')}>Figma</button>
                     </div>
-                    <div className='skills mt-lg-5 mt-1 mb-lg-4 mb-0'>
+                    <div className='skills mt-5 mb-lg-4 mb-0'>
                         <h2 className="text-sm-start text-center">What I Do</h2>
                         <div className="d-flex flex-column align-items-stretch">
                             <div className="skills-content">
@@ -62,7 +64,7 @@ const Header: React.FC = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='experience mt-lg-5 mt-2'>
+                    <div className='experience mt-lg-5 mt-3'>
                         {/* <h2>Experience</h2> */}
                         <div className="d-flex flex-lg-row flex-sm-column flex-column justify-content-sm-start justify-content-between align-items-sm-start align-items-center">
                             <div className='education text-sm-start text-center'>
