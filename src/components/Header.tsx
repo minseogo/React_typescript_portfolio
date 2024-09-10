@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ReactTyped } from 'react-typed';
 import '../css/main.css';
-import Reactsvg from '../img/React_logo.svg'
+import Reactsvg from '../img/React.svg'
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -46,20 +46,35 @@ const Header: React.FC = () => {
                             <li>1994. 11. 12</li>
                             <li>010 - 5042 - 9412</li>
                             <li>gominseo1112@gmail.com</li>
-                            <li>https://github.com/minseogo</li>
                         </ul>
                         <button className='info_btns border-1 bg-white text-black' onClick={() => window.open('https://github.com/minseogo', '_blank')}>Git Hub</button>
                         <button className='info_btns border-1 bg-white text-black ms-2' onClick={() => window.open('https://www.figma.com/design/chnxRjxPKX40REZtT5p6Sl/%EB%AF%BC%EC%84%9C?node-id=0-1&t=BJScLCAEXnBR6d5a-1', '_blank')}>Figma</button>
                     </div>
                     <div className='skills mt-5 mb-lg-4 mb-0'>
-                        <h2 className="text-sm-start text-center">What I Do</h2>
+                        <h2 className="text-sm-start text-center mb-sm-0 mb-3">What I Do</h2>
                         <div className="d-flex flex-column align-items-stretch">
                             <div className="skills-content">
-                                <div className='d-flex flex-row mt-1 align-items-lg-center flex-lg-row justify-content-evenly align-items-sm-start flex-sm-column align-items-center justify-content-sm-start '>
-                                    <div className='text-lg-center text-start me-lg-3 me-1'><img className='reactlogo' src={Reactsvg} alt="React svg" /></div>
-                                    <div className='text-lg-center text-start me-lg-2 me-1 mt-lg-0 mt-sm-2'><img className='figmalogo' src={`${process.env.PUBLIC_URL}/img/Figma_logo.png`} alt="Figma png" /></div>
-                                    <div className='text-lg-center text-start me-lg-2 me-1 mt-lg-0 mt-sm-2'><img src={`${process.env.PUBLIC_URL}/img/Cafe24_logo.png`} alt="Cafe24 png" /></div>
-                                    <div className='text-lg-center text-start mt-lg-0 mt-sm-2 ms-md-0 ms-sm-1'><img src={`${process.env.PUBLIC_URL}/img/Gnuboard_logo.png`} alt="Gnuboard png" /></div>
+                                <div className='d-flex mt-1 align-items-lg-start flex-column justify-content-evenly align-items-sm-start flex-sm-column align-items-center justify-content-sm-start '>
+                                    <div className='d-flex align-items-center'>
+                                        <div className='text-lg-center text-start '><img className='reactlogo' src={Reactsvg} alt="React svg" /></div>
+                                        <div className='text-lg-center text-start '><img className='typelogo' src={`${process.env.PUBLIC_URL}/img/Type.png`} alt="Typescript png" /></div>
+                                        <div className='text-lg-center text-start '><img className='bootlogo' src={`${process.env.PUBLIC_URL}/img/Boots.png`} alt="Bootstrap png" /></div>
+                                    </div>
+                                    <div className='d-flex align-items-center mt-1 solu_margin'>
+                                        <div className='text-lg-center text-start '><img className='sirlogo' src={`${process.env.PUBLIC_URL}/img/Sir.png`} alt="Sir png" /></div>
+                                        <div className='text-lg-center text-start '><img className='cafelogo' src={`${process.env.PUBLIC_URL}/img/Cafe24.png`} alt="Cafe24 png" /></div>
+                                    </div>
+                                    <div className='d-flex align-items-center mt-2 me-1 me-sm-0 git_margin'>
+                                        <div className='text-lg-center text-start me-sm-1 me-0 '><img className='gitlogo' src={`${process.env.PUBLIC_URL}/img/Github.png`} alt="Github png" /></div>
+                                    </div>
+                                    <div className='d-flex align-items-center mt-md-3 mt-3 tool_margin'>
+                                        <div className='text-lg-center text-start me-1 '><img className='figmalogo' src={`${process.env.PUBLIC_URL}/img/Figma.png`} alt="Figma png" /></div>
+                                        <div className='text-lg-center text-start me-1 '><img className='pslogo' src={`${process.env.PUBLIC_URL}/img/Ps.png`} alt="Ps png" /></div>
+                                        <div className='text-lg-center text-start'><img className='ailogo' src={`${process.env.PUBLIC_URL}/img/Ai.png`} alt="Ai png" /></div>
+                                    </div>
+                                    
+
+                                    
                                 </div>
                             </div>
                         </div>

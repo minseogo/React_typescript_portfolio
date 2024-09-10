@@ -506,52 +506,7 @@ a:hover {
 /*--------------------------------------------------------------
 # Global Sections
 --------------------------------------------------------------*/
-.skills-content img{
-  width: 6rem;
-}
-.skills-content .javascriptlogo{
-  width: 3rem;
-}
-.skills-content .csslogo{
-  width: 3rem;
-}
-.skills-content .figmalogo{
-  width: 2rem;
-}
-.skills-content .reactlogo{
-  width: 2rem;
-}
-@media(max-width:990px){
-.skills-content .bi {
-    font-size: 40px;
-  }
-.skills-content img{
-    width: 6rem;
-  }
-.skills-content .javascriptlogo{
-    width: 4rem;
-  }
-.skills-content .csslogo{
-    width: 3rem;
-  }
-  }
-@media(max-width:320px){
-.skills-content .bi {
-  font-size: 35px;
-}
-.skills-content img{
-  width: 5rem;
-}
-.skills-content .javascriptlogo{
-  width: 3rem;
-}
-.skills-content .csslogo{
-  width: 3rem;
-}
-.skills-content .figmalogo{
-  width: 2rem;
-}
-}
+
 
 /*--------------------------------------------------------------
 # Global Section Titles
@@ -1337,6 +1292,71 @@ a:hover {
 .info_btns {
  font-size: 10px;
 }
+.skills-content .sirlogo{
+  width: 2rem;
+}
+.skills-content .hardlogo{
+  width: 2.3rem;
+}
+.skills-content .pslogo{
+  width: 2.3rem;
+}
+.skills-content .ailogo{
+  width: 2.3rem;
+}
+.skills-content .gitlogo{
+  width: 2.3rem;
+}
+.skills-content .bootlogo{
+  width: 2.4rem;
+}
+.skills-content .typelogo{
+  width: 3rem;
+}
+.skills-content .figmalogo{
+  width: 2.3rem;
+}
+.skills-content .cafelogo{
+  width: 7rem;
+}
+.skills-content .reactlogo{
+  width: 2rem;
+}
+/* @media(max-width:990px){
+.skills-content .bi {
+    font-size: 40px;
+  }
+.skills-content img{
+    width: 6rem;
+  }
+.skills-content .javascriptlogo{
+    width: 4rem;
+  }
+.skills-content .csslogo{
+    width: 3rem;
+  }
+  }
+@media(max-width:320px){
+.skills-content .bi {
+  font-size: 35px;
+}
+.skills-content img{
+  width: 5rem;
+}
+.skills-content .javascriptlogo{
+  width: 3rem;
+}
+.skills-content .csslogo{
+  width: 3rem;
+}
+.skills-content .figmalogo{
+  width: 2rem;
+}
+} */
+
+.icon-size{
+  width: 30px;
+}
 /*--------------------------------------------------------------
 # 반응형
 --------------------------------------------------------------*/
@@ -1356,10 +1376,31 @@ a:hover {
     width: 2rem;
   }
   .skills-content .figmalogo {
-    width: 2rem;
+    width: 30px;
   }
-  .skills-content img {
+  .skills-content .sirlogo{
+    width: 25px;
+  }
+  .skills-content .pslogo{
+    width: 32px;
+  }
+  .skills-content .ailogo{
+    width: 32px;
+  }
+  .skills-content .gitlogo{
+    width: 30px;
+  }
+  .skills-content .bootlogo{
+    width: 29px;
+  }
+  .skills-content .typelogo{
+    width: 37px;
+  }
+  .skills-content .cafelogo{
     width: 70px;
+  }
+  .portfolio-info p{
+    font-size: 13px;
   }
 }
 @media(max-width:990px){
@@ -1419,7 +1460,28 @@ a:hover {
   .skills-content .figmalogo{
     width: 25px;
   }
-  .skills-content img{
+  .skills-content .sirlogo{
+    width: 25px;
+  }
+  .skills-content .hardlogo{
+    width: 25px;
+  }
+  .skills-content .pslogo{
+    width: 27px;
+  }
+  .skills-content .ailogo{
+    width: 27px;
+  }
+  .skills-content .gitlogo{
+    width: 25px;
+  }
+  .skills-content .bootlogo{
+    width: 25px;
+  }
+  .skills-content .typelogo{
+    width: 32px;
+  }
+  .skills-content .cafelogo{
     width: 70px;
   }
   .portfolio-info .bi{
@@ -1456,22 +1518,40 @@ a:hover {
     font-weight: 400;
   }
   .skills > h2{
-    font-size: 25px;
-    font-weight: 400;
+    font-size: 30px;
+    font-weight: 500;
   }
   .skills-content .reactlogo{
-    width: 4rem;
+    width: 35px;
   }
   .skills-content .figmalogo {
-    width: 4rem;
+    width: 35px;
   }
-  .skills-content img {
-    width: 9rem;
+  .skills-content .sirlogo{
+    width: 30px;
+  }
+  .skills-content .pslogo{
+    width: 37px;
+  }
+  .skills-content .ailogo{
+    width: 37px;
+  }
+  .skills-content .gitlogo{
+    width: 36px;
+  }
+  .skills-content .typelogo{
+    width: 43px;
+  }
+  .skills-content .bootlogo{
+    width: 35px;
+  }
+  .skills-content .cafelogo {
+    width: 110px;
   }
   .resume .resume-title{
     color: black;
-    font-size: 25px;
-    font-weight: 400;
+    font-size: 30px;
+    font-weight: 500;
     margin-top: 20px;
     margin-bottom: 20px;
   }
@@ -1511,16 +1591,7 @@ a:hover {
     font-size: 13px;
    }
 }
-@media(max-width:440px){
-  .skills-content .reactlogo{
-    width: 40px;
-  }
-  .skills-content .figmalogo{
-    width: 40px;
-  }
-  .skills-content img{
-    width: 100px;
-  }
+@media(min-width:430px) and (max-width:480px){
   .hello{
     position: absolute;
     top: 50%;
@@ -1531,16 +1602,8 @@ a:hover {
     color: #fff;
   }
 }
-@media(max-width:320px){
-  .skills-content .reactlogo{
-    width: 40px;
-  }
-  .skills-content .figmalogo{
-    width: 40px;
-  }
-  .skills-content img{
-    width: 100px;
-  }
+
+@media(min-width:320px) and (max-width:390px){
   .hello{
     position: absolute;
     top: 42%;
@@ -1575,5 +1638,26 @@ a:hover {
   }
   .lo_font{
     font-size: 11px;
+  }
+  .skills-content .reactlogo{
+    width: 35px;
+  }
+  .skills-content .figmalogo{
+    width: 40px;
+  }
+  .skills-content .gitlogo{
+    width: 30px;
+  }
+  .skills-content .sirlogo{
+    width: 27px;
+  }
+  .skills-content .pslogo{
+    width: 27px;
+  }
+  .skills-content .ailogo{
+    width: 27px;
+  }
+  .skills-content .figmalogo{
+    width: 27px;
   }
 }
