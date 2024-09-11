@@ -51,24 +51,24 @@ const Header: React.FC = () => {
                         <button className='info_btns border-1 bg-white text-black ms-2' onClick={() => window.open('https://www.figma.com/design/chnxRjxPKX40REZtT5p6Sl/%EB%AF%BC%EC%84%9C?node-id=0-1&t=BJScLCAEXnBR6d5a-1', '_blank')}>Figma</button>
                     </div>
                     <div className='skills mt-5 mb-lg-4 mb-0'>
-                        <h2 className="text-sm-start text-center mb-sm-0 mb-3">What I Do</h2>
+                        <h2 className="text-sm-start text-center mb-3">What I Do</h2>
                         <div className="d-flex flex-column align-items-stretch">
                             <div className="skills-content">
-                                <div className='d-flex mt-1 align-items-lg-start flex-column justify-content-evenly align-items-sm-start flex-sm-column align-items-center justify-content-sm-start '>
-                                    <div className='d-flex align-items-center'>
+                                <div className=' d-flex mt-1 align-items-lg-start flex-column justify-content-evenly align-items-sm-start flex-sm-column align-items-center justify-content-sm-start '>
+                                    <div className='logo_gap d-flex align-items-center '>
                                         <div className='text-lg-center text-start '><img className='reactlogo' src={Reactsvg} alt="React svg" /></div>
                                         <div className='text-lg-center text-start '><img className='typelogo' src={`${process.env.PUBLIC_URL}/img/Type.png`} alt="Typescript png" /></div>
                                         <div className='text-lg-center text-start '><img className='bootlogo' src={`${process.env.PUBLIC_URL}/img/Boots.png`} alt="Bootstrap png" /></div>
                                     </div>
-                                    <div className='d-flex align-items-center mt-1 solu_margin'>
-                                        <div className='text-lg-center text-start '><img className='sirlogo' src={`${process.env.PUBLIC_URL}/img/Sir.png`} alt="Sir png" /></div>
+                                    <div className='logo_gap d-flex align-items-center mt-3 solu_margin'>
+                                        <div className='text-lg-center text-start'><img className='sirlogo' src={`${process.env.PUBLIC_URL}/img/Sir.png`} alt="Sir png" /></div>
                                         <div className='text-lg-center text-start '><img className='cafelogo' src={`${process.env.PUBLIC_URL}/img/Cafe24.png`} alt="Cafe24 png" /></div>
                                     </div>
-                                    <div className='d-flex align-items-center mt-2 me-1 me-sm-0 git_margin'>
+                                    <div className='logo_gap d-flex align-items-center mt-3 me-1 me-sm-0 git_margin'>
                                         <div className='text-lg-center text-start me-sm-1 me-0 '><img className='gitlogo' src={`${process.env.PUBLIC_URL}/img/Github.png`} alt="Github png" /></div>
-                                    </div>
-                                    <div className='d-flex align-items-center mt-md-3 mt-3 tool_margin'>
                                         <div className='text-lg-center text-start me-1 '><img className='figmalogo' src={`${process.env.PUBLIC_URL}/img/Figma.png`} alt="Figma png" /></div>
+                                    </div>
+                                    <div className='logo_gap d-flex align-items-center mt-md-3 mt-3 tool_margin'>
                                         <div className='text-lg-center text-start me-1 '><img className='pslogo' src={`${process.env.PUBLIC_URL}/img/Ps.png`} alt="Ps png" /></div>
                                         <div className='text-lg-center text-start'><img className='ailogo' src={`${process.env.PUBLIC_URL}/img/Ai.png`} alt="Ai png" /></div>
                                     </div>

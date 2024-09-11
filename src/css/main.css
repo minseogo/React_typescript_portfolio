@@ -1259,7 +1259,7 @@ a:hover {
  font-size: 10px;
 }
 .skills-content .sirlogo{
-  width: 2rem;
+  width: 1.5rem;
 }
 .skills-content .hardlogo{
   width: 2.3rem;
@@ -1274,19 +1274,23 @@ a:hover {
   width: 2.3rem;
 }
 .skills-content .bootlogo{
-  width: 2.4rem;
+  width: 2.1rem;
 }
 .skills-content .typelogo{
-  width: 3rem;
+  width: 2rem;
+  border-radius: 5px;
 }
 .skills-content .figmalogo{
   width: 2.3rem;
 }
 .skills-content .cafelogo{
-  width: 7rem;
+  width: 6rem;
 }
 .skills-content .reactlogo{
-  width: 2rem;
+  width: 2.1rem;
+}
+.skills-content .logo_gap{
+  gap: 8px;
 }
 /* @media(max-width:990px){
 .skills-content .bi {
@@ -1326,7 +1330,7 @@ a:hover {
   font-size: 23px;
 }
 .portfolio-info img{
-  vertical-align: top;
+  vertical-align: middle;
 }
 .dash {
   position: relative; 
@@ -1355,17 +1359,24 @@ a:hover {
   background: #000;
 }
 .icon-size{
-  width: 25px;
+  width: 24px;
 }
 .cafe24-size {
-  width: 95px; 
+  width: 30%;
+  height: auto;
+}
+.sir-size{
+  width: 20px;
+}
+.pt_gap{
+  gap: 5px;
 }
 /*--------------------------------------------------------------
 # 반응형
 --------------------------------------------------------------*/
 @media(max-width:1440px){
   .hello > h3{
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 500;
   }
 }
@@ -1382,7 +1393,7 @@ a:hover {
     width: 30px;
   }
   .skills-content .sirlogo{
-    width: 25px;
+    width: 22px;
   }
   .skills-content .pslogo{
     width: 32px;
@@ -1397,7 +1408,7 @@ a:hover {
     width: 29px;
   }
   .skills-content .typelogo{
-    width: 37px;
+    width: 29px;
   }
   .skills-content .cafelogo{
     width: 70px;
@@ -1464,7 +1475,7 @@ a:hover {
     width: 25px;
   }
   .skills-content .sirlogo{
-    width: 25px;
+    width: 20px;
   }
   .skills-content .hardlogo{
     width: 25px;
@@ -1482,7 +1493,7 @@ a:hover {
     width: 25px;
   }
   .skills-content .typelogo{
-    width: 32px;
+    width: 25px;
   }
   .skills-content .cafelogo{
     width: 70px;
@@ -1531,7 +1542,7 @@ a:hover {
     width: 35px;
   }
   .skills-content .sirlogo{
-    width: 30px;
+    width: 25px;
   }
   .skills-content .pslogo{
     width: 37px;
@@ -1543,7 +1554,7 @@ a:hover {
     width: 36px;
   }
   .skills-content .typelogo{
-    width: 43px;
+    width: 35px;
   }
   .skills-content .bootlogo{
     width: 35px;
@@ -1652,7 +1663,10 @@ a:hover {
     width: 30px;
   }
   .skills-content .sirlogo{
-    width: 27px;
+    width: 23px;
+  }
+  .skills-content .cafelogo{
+    width: 100px;
   }
   .skills-content .pslogo{
     width: 27px;

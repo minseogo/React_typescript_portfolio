@@ -39,8 +39,11 @@ const Portfolio: React.FC = () => {
                 <div className='d-flex flex-row justify-content-between align-items-center'>
                   <h4 className='mb-0 d-flex'>
                     {item.title} 
-                    <div className='ms-2'>
-                      {item.icon.split('|').map((icon, i) => ( <img key={i} src={`/img/${icon}`} alt={`icon-${i}`} className={icon === 'Cafe24.png' ? 'cafe24-size' : 'icon-size'}  /> ))}
+                    <div className='ms-2 d-flex pt_gap align-items-center'>
+                      {item.icon.split('|').map((icon, i) => ( 
+                        icon &&
+                      <img key={i} src={`/img/${icon}`} alt={`icon-${i}`} className={icon === 'Cafe24.png' ? 'cafe24-size': icon === 'Sir.png' ? 'sir-size' : 'icon-size'}  /> 
+                      ))}
                     </div>  
                     {/* {
                       item.icon.split('|').map( i => <img src={i} alt={i} ></img> )
