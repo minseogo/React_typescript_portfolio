@@ -23,14 +23,12 @@ const Portfolio: React.FC = () => {
       <div className="dash ms-4">
         <h1>Project</h1>
       </div>
-
       <div className="">
         <ul className="portfolio-filters">
           <li onClick={() => setFilter('All')} className={filter === 'All' ? 'filter-active' : ''}>All</li>
           <li onClick={() => setFilter('개인 프로젝트')} className={filter === '개인 프로젝트' ? 'filter-active' : ''}>개인 프로젝트</li>
           <li onClick={() => setFilter('팀 프로젝트')} className={filter === '팀 프로젝트' ? 'filter-active' : ''}>팀 프로젝트</li>
         </ul>
-
         <div className="row portfolio-container ms-md-6 ms-0 me-2">
           {filteredItems.map( item => (
             <div key={item.id} className="col-sm-6 portfolio-item">
@@ -47,11 +45,7 @@ const Portfolio: React.FC = () => {
                       <img key={i} src={`/img/${icon}`} alt={`icon-${i}`} className={icon === 'Cafe24.png' ? 'cafe24-size': icon === 'Sir.png' ? 'sir-size' : 'icon-size'}  /> 
                       ))}
                     </div>  
-                    {/* {
-                      item.icon.split('|').map( i => <img src={i} alt={i} ></img> )
-                    } */}
                   </h4>
-
                     <a href={item.link} className="details-link" target="_blank" rel="noopener noreferrer">
                       <i className="bi bi-link-45deg text-black"></i>
                     </a>
