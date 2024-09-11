@@ -37,7 +37,7 @@ const Portfolio: React.FC = () => {
               </div>
               <div className="portfolio-info mb-5">
                 <div className='d-flex flex-row justify-content-between align-items-center'>
-                  <h4 className='mb-0 d-flex'>
+                  <h4 className='mb-0 d-flex title_nowrap'>
                     {item.title} 
                     <div className='ms-2 d-flex pt_gap align-items-center'>
                       {item.icon.split('|').map((icon, i) => ( 

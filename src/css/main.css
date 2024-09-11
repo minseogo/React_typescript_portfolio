@@ -236,6 +236,9 @@ a:hover {
 .portfolio .portfolio-content:hover .portfolio-info {
   opacity: 1;
 }
+.title_nowrap{
+  white-space: nowrap;
+}
 .info_btns {
  font-size: 10px;
 }
