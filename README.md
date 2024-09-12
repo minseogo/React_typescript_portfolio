@@ -1,46 +1,54 @@
-# Getting Started with Create React App
+# 자기소개서 웹페이지
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+이 레포지토리는 개인 자기소개서 및 포트폴리오 웹사이트의 소스 코드를 포함하고 있습니다. 이 페이지는 저를 브랜딩하기 위해 TypeScript 기반의 React 환경에서 제작한 자기소개서입니다. 직관적인 디자인과 반응형으로 설계된 페이지로, 저의 기술 역량과 창의성을 담았습니다. 또한, 한국어와 영어 두 가지 언어를 지원합니다.
 
-## Available Scripts
+# 플러그인
+@types/react-bootstrap: ^0.32.37
+@types/react-dom: ^18.3.0
+@types/swiper: ^6.0.0
+axios: ^1.7.7
+bootstrap: ^5.3.3
+bootstrap-icons: ^1.11.3
+react: ^18.3.1
+react-bootstrap: ^2.10.4
+react-dom: ^18.3.1
+react-scripts: 5.0.1
+react-typed: ^2.0.12
+react-youtube: ^10.1.0
 
-In the project directory, you can run:
+# 주요 기능
 
-### `npm start`
+- **언어 전환 기능**: 사용자가 버튼을 클릭하여 한국어와 영어로 언어를 전환할 수 있습니다.
+- **포트폴리오 섹션**: 진행한 프로젝트들을 필터링하여 확인할 수 있습니다.
+- **타이핑 효과**: 프론트엔드 개발자로서의 스킬을 강조하는 타이핑 애니메이션이 포함되어 있습니다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# 기술 스택
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **React**: 사용자 인터페이스를 구축하는 JavaScript 라이브러리.
+- **TypeScript**: JavaScript의 상위 언어로, 정적 타입을 통해 더 안전한 코드를 작성.
+- **Bootstrap**: 반응형 웹페이지를 위한 CSS 프레임워크.
+- **React Typed**: 텍스트 타이핑 애니메이션을 구현하기 위한 라이브러리.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# 관련주소
+- 피그마 : https://www.figma.com/design/chnxRjxPKX40REZtT5p6Sl/%EB%AF%BC%EC%84%9C?node-id=0-1&m=dev&t=lQHCrmUGVAdhlWhK-1
+- 버셀 : https://gominseo-pr.vercel.app/
 
-### `npm run build`
+## 기타 포트 폴리오
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# 개인 프로젝트
+CK 카페24 : https://minseogo.cafe24.com
+CK 그누보드 : http://gominseo.dothome.co.kr/ck
+CK WEB : https://gominseo-calvinklein.vercel.app/
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# 팀 프로젝트 
+Ugly Ushttps://team-project-reactuglyus.vercel.app
+Eclat : https://i-web.kr/green05
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 버전 관리
+- 메이저 : 리뉴얼
+- 마이너 : 컨텐츠 제작
+- 패치 : 오류
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+# 주 커밋 리스트
+https://github.com/minseogo/React_typescript_portfolio/commit/c9af2e5c9004af5585b47a492a030b34cf9ace8b

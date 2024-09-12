@@ -330,6 +330,28 @@ a:hover {
 .lang_btns{
   margin-right: 33px;
 }
+.profile-img .review_size{
+  width: 40%;
+}
+.youtube-player{
+  width: 100%;
+}
+.youtube-player h3 {
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+}
+.review{
+  width: 95%;
+}
+.review_video img {
+  width: 30%;
+}
+.review h4 {
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+}
 /* # 반응형 */
 @media(max-width:1440px){
   .hello > h3{

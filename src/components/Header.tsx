@@ -5,6 +5,7 @@ import Reactsvg from '../img/React.svg';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import data from '../data/data.json';
+import YouTube from 'react-youtube';
 
 interface HeaderProps {
   language: 'kr' | 'en';
@@ -18,7 +19,9 @@ const Header: React.FC<HeaderProps> = ({ language,  setLanguage  }) => {
 const description = language === 'kr' 
   ? '영국 어학연수와 MD 업무를 통해 소통 능력과 실무 역량을 키웠으며, 프론트엔드 개발에 대한 흥미를 넓혔습니다. 사용자 중심의 웹 경험을 제공하며 향후 프로젝트 성공에 기여하고 싶습니다.'
   : 'Through studying in the UK and working as an MD, I developed communication skills and practical abilities. I expanded my interest in frontend development and want to contribute to the success of future projects by providing user-centered web experiences.';
-
+  const review = language === 'kr' 
+  ? '팀 프로젝트 Ugly Us에 대한 리뷰입니다.'
+  : 'Review of the Team Project "Ugly Us';
   return (
     <div id="header" className="d-flex flex-column mt-sm-4 mt-1 ms-sm-4 ms-2 me-2 me-sm-0">
       <div>
@@ -32,10 +35,13 @@ const description = language === 'kr'
         <div className='d-flex flex-sm-row flex-column'>
           <div className="profile-img col-sm-6">
             <img src="/img/me.jpg" alt="" className="img-fluid" />
-            <div className='info mt-3 pe-4 pe-lg-0'>
+            <div className='info mt-3 pe-sm-4 pe-lg-0'>
               <p className='d-flex flex-column info_font text-sm-start text-center'>
                 {description}
               </p>
+            </div>
+            <div className="youtube-player pe-sm-4 d-flex flex-sm-row flex-column align-items-center">
+              <YouTube videoId="wmO7MrHiB2A" opts={{ height: '185', width: '100%' }} />
             </div>
           </div>
           <div className="resume section d-flex flex-column col-sm-5">
