@@ -154,6 +154,9 @@ a:hover {
 }
 
 /* # Portfolio */
+.lang_btns{
+  width: 50px;
+}
 .portfolio .portfolio-filters {
   padding: 0;
   margin: 0 auto 20px auto;
@@ -324,7 +327,9 @@ a:hover {
 .pt_gap{
   gap: 5px;
 }
-
+.lang_btns{
+  margin-right: 33px;
+}
 /* # 반응형 */
 @media(max-width:1440px){
   .hello > h3{
@@ -370,6 +375,9 @@ a:hover {
   }
 }
 @media(max-width:990px){
+  .lang_btns{
+    font-size: 13px;
+  }
   .skills > h2{
     font-size: 18px;
     font-weight: 500;
@@ -395,6 +403,9 @@ a:hover {
   }
 }
 @media(max-width:758px){
+  .lang_btns {
+    margin-right: 27px;
+  }
   .hello > h3{
     font-size: 18px;
   }
@@ -455,6 +466,9 @@ a:hover {
   }
 }
 @media (max-width: 575px) {
+  .lang_btns {
+    margin-right: 8px;
+  }
   .profile-img {
     position: relative;
   }

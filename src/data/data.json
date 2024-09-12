@@ -1,95 +1,97 @@
+
 {
-    "header": {
-      "kr": {
-        "siteName": "포트폴리오",
-        "hello": "안녕하세요.",
-        "name": "고민서입니다.",
-        "personal": {
-          "birthdate": "1994. 11. 12",
-          "phone": "010 - 5042 - 9412",
-          "email": "gominseo1112@gmail.com"
-        },
-        "buttons": {
-          "github": "Git Hub",
-          "figma": "Figma"
-        },
-        "skills": {
-          "title": "What I Do"
-        },
-        "education": {
-          "title": "Education",
-          "schools": [
-            { "name": "웹퍼블리셔(UI/UX)&프론트엔드개발", "years": "2024.03 ~ 2024.09" },
-            { "name": "IH LONDON", "years": "2020.09 ~ 2020.11 / 2019.04 ~ 2019.07", "location": "영국, 런던" },
-            { "name": "수원과학대학교 / 공연연기과", "years": "2014.03 ~ 2018.03" },
-            { "name": "목동고등학교", "years": "2010.03 ~ 2013.03" }
-          ]
-        },
-        "workExperience": {
-          "title": "Work Experience",
-          "jobs": [
-            { "role": "온라인 MD", "years": "2023.10 ~ 2024.01", "company": "웹뜰 / 대한민국, 서울" },
-            { "role": "온라인 마케팅, 바리스타", "years": "2022.10 ~ 2023.05", "company": "Cocomelt / 영국, 런던" },
-            { "role": "바리스타", "years": "2022.05 ~ 2022.08", "company": "Knockbox / 영국, 런던" },
-            { "role": "온라인MD 인턴", "years": "2021.12 ~ 2022.03", "company": "Globalon / 영국, 런던" },
-            { "role": "온라인MD", "years": "2021.03 ~ 2021.09", "company": "세븐제이스 / 대한민국, 경기도" }
-          ]
-        }
-      },
-      "en": {
-        "siteName": "Portfolio",
-        "hello": "Hello,",
-        "name": "I'm Minseo Go.",
-        "personal": {
-          "birthdate": "1994. 11. 12",
-          "phone": "010 - 5042 - 9412",
-          "email": "gominseo1112@gmail.com"
-        },
-        "buttons": {
-          "github": "Git Hub",
-          "figma": "Figma"
-        },
-        "skills": {
-          "title": "What I Do"
-        },
-        "education": {
-          "title": "Education",
-          "schools": [
-            { "name": "Web Publisher(UI/UX)&Frontend Developer", "years": "2024.03 ~ 2024.09" },
-            { "name": "IH LONDON", "years": "2020.09 ~ 2020.11 / 2019.04 ~ 2019.07", "location": "London, UK" },
-            { "name": "Suwon Science College / Theater & Performance", "years": "2014.03 ~ 2018.03" },
-            { "name": "Mokdong High School", "years": "2010.03 ~ 2013.03" }
-          ]
-        },
-        "workExperience": {
-          "title": "Work Experience",
-          "jobs": [
-            { "role": "Online MD", "years": "2023.10 ~ 2024.01", "company": "Webdeul / Seoul, South Korea" },
-            { "role": "Online Marketing, Barista", "years": "2022.10 ~ 2023.05", "company": "Cocomelt / London, UK" },
-            { "role": "Barista", "years": "2022.05 ~ 2022.08", "company": "Knockbox / London, UK" },
-            { "role": "Online MD Intern", "years": "2021.12 ~ 2022.03", "company": "Globalon / London, UK" },
-            { "role": "Online MD", "years": "2021.03 ~ 2021.09", "company": "SevenJays / Gyeonggi, South Korea" }
-          ]
-        }
-      }
+  "kr": {
+    "siteName": "Portfolio",
+    "hello": "안녕하세요.",
+    "name": "고민서입니다.",
+    "personal": {
+      "birthdate": "1994. 11. 12",
+      "phone": "010 - 5042 - 9412",
+      "email": "gominseo1112@gmail.com"
+    },
+    "buttons": {
+      "github": "Git Hub",
+      "figma": "Figma"
+    },
+    "skills": {
+      "title": "What I Do"
+    },
+    "education": {
+      "title": "Education",
+      "schools": [
+        { "name": "웹퍼블리셔(UI/UX)&프론트엔드개발", "years": "2024.03 ~ 2024.09" },
+        { "name": "IH LONDON", "years": "2020.09 ~ 2020.11 / 2019.04 ~ 2019.07", "location": "영국, 런던" },
+        { "name": "수원과학대학교 / 공연연기과", "years": "2014.03 ~ 2018.03" },
+        { "name": "목동고등학교", "years": "2010.03 ~ 2013.03" }
+      ]
+    },
+    "workExperience": {
+      "title": "Work Experience",
+      "jobs": [
+        { "role": "온라인 MD", "years": "2023.10 ~ 2024.01", "company": "웹뜰 / 대한민국, 서울" },
+        { "role": "온라인 마케팅, 바리스타", "years": "2022.10 ~ 2023.05", "company": "Cocomelt / 영국, 런던" },
+        { "role": "바리스타", "years": "2022.05 ~ 2022.08", "company": "Knockbox / 영국, 런던" },
+        { "role": "온라인MD 인턴", "years": "2021.12 ~ 2022.03", "company": "Globalon / 영국, 런던" },
+        { "role": "온라인MD", "years": "2021.03 ~ 2021.09", "company": "세븐제이스 / 대한민국, 경기도" }
+      ]
     },
     "portfolio": {
-      "kr": [
+      "title": "Portfolio",
+      "items": [
         { "id": 1, "filter": "개인 프로젝트", "image": "ck.png", "icon": "Boots.png|Sir.png", "title": "CK 그누보드", "description": "브랜드의 고급스러움과 미니멀리즘을 강조하며, 새로운 사용자 경험을 제공하기 위해 리뉴얼하고 그누보드를 기반으로 제작한 웹사이트입니다.", "link": "http://gominseo.dothome.co.kr/ck/" },
         { "id": 2, "filter": "개인 프로젝트", "image": "ck.png", "icon": "Boots.png|Cafe24.png", "title": "CK 카페24", "description": "브랜드의 고급스러움과 미니멀리즘을 강조하며, 새로운 사용자 경험을 제공하기 위해 리뉴얼하고 카페24를 기반으로 제작한 웹사이트입니다.", "link": "https://minseogo.cafe24.com/" },
         { "id": 3, "filter": "개인 프로젝트", "image": "ck.png", "icon": "Boots.png|Hard.png", "title": "CK", "description": "브랜드의 고급스러움과 미니멀리즘을 강조하며, 새로운 사용자 경험을 제공하기 위해 리뉴얼하고 vercel 서버를 사용하여 제작한 웹사이트입니다.", "link": "https://gominseo-calvinklein.vercel.app/" },
         { "id": 4, "filter": "개인 프로젝트", "image": "pr.png", "icon": "React.png|Type.png|Boots.png", "title": "PR", "description": "저를 브랜딩하기 위해 타입스크립트 기반의 리액트 환경에서 제작한 자기소개서입니다. 직관적인 디자인과 반응형으로 설계된 페이지로, 저의 기술 역량과 창의성을 담았습니다.", "link": "https://gominseo-pr.vercel.app/" },
         { "id": 5, "filter": "팀 프로젝트", "image": "veg.png", "icon": "Boots.png|React.png", "title": "Ugly Us", "description": "리뷰, 스토어 컴포넌트를 개발 및 리뉴얼하여 사용자 맞춤형 경험과 리뷰 서비스를 제공하는 이커머스 웹사이트입니다.", "link": "https://team-project-reactuglyus.vercel.app/" },
         { "id": 6, "filter": "팀 프로젝트", "image": "eclat.png", "icon": "", "title": "Eclat", "description": "브랜드 아이덴티티를 강화하고 사용자 친화적인 인터페이스를 제공하며, 시즌 추천, 이벤트, 리뷰 컴포넌트와 브랜드 스토리 페이지를 제작한 플랫폼형 웹사이트입니다.", "link": "https://i-web.kr/green05/" }
-      ],
-      "en": [
-        { "id": 1, "filter": "Personal Project", "image": "ck.png", "icon": "Boots.png|Sir.png", "title": "CK Gnuboard", "description": "A renewed website based on Gnuboard that emphasizes the brand’s luxury and minimalism, offering a new user experience.", "link": "http://gominseo.dothome.co.kr/ck/" },
-        { "id": 2, "filter": "Personal Project", "image": "ck.png", "icon": "Boots.png|Cafe24.png", "title": "CK Cafe24", "description": "A renewed website based on Cafe24, emphasizing the brand’s luxury and minimalism, offering a new user experience.", "link": "https://minseogo.cafe24.com/" },
-        { "id": 3, "filter": "Personal Project", "image": "ck.png", "icon": "Boots.png|Hard.png", "title": "CK", "description": "A renewed website emphasizing the brand’s luxury and minimalism, hosted on the Vercel server.", "link": "https://gominseo-calvinklein.vercel.app/" },
-        { "id": 4, "filter": "Personal Project", "image": "pr.png", "icon": "React.png|Type.png|Boots.png", "title": "PR", "description": "A personal introduction website, built in a React environment using TypeScript, showcasing intuitive design and responsive layout.", "link": "https://gominseo-pr.vercel.app/" },
-        { "id": 5, "filter": "Team Project", "image": "veg.png", "icon": "Boots.png|React.png", "title": "Ugly Us", "description": "An e-commerce website providing tailored experiences and review services, where I contributed by developing and renewing the review and store components.", "link": "https://team-project-reactuglyus.vercel.app/" },
-        { "id": 6, "filter": "Team Project", "image": "eclat.png", "icon": "", "title": "Eclat", "description": "A platform website built to enhance brand identity, providing user-friendly interfaces with seasonal recommendations, event components, review sections, and a brand story page.", "link": "https://i-web.kr/green05/" }
       ]
     }
-  } 
-  
+  },
+  "en": {
+    "siteName": "Portfolio",
+    "hello": "Hello,",
+    "name": "Minseo Go.",
+    "personal": {
+      "birthdate": "1994. 11. 12",
+      "phone": "010 - 5042 - 9412",
+      "email": "gominseo1112@gmail.com"
+    },
+    "buttons": {
+      "github": "Git Hub",
+      "figma": "Figma"
+    },
+    "skills": {
+      "title": "What I Do"
+    },
+    "education": {
+      "title": "Education",
+      "schools": [
+        { "name": "Web Publisher(UI/UX)&Frontend Developer", "years": "2024.03 ~ 2024.09" },
+        { "name": "IH LONDON", "years": "2020.09 ~ 2020.11 / 2019.04 ~ 2019.07", "location": "London, UK" },
+        { "name": "Suwon Science College / Theater & Performance", "years": "2014.03 ~ 2018.03" },
+        { "name": "Mokdong High School", "years": "2010.03 ~ 2013.03" }
+      ]
+    },
+    "workExperience": {
+      "title": "Work Experience",
+      "jobs": [
+        { "role": "Online MD", "years": "2023.10 ~ 2024.01", "company": "Webdeul / Seoul, South Korea" },
+        { "role": "Online Marketing, Barista", "years": "2022.10 ~ 2023.05", "company": "Cocomelt / London, UK" },
+        { "role": "Barista", "years": "2022.05 ~ 2022.08", "company": "Knockbox / London, UK" },
+        { "role": "Online MD Intern", "years": "2021.12 ~ 2022.03", "company": "Globalon / London, UK" },
+        { "role": "Online MD", "years": "2021.03 ~ 2021.09", "company": "SevenJays / Gyeonggi, South Korea" }
+      ]
+    },
+    "portfolio": {
+      "title": "Portfolio",
+      "items": [
+        { "id": 1, "filter": "개인 프로젝트", "image": "ck.png", "icon": "Boots.png|Sir.png", "title": "CK Gnuboard", "description": "A renewed website based on Gnuboard that emphasizes the brand’s luxury and minimalism, offering a new user experience.", "link": "http://gominseo.dothome.co.kr/ck/" },
+        { "id": 2, "filter": "개인 프로젝트", "image": "ck.png", "icon": "Boots.png|Cafe24.png", "title": "CK Cafe24", "description": "A renewed website based on Cafe24, emphasizing the brand’s luxury and minimalism, offering a new user experience.", "link": "https://minseogo.cafe24.com/" },
+        { "id": 3, "filter": "개인 프로젝트", "image": "ck.png", "icon": "Boots.png|Hard.png", "title": "CK", "description": "A renewed website emphasizing the brand’s luxury and minimalism, hosted on the Vercel server.", "link": "https://gominseo-calvinklein.vercel.app/" },
+        { "id": 4, "filter": "개인 프로젝트", "image": "pr.png", "icon": "React.png|Type.png|Boots.png", "title": "PR", "description": "A personal introduction website, built in a React environment using TypeScript, showcasing intuitive design and responsive layout.", "link": "https://gominseo-pr.vercel.app/" },
+        { "id": 5, "filter": "팀 프로젝트", "image": "veg.png", "icon": "Boots.png|React.png", "title": "Ugly Us", "description": "An e-commerce website providing tailored experiences and review services, where I contributed by developing and renewing the review and store components.", "link": "https://team-project-reactuglyus.vercel.app/" },
+        { "id": 6, "filter": "팀 프로젝트", "image": "eclat.png", "icon": "", "title": "Eclat", "description": "A platform website built to enhance brand identity, providing user-friendly interfaces with seasonal recommendations, event components, review sections, and a brand story page.", "link": "https://i-web.kr/green05/" }
+      ]
+    }
+  }
+}

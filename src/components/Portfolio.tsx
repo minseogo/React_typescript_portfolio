@@ -1,36 +1,52 @@
-import React from 'react';
-import '../css/main.css'
+import React, { useState } from 'react';
+import '../css/main.css';
+import data from '../data/data.json';
 
-const Portfolio: React.FC = () => {
-  const portfolioItems = [
-    { id: 1, filter: '개인 프로젝트', image: 'ck.png', icon : 'Boots.png|Sir.png', title: 'CK Gnuboard', description: '브랜드의 고급스러움과 미니멀리즘을 강조하며, 새로운 사용자 경험을 제공하기 위해 리뉴얼하고 그누보드를 기반으로 제작한 웹사이트입니다.', link: 'http://gominseo.dothome.co.kr/ck/'  },
-    { id: 2, filter: '개인 프로젝트', image: 'ck.png',icon : 'Boots.png|Cafe24.png', title: 'CK Cafe24', description: '브랜드의 고급스러움과 미니멀리즘을 강조하며, 새로운 사용자 경험을 제공하기 위해 리뉴얼하고 카페24를 기반으로 제작한 웹사이트입니다.', link: 'https://minseogo.cafe24.com/'  },
-    { id: 3, filter: '개인 프로젝트', image: 'ck.png', icon : 'Boots.png|Hard.png', title: 'CK', description: '브랜드의 고급스러움과 미니멀리즘을 강조하며, 새로운 사용자 경험을 제공하기 위해 리뉴얼하고 vercel 서버를 사용하여 제작한 웹사이트입니다.', link: 'https://gominseo-calvinklein.vercel.app/'  },
-    { id: 4, filter: '개인 프로젝트', image: 'pr.png', icon : 'React.png|Type.png|Boots.png', title: 'PR', description: '저를 브랜딩하기 위해 타입스크립트 기반의 리액트 환경에서 제작한 자기소개서입니다. 직관적인 디자인과 반응형으로 설계된 페이지로, 저의 기술 역량과 창의성을 담았습니다.', link: 'https://gominseo-pr.vercel.app/'  },
-    { id: 5, filter: '팀 프로젝트', image: 'veg.png', icon : 'Boots.png|React.png', title: 'Ugly Us', description: '리뷰, 스토어 컴포넌트를 개발 및 리뉴얼하여 사용자 맞춤형 경험과 리뷰 서비스를 제공하는 이커머스 웹사이트입니다.', link: 'https://team-project-reactuglyus.vercel.app/'  },
-    { id: 6, filter: '팀 프로젝트', image: 'eclat.png', icon : '', title: 'Eclat', description: '브랜드 아이덴티티를 강화하고 사용자 친화적인 인터페이스를 제공하며, 시즌 추천, 이벤트, 리뷰 컴포넌트와 브랜드 스토리 페이지를 제작한 플랫폼형 웹사이트입니다.', link: 'https://i-web.kr/green05/'  },
-    
-  ];
+interface PortfolioItem {
+  id: number;
+  filter: string;
+  image: string;
+  icon: string;
+  title: string;
+  description: string;
+  link: string;
+}
 
-  const [filter, setFilter] = React.useState<string>('All');
+interface PortfolioProps {
+  language: 'kr' | 'en';
+  setLanguage: React.Dispatch<React.SetStateAction<'kr' | 'en'>>;
+}
 
-  const filteredItems = filter === 'All'
-    ? portfolioItems
-    : portfolioItems.filter(item => item.filter === filter);
+const Portfolio: React.FC<PortfolioProps> = ({ language, setLanguage }) => {
+  const [filter, setFilter] = useState('All');
+  const langData = data[language].portfolio; 
+  const filteredItems = langData.items.filter(item => filter === 'All' || item.filter === filter);
 
   return (
     <section id="portfolio" className="portfolio section light-background mt-4">
-      <div className="dash ms-4">
-        <h1>Project</h1>
+      <div className="ms-4 d-flex align-items-center justify-content-between">
+        <div className="dash">
+          <h1>{data[language].portfolio.title}</h1> 
+        </div>
+        <div className='d-sm-flex d-none lang_btns'>
+          <button className="border-0 bg-white text-black" onClick={() => setLanguage('kr')}>KR</button>
+          <button className="border-0 bg-white text-black me-4 ms-2" onClick={() => setLanguage('en')}>EN</button>
+        </div>
       </div>
-      <div className="">
+      <div>
         <ul className="portfolio-filters">
-          <li onClick={() => setFilter('All')} className={filter === 'All' ? 'filter-active' : ''}>All</li>
-          <li onClick={() => setFilter('개인 프로젝트')} className={filter === '개인 프로젝트' ? 'filter-active' : ''}>개인 프로젝트</li>
-          <li onClick={() => setFilter('팀 프로젝트')} className={filter === '팀 프로젝트' ? 'filter-active' : ''}>팀 프로젝트</li>
+          <li onClick={() => setFilter('All')} className={filter === 'All' ? 'filter-active' : ''}>
+            {language === 'kr' ? '모두' : 'All'}
+          </li>
+          <li onClick={() => setFilter('개인 프로젝트')} className={filter === '개인 프로젝트' ? 'filter-active' : ''}>
+            {language === 'kr' ? '개인 프로젝트' : 'Personal Projects'}
+          </li>
+          <li onClick={() => setFilter('팀 프로젝트')} className={filter === '팀 프로젝트' ? 'filter-active' : ''}>
+            {language === 'kr' ? '팀 프로젝트' : 'Team Projects'}
+          </li>
         </ul>
         <div className="row portfolio-container ms-md-6 ms-0 me-2">
-          {filteredItems.map( item => (
+          {filteredItems.map(item => (
             <div key={item.id} className="col-sm-6 portfolio-item">
               <div className="portfolio-content">
                 <img src={`/img/${item.image}`} className="img-fluid" alt={item.title} />
@@ -38,20 +54,26 @@ const Portfolio: React.FC = () => {
               <div className="portfolio-info mb-5">
                 <div className='d-flex flex-row justify-content-between align-items-center'>
                   <h4 className='mb-0 d-flex title_nowrap'>
-                    {item.title} 
+                    {item.title}
                     <div className='ms-2 d-flex pt_gap align-items-center'>
-                      {item.icon.split('|').map((icon, i) => ( 
-                        icon &&
-                      <img key={i} src={`/img/${icon}`} alt={`icon-${i}`} className={icon === 'Cafe24.png' ? 'cafe24-size': icon === 'Sir.png' ? 'sir-size' : 'icon-size'}  /> 
+                      {item.icon.split('|').map((icon, i) => (
+                        icon && (
+                          <img
+                            key={i}
+                            src={`/img/${icon}`}
+                            alt={`${icon}-${i}`}
+                            className={icon === 'Cafe24.png' ? 'cafe24-size' : icon === 'Sir.png' ? 'sir-size' : 'icon-size'}
+                          />
+                        )
                       ))}
-                    </div>  
+                    </div>
                   </h4>
-                    <a href={item.link} className="details-link" target="_blank" rel="noopener noreferrer">
-                      <i className="bi bi-link-45deg text-black"></i>
-                    </a>
+                  <a href={item.link} className="details-link" target="_blank" rel="noopener noreferrer">
+                    <i className="bi bi-link-45deg text-black"></i>
+                  </a>
                 </div>
-                  <p>{item.description}</p>
-                </div>
+                <p>{item.description}</p>
+              </div>
             </div>
           ))}
         </div>
