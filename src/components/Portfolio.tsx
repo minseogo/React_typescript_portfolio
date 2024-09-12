@@ -53,7 +53,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ language, setLanguage }) => {
               </div>
               <div className="portfolio-info mb-5">
                 <div className='d-flex flex-row justify-content-between align-items-center'>
-                  <h4 className='mb-0 d-flex title_nowrap'>
+                  <h4 className='mb-0 d-flex title_nowrap mb-2'>
                     {item.title}
                     <div className='ms-2 d-flex pt_gap align-items-center'>
                       {item.icon.split('|').map((icon, i) => (
@@ -72,7 +72,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ language, setLanguage }) => {
                     <i className="bi bi-link-45deg text-black"></i>
                   </a>
                 </div>
-                <p>{item.description}</p>
+                <p className='des_font'>{item.description}</p>
               </div>
             </div>
           ))}

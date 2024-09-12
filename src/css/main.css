@@ -354,6 +354,9 @@ a:hover {
   font-size: 18px;
   font-weight: 500;
 }
+.des_font{
+  letter-spacing: -1px;
+}
 /* # 반응형 */
 @media(max-width:1440px){
   .hello > h3{
