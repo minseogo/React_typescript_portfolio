@@ -1,7 +1,7 @@
 
 {
   "kr": {
-    "siteName": "Portfolio",
+    "siteName": "Profile",
     "hello": "안녕하세요.",
     "name": "고민서입니다.",
     "personal": {
@@ -36,7 +36,7 @@
       ]
     },
     "portfolio": {
-      "title": "Portfolio",
+      "title": "Project",
       "items": [
         { "id": 1, "filter": "개인 프로젝트", "image": "ck.png", "icon": "Boots.png|Sir.png", "title": "CK 그누보드", "description": "브랜드의 고급스러움과 미니멀리즘을 강조하며, 새로운 사용자 경험을 제공하기 위해 리뉴얼하고 그누보드를 기반으로 제작한 웹사이트입니다.", "link": "http://gominseo.dothome.co.kr/ck/" },
         { "id": 2, "filter": "개인 프로젝트", "image": "ck.png", "icon": "Boots.png|Cafe24.png", "title": "CK 카페24", "description": "브랜드의 고급스러움과 미니멀리즘을 강조하며, 새로운 사용자 경험을 제공하기 위해 리뉴얼하고 카페24를 기반으로 제작한 웹사이트입니다.", "link": "https://minseogo.cafe24.com/" },
@@ -48,7 +48,7 @@
     }
   },
   "en": {
-    "siteName": "Portfolio",
+    "siteName": "Profile",
     "hello": "Hello,",
     "name": "Minseo Go.",
     "personal": {
@@ -83,7 +83,7 @@
       ]
     },
     "portfolio": {
-      "title": "Portfolio",
+      "title": "Project",
       "items": [
         { "id": 1, "filter": "개인 프로젝트", "image": "ck.png", "icon": "Boots.png|Sir.png", "title": "CK Gnuboard", "description": "A renewed website based on Gnuboard that emphasizes the brand’s luxury and minimalism, offering a new user experience.", "link": "http://gominseo.dothome.co.kr/ck/" },
         { "id": 2, "filter": "개인 프로젝트", "image": "ck.png", "icon": "Boots.png|Cafe24.png", "title": "CK Cafe24", "description": "A renewed website based on Cafe24, emphasizing the brand’s luxury and minimalism, offering a new user experience.", "link": "https://minseogo.cafe24.com/" },

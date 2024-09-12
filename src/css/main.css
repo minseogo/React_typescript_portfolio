@@ -90,6 +90,7 @@ a:hover {
 .hello > h3{
   font-size: 48px;
   font-weight: 500;
+  letter-spacing: -1px;
 }
 .personal {
   font-size: 12px;
@@ -280,7 +281,7 @@ a:hover {
   gap: 8px;
 }
 .info_font{
-  font-size: 14px;
+  font-size: 13px;
 }
 .portfolio-info .bi{
   font-size: 23px;
@@ -299,7 +300,7 @@ a:hover {
 .dash_f::before {
   content: '';
   position: absolute;
-  left: -15.3%;
+  left: -19.3%;
   top: 56.4%;
   width: 20px;
   height: 2px;
@@ -335,6 +336,7 @@ a:hover {
 }
 .youtube-player{
   width: 100%;
+  margin-top: 189px;
 }
 .youtube-player h3 {
   color: black;
@@ -488,6 +490,9 @@ a:hover {
   }
 }
 @media (max-width: 575px) {
+  .youtube-player{
+    margin-top: 24px;
+  }
   .lang_btns {
     margin-right: 8px;
   }

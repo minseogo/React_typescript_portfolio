@@ -17,7 +17,7 @@ const Header: React.FC<HeaderProps> = ({ language,  setLanguage  }) => {
   : ['Frontend Developer', 'Web Publisher'];
 
 const description = language === 'kr' 
-  ? '영국 어학연수와 MD 업무를 통해 소통 능력과 실무 역량을 키웠으며, 프론트엔드 개발에 대한 흥미를 넓혔습니다. 사용자 중심의 웹 경험을 제공하며 향후 프로젝트 성공에 기여하고 싶습니다.'
+  ? '영국 어학연수와 MD 업무를 통해 소통 능력과 실무 역량을 키웠으며, | 프론트엔드 개발에 대한 흥미를 넓혔습니다. 사용자 중심의 웹 경험을 제공하며 | 향후 프로젝트 성공에 기여하고 싶습니다.'
   : 'Through studying in the UK and working as an MD, I developed communication skills and practical abilities. I expanded my interest in frontend development and want to contribute to the success of future projects by providing user-centered web experiences.';
   const review = language === 'kr' 
   ? '팀 프로젝트 Ugly Us에 대한 리뷰입니다.'
@@ -37,7 +37,12 @@ const description = language === 'kr'
             <img src="/img/me.jpg" alt="" className="img-fluid" />
             <div className='info mt-3 pe-sm-4 pe-lg-0'>
               <p className='d-flex flex-column info_font text-sm-start text-center'>
-                {description}
+                {description.split('|').map( item => {
+                  return(
+                    <>
+                     {item}<br></br>
+                    </>
+                  )})}
               </p>
             </div>
             <div className="youtube-player pe-sm-4 d-flex flex-sm-row flex-column align-items-center">
