@@ -6,7 +6,9 @@ import {
   SiTypescript,
   SiBootstrap,
   SiTailwindcss,
+  SiMysql,
   SiGithub,
+  SiNotion,
   SiVercel,
 } from 'react-icons/si';
 import data from '../data/data.json';
@@ -17,7 +19,9 @@ const ReactIcon = SiReact as IconComponent;
 const TypescriptIcon = SiTypescript as IconComponent;
 const BootstrapIcon = SiBootstrap as IconComponent;
 const TailwindIcon = SiTailwindcss as IconComponent;
+const MysqlIcon = SiMysql as IconComponent;
 const GithubIcon = SiGithub as IconComponent;
+const NotionIcon = SiNotion as IconComponent;
 const VercelIcon = SiVercel as IconComponent;
 
 interface HeaderProps {
@@ -37,15 +41,27 @@ const Header: React.FC<HeaderProps> = ({ language, setLanguage }) => {
       : 'Through studying in the UK and working as an MD, I developed communication skills and practical abilities. I expanded my interest in frontend development and want to contribute to the success of future projects by providing user-centered web experiences.';
 
   return (
-    <div id="header" className="ml-2 mr-2 mt-1 flex flex-col sm:ml-4 sm:mr-0 sm:mt-4">
+    <header id="header" className="ml-2 mr-2 mt-1 flex flex-col sm:ml-4 sm:mr-0 sm:mt-4">
       <div>
         <div className="dash_f ml-0 flex items-baseline justify-between md:ml-4 sm:inline-block">
           <h1 className="sitename mb-3">{data[language].siteName}</h1>
           <div className="lang_btns flex sm:hidden">
-            <button className="border-0 bg-white text-black" onClick={() => setLanguage('kr')}>
+            <button
+              className="border-0 bg-white text-black"
+              onClick={() => setLanguage('kr')}
+              aria-pressed={language === 'kr'}
+              aria-label="Switch language to Korean"
+              type="button"
+            >
               KR
             </button>
-            <button className="ml-2 mr-4 border-0 bg-white text-black" onClick={() => setLanguage('en')}>
+            <button
+              className="ml-2 mr-4 border-0 bg-white text-black"
+              onClick={() => setLanguage('en')}
+              aria-pressed={language === 'en'}
+              aria-label="Switch language to English"
+              type="button"
+            >
               EN
             </button>
           </div>
@@ -53,7 +69,7 @@ const Header: React.FC<HeaderProps> = ({ language, setLanguage }) => {
 
         <div className="flex flex-col sm:flex-row">
           <div className="profile-img sm:w-1/2">
-            <img src="/img/me.jpg" alt="" className="h-auto w-full" />
+            <img src="/img/me.jpg" alt="Profile portrait of Minseo Go" className="h-auto w-full" />
             <div className="info mt-3 sm:pr-4 lg:pr-0">
               <p className="info_font flex flex-col text-center sm:text-left">
                 {description.split('|').map((item, index) => (
@@ -64,7 +80,11 @@ const Header: React.FC<HeaderProps> = ({ language, setLanguage }) => {
                 ))}
               </p>
             </div>
-            <div className="youtube-player flex flex-col items-center sm:flex-row sm:pr-4">
+            <div
+              className="youtube-player flex flex-col items-center sm:flex-row sm:pr-4"
+              role="region"
+              aria-label="Introduction video"
+            >
               <YouTube videoId="wmO7MrHiB2A" opts={{ height: '185', width: '100%' }} />
             </div>
           </div>
@@ -87,9 +107,12 @@ const Header: React.FC<HeaderProps> = ({ language, setLanguage }) => {
               <button
                 className="info_btns border border-black bg-white px-2 py-1 text-black"
                 onClick={() => window.open('https://github.com/minseogo', '_blank')}
+                type="button"
+                aria-label="Open GitHub profile in a new tab"
               >
                 {data[language].buttons.github}
               </button>
+              {/* 
               <button
                 className="info_btns ml-2 border border-black bg-white px-2 py-1 text-black"
                 onClick={() =>
@@ -98,8 +121,24 @@ const Header: React.FC<HeaderProps> = ({ language, setLanguage }) => {
                     '_blank'
                   )
                 }
+                type="button"
+                aria-label="Open Figma design in a new tab"
               >
                 {data[language].buttons.figma}
+              </button>
+              */}
+              <button
+                className="info_btns ml-2 border border-black bg-white px-2 py-1 text-black"
+                onClick={() =>
+                  window.open(
+                    'https://boggy-forgery-956.notion.site/1014eece51c480a4a96cd75198f2e8c2',
+                    '_blank'
+                  )
+                }
+                type="button"
+                aria-label="Open Notion page in a new tab"
+              >
+                Notion
               </button>
             </div>
 
@@ -114,13 +153,19 @@ const Header: React.FC<HeaderProps> = ({ language, setLanguage }) => {
                       <BootstrapIcon className="text-[2.1rem] text-[#7952B3]" title="Bootstrap" />
                       <TailwindIcon className="text-[2.1rem] text-[#38BDF8]" title="Tailwind CSS" />
                     </div>
+                    <div className="logo_gap mt-3 flex items-center">
+                      <MysqlIcon className="text-[2rem] text-[#4479A1]" title="MySQL" />
+                      <span className="text-sm font-semibold tracking-wide text-black">AI API</span>
+                      <span className="text-sm font-semibold tracking-wide text-black">REST API</span>
+                    </div>
                     <div className="logo_gap solu_margin mt-3 flex items-center">
                       <img src={`${process.env.PUBLIC_URL}/img/Sir.png`} alt="SIR png" className="h-7 w-auto" />
                       <img src={`${process.env.PUBLIC_URL}/img/Cafe24.png`} alt="Cafe24 png" className="h-6 w-auto" />
                     </div>
                     <div className="logo_gap git_margin mt-3 mr-1 flex items-center sm:mr-0">
                       <GithubIcon className="mr-0 text-[2.3rem] text-black sm:mr-1" title="GitHub" />
-                      <img src={`${process.env.PUBLIC_URL}/img/Figma.png`} alt="Figma png" className="mr-1 h-9 w-auto" />
+                      {/* <img src={`${process.env.PUBLIC_URL}/img/Figma.png`} alt="Figma png" className="mr-1 h-9 w-auto" /> */}
+                      <NotionIcon className="mr-1 text-[2rem] text-black" title="Notion" />
                       <VercelIcon className="ml-1 text-[2rem] text-black" title="Vercel" />
                     </div>
                   </div>
@@ -162,7 +207,7 @@ const Header: React.FC<HeaderProps> = ({ language, setLanguage }) => {
           </div>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 

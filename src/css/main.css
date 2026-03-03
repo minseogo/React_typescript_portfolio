@@ -110,7 +110,7 @@ a:hover {
   margin-bottom: 20px;
 }
 .resume .resume-item {
-  padding: 0 0 5px 20px;
+  padding: 0 0 20px 20px;
   margin-top: -2px;
   border-left: 1px solid black;
   position: relative;
@@ -128,7 +128,7 @@ a:hover {
   padding: 5px 15px;
   display: inline-block;
   font-weight: 400;
-  margin-bottom: 10px;
+  margin-bottom: 2px;
 }
 .resume .resume-item ul {
   padding-left: 20px;
@@ -152,6 +152,8 @@ a:hover {
 }
 .lo_font{
   font-size: 11px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /* # Portfolio */
@@ -195,8 +197,14 @@ a:hover {
 .portfolio .portfolio-content {
   position: relative;
   overflow: hidden;
+  aspect-ratio: 16 / 10;
+  background-color: #f3f4f6;
 }
 .portfolio .portfolio-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   transition: 0.3s;
 }
 .portfolio .portfolio-content .portfolio-info h4 {
@@ -578,7 +586,7 @@ a:hover {
     padding: 5px 15px;
     display: inline-block;
     font-weight: 400;
-    margin-bottom: 10px;
+    margin-bottom: 0;
   }
   .lo_font{
     font-size: 12px;
@@ -587,7 +595,7 @@ a:hover {
     display: none;
   }
   .resume .resume-item{
-    padding: 0 0 0 0; 
+    padding: 0 0 20px 0; 
     margin-top: 0px;
     border-left: none;
   }

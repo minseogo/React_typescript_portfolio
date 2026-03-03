@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link2 } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Link2 } from 'lucide-react';
 import {
   SiReact,
   SiTypescript,
@@ -23,6 +23,8 @@ interface PortfolioProps {
 const ALL_FILTER = 'All';
 const PERSONAL_FILTER = '개인 프로젝트';
 const TEAM_FILTER = '팀 프로젝트';
+const PROFESSIONAL_FILTER = '실무 프로젝트';
+const ITEMS_PER_PAGE = 4;
 
 const renderStackIcon = (icon: string, index: number) => {
   switch (icon) {
@@ -45,8 +47,16 @@ const renderStackIcon = (icon: string, index: number) => {
 
 const Portfolio: React.FC<PortfolioProps> = ({ language, setLanguage }) => {
   const [filter, setFilter] = useState(ALL_FILTER);
+  const [page, setPage] = useState(1);
   const langData = data[language].portfolio;
   const filteredItems = langData.items.filter((item) => filter === ALL_FILTER || item.filter === filter);
+  const totalPages = Math.max(1, Math.ceil(filteredItems.length / ITEMS_PER_PAGE));
+  const paginatedItems = filteredItems.slice((page - 1) * ITEMS_PER_PAGE, page * ITEMS_PER_PAGE);
+
+  const handleFilterChange = (nextFilter: string) => {
+    setFilter(nextFilter);
+    setPage(1);
+  };
 
   return (
     <section id="portfolio" className="portfolio section light-background mt-4">
@@ -55,32 +65,77 @@ const Portfolio: React.FC<PortfolioProps> = ({ language, setLanguage }) => {
           <h1>{data[language].portfolio.title}</h1>
         </div>
         <div className="lang_btns hidden sm:flex">
-          <button className="border-0 bg-white text-black" onClick={() => setLanguage('kr')}>
+          <button
+            className="border-0 bg-white text-black"
+            onClick={() => setLanguage('kr')}
+            aria-pressed={language === 'kr'}
+            aria-label="Switch language to Korean"
+            type="button"
+          >
             KR
           </button>
-          <button className="ml-2 mr-4 border-0 bg-white text-black" onClick={() => setLanguage('en')}>
+          <button
+            className="ml-2 mr-4 border-0 bg-white text-black"
+            onClick={() => setLanguage('en')}
+            aria-pressed={language === 'en'}
+            aria-label="Switch language to English"
+            type="button"
+          >
             EN
           </button>
         </div>
       </div>
 
       <div>
-        <ul className="portfolio-filters">
-          <li onClick={() => setFilter(ALL_FILTER)} className={filter === ALL_FILTER ? 'filter-active' : ''}>
-            {language === 'kr' ? '모두' : 'All'}
-          </li>
-          <li onClick={() => setFilter(PERSONAL_FILTER)} className={filter === PERSONAL_FILTER ? 'filter-active' : ''}>
-            {language === 'kr' ? PERSONAL_FILTER : 'Personal Projects'}
-          </li>
-          <li onClick={() => setFilter(TEAM_FILTER)} className={filter === TEAM_FILTER ? 'filter-active' : ''}>
-            {language === 'kr' ? TEAM_FILTER : 'Team Projects'}
-          </li>
-        </ul>
+        <nav aria-label="Project category filters">
+          <ul className="portfolio-filters">
+            <li className={filter === ALL_FILTER ? 'filter-active' : ''}>
+              <button
+                type="button"
+                onClick={() => handleFilterChange(ALL_FILTER)}
+                aria-pressed={filter === ALL_FILTER}
+                className="border-0 bg-transparent p-0"
+              >
+                {language === 'kr' ? '모두' : 'All'}
+              </button>
+            </li>
+            <li className={filter === PERSONAL_FILTER ? 'filter-active' : ''}>
+              <button
+                type="button"
+                onClick={() => handleFilterChange(PERSONAL_FILTER)}
+                aria-pressed={filter === PERSONAL_FILTER}
+                className="border-0 bg-transparent p-0"
+              >
+                {language === 'kr' ? PERSONAL_FILTER : 'Personal Projects'}
+              </button>
+            </li>
+            <li className={filter === TEAM_FILTER ? 'filter-active' : ''}>
+              <button
+                type="button"
+                onClick={() => handleFilterChange(TEAM_FILTER)}
+                aria-pressed={filter === TEAM_FILTER}
+                className="border-0 bg-transparent p-0"
+              >
+                {language === 'kr' ? TEAM_FILTER : 'Team Projects'}
+              </button>
+            </li>
+            <li className={filter === PROFESSIONAL_FILTER ? 'filter-active' : ''}>
+              <button
+                type="button"
+                onClick={() => handleFilterChange(PROFESSIONAL_FILTER)}
+                aria-pressed={filter === PROFESSIONAL_FILTER}
+                className="border-0 bg-transparent p-0"
+              >
+                {language === 'kr' ? PROFESSIONAL_FILTER : 'Professional Projects'}
+              </button>
+            </li>
+          </ul>
+        </nav>
 
-        <div className="portfolio-container ml-0 mr-2 grid grid-cols-1 gap-x-4 md:ml-6 sm:grid-cols-2">
-          {filteredItems.map((item) => (
+        <div className="portfolio-container ml-2 mr-2 grid grid-cols-1 gap-x-4 md:ml-6 sm:grid-cols-2">
+          {paginatedItems.map((item) => (
             <div key={item.id} className="portfolio-item">
-              <div className="portfolio-content">
+              <div className="portfolio-content mb-2">
                 <img src={`/img/${item.image}`} className="h-auto w-full" alt={item.title} />
               </div>
               <div className="portfolio-info mb-3">
@@ -106,6 +161,41 @@ const Portfolio: React.FC<PortfolioProps> = ({ language, setLanguage }) => {
             </div>
           ))}
         </div>
+        {filteredItems.length > ITEMS_PER_PAGE && (
+          <div className="mt-2 flex items-center justify-center gap-2">
+            <button
+              type="button"
+              onClick={() => setPage((prev) => Math.max(1, prev - 1))}
+              disabled={page === 1}
+              aria-label={language === 'kr' ? '이전 페이지' : 'Previous page'}
+              className="px-2 py-1 text-xs disabled:cursor-not-allowed disabled:opacity-50"
+            >
+              <ChevronLeft className="h-4 w-4" />
+            </button>
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map((num) => (
+              <button
+                key={num}
+                type="button"
+                onClick={() => setPage(num)}
+                aria-current={page === num ? 'page' : undefined}
+                className={`px-2 py-1 text-xs ${
+                  page === num ? 'font-semibold text-blue-600' : 'text-gray-400 hover:text-gray-600'
+                }`}
+              >
+                {num}
+              </button>
+            ))}
+            <button
+              type="button"
+              onClick={() => setPage((prev) => Math.min(totalPages, prev + 1))}
+              disabled={page === totalPages}
+              aria-label={language === 'kr' ? '다음 페이지' : 'Next page'}
+              className="px-2 py-1 text-xs disabled:cursor-not-allowed disabled:opacity-50"
+            >
+              <ChevronRight className="h-4 w-4" />
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

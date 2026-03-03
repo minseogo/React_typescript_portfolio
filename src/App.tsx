@@ -7,15 +7,14 @@ const App: React.FC = () => {
   const [language, setLanguage] = useState<'kr' | 'en'>('kr'); // 언어 상태
 
   return (
-    <div className="app-container">
-      <div className="header-section">
+    <main className="app-container">
+      <div className="header-section" role="region" aria-label="Profile section">
         <Header language={language} setLanguage={setLanguage} />
       </div>
-      <div className="portfolio-section">
+      <div className="portfolio-section" role="region" aria-label="Portfolio section">
         <Portfolio language={language} setLanguage={setLanguage} />
       </div>
-
-    </div>
+    </main>
   );
 };
 
