@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 40" role="img" aria-labelledby="sirTitle">
+  <title id="sirTitle">SIR</title>
+  <rect x="1.5" y="1.5" width="93" height="37" rx="6" fill="#ffffff" stroke="#111111" stroke-width="3"/>
+  <text x="48" y="27" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#111111">SIR</text>
+</svg>

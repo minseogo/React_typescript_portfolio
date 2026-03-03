@@ -1,131 +1,159 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { ReactTyped } from 'react-typed';
 import '../css/main.css';
-import Reactsvg from '../img/React.svg';
-import 'bootstrap-icons/font/bootstrap-icons.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import {
+  SiReact,
+  SiTypescript,
+  SiBootstrap,
+  SiTailwindcss,
+  SiGithub,
+  SiVercel,
+} from 'react-icons/si';
 import data from '../data/data.json';
 import YouTube from 'react-youtube';
+
+type IconComponent = React.ComponentType<{ className?: string; title?: string }>;
+const ReactIcon = SiReact as IconComponent;
+const TypescriptIcon = SiTypescript as IconComponent;
+const BootstrapIcon = SiBootstrap as IconComponent;
+const TailwindIcon = SiTailwindcss as IconComponent;
+const GithubIcon = SiGithub as IconComponent;
+const VercelIcon = SiVercel as IconComponent;
 
 interface HeaderProps {
   language: 'kr' | 'en';
   setLanguage: React.Dispatch<React.SetStateAction<'kr' | 'en'>>;
 }
-const Header: React.FC<HeaderProps> = ({ language,  setLanguage  }) => {
-  const typedStrings = language === 'kr' 
-  ? ['프론트엔드 개발자', '웹 퍼블리셔']
-  : ['Frontend Developer', 'Web Publisher'];
 
-const description = language === 'kr' 
-  ? '영국 어학연수와 MD 업무를 통해 소통 능력과 실무 역량을 키웠으며, | 프론트엔드 개발에 대한 흥미를 넓혔습니다. 사용자 중심의 웹 경험을 제공하며 | 향후 프로젝트 성공에 기여하고 싶습니다.'
-  : 'Through studying in the UK and working as an MD, I developed communication skills and practical abilities. I expanded my interest in frontend development and want to contribute to the success of future projects by providing user-centered web experiences.';
-  const review = language === 'kr' 
-  ? '팀 프로젝트 Ugly Us에 대한 리뷰입니다.'
-  : 'Review of the Team Project "Ugly Us';
+const Header: React.FC<HeaderProps> = ({ language, setLanguage }) => {
+  const typedStrings =
+    language === 'kr'
+      ? ['프론트엔드 개발자', '퍼블리셔']
+      : ['Frontend Developer', 'Publisher'];
+
+  const description =
+    language === 'kr'
+      ? '영국 어학연수와 MD 업무를 통해 소통 능력과 실무 역량을 키웠고, | 프론트엔드 개발에 대한 관심을 확장하며 사용자 중심의 웹 경험을 제공하고자 합니다. | 앞으로도 프로젝트의 성공에 기여하는 개발자가 되겠습니다.'
+      : 'Through studying in the UK and working as an MD, I developed communication skills and practical abilities. I expanded my interest in frontend development and want to contribute to the success of future projects by providing user-centered web experiences.';
+
   return (
-    <div id="header" className="d-flex flex-column mt-sm-4 mt-1 ms-sm-4 ms-2 me-2 me-sm-0">
+    <div id="header" className="ml-2 mr-2 mt-1 flex flex-col sm:ml-4 sm:mr-0 sm:mt-4">
       <div>
-        <div className='dash_f ms-md-4 ms-0 d-sm-inline-block d-flex align-items-baseline justify-content-between'>
+        <div className="dash_f ml-0 flex items-baseline justify-between md:ml-4 sm:inline-block">
           <h1 className="sitename mb-3">{data[language].siteName}</h1>
-          <div className='d-sm-none d-flex lang_btns'>
-            <button className="border-0 bg-white text-black " onClick={() => setLanguage('kr')}>KR</button>
-            <button className="border-0 bg-white text-black me-4 ms-2" onClick={() => setLanguage('en')}>EN</button>
+          <div className="lang_btns flex sm:hidden">
+            <button className="border-0 bg-white text-black" onClick={() => setLanguage('kr')}>
+              KR
+            </button>
+            <button className="ml-2 mr-4 border-0 bg-white text-black" onClick={() => setLanguage('en')}>
+              EN
+            </button>
           </div>
         </div>
-        <div className='d-flex flex-sm-row flex-column'>
-          <div className="profile-img col-sm-6">
-            <img src="/img/me.jpg" alt="" className="img-fluid" />
-            <div className='info mt-3 pe-sm-4 pe-lg-0'>
-              <p className='d-flex flex-column info_font text-sm-start text-center'>
-                {description.split('|').map( item => {
-                  return(
-                    <>
-                     {item}<br></br>
-                    </>
-                  )})}
+
+        <div className="flex flex-col sm:flex-row">
+          <div className="profile-img sm:w-1/2">
+            <img src="/img/me.jpg" alt="" className="h-auto w-full" />
+            <div className="info mt-3 sm:pr-4 lg:pr-0">
+              <p className="info_font flex flex-col text-center sm:text-left">
+                {description.split('|').map((item, index) => (
+                  <React.Fragment key={`${item}-${index}`}>
+                    {item}
+                    <br />
+                  </React.Fragment>
+                ))}
               </p>
             </div>
-            <div className="youtube-player pe-sm-4 d-flex flex-sm-row flex-column align-items-center">
+            <div className="youtube-player flex flex-col items-center sm:flex-row sm:pr-4">
               <YouTube videoId="wmO7MrHiB2A" opts={{ height: '185', width: '100%' }} />
             </div>
           </div>
-          <div className="resume section d-flex flex-column col-sm-5">
-            <div className='hello'>
-              <h3 className='d-flex flex-column'>
-              {data[language].hello}
-                <ReactTyped
-                  strings={typedStrings}
-                  typeSpeed={70}
-                  backSpeed={50}
-                  loop
-                />
-                 {data[language].name}
+
+          <div className="resume section flex flex-col sm:w-5/12">
+            <div className="hello">
+              <h3 className="flex flex-col">
+                {data[language].hello}
+                <ReactTyped strings={typedStrings} typeSpeed={70} backSpeed={50} loop />
+                {data[language].name}
               </h3>
             </div>
-            <div className='personal mb-lg-5 mb-2 mt-2 text-sm-start text-center'>
-              <ul className='list-unstyled'>
+
+            <div className="personal mt-2 mb-2 text-center sm:text-left lg:mb-5">
+              <ul className="m-0 list-none p-0">
                 <li>{data[language].personal.birthdate}</li>
                 <li>{data[language].personal.phone}</li>
                 <li>{data[language].personal.email}</li>
               </ul>
               <button
-                className='info_btns border-1 bg-white text-black'
+                className="info_btns border border-black bg-white px-2 py-1 text-black"
                 onClick={() => window.open('https://github.com/minseogo', '_blank')}
               >
                 {data[language].buttons.github}
               </button>
               <button
-                className='info_btns border-1 bg-white text-black ms-2'
-                onClick={() => window.open('https://www.figma.com/design/chnxRjxPKX40REZtT5p6Sl/%EB%AF%BC%EC%84%9C?node-id=0-1&t=BJScLCAEXnBR6d5a-1', '_blank')}
+                className="info_btns ml-2 border border-black bg-white px-2 py-1 text-black"
+                onClick={() =>
+                  window.open(
+                    'https://www.figma.com/design/chnxRjxPKX40REZtT5p6Sl/%EB%AF%BC%EC%84%9C?node-id=0-1&t=BJScLCAEXnBR6d5a-1',
+                    '_blank'
+                  )
+                }
               >
                 {data[language].buttons.figma}
               </button>
             </div>
-            <div className='skills mt-5 mb-lg-4 mb-0'>
-                <h2 className="text-sm-start text-center mb-3">{data[language].skills.title}</h2>
-                <div className="d-flex flex-column align-items-stretch">
-                    <div className="skills-content">
-                        <div className=' d-flex mt-1 align-items-lg-start flex-column justify-content-evenly align-items-sm-start flex-sm-column align-items-center justify-content-sm-start '>
-                            <div className='logo_gap d-flex align-items-center '>
-                                <div className='text-lg-center text-start '><img className='reactlogo' src={Reactsvg} alt="React svg" /></div>
-                                <div className='text-lg-center text-start '><img className='typelogo' src={`${process.env.PUBLIC_URL}/img/Type.png`} alt="Typescript png" /></div>
-                                <div className='text-lg-center text-start '><img className='bootlogo' src={`${process.env.PUBLIC_URL}/img/Boots.png`} alt="Bootstrap png" /></div>
-                            </div>
-                            <div className='logo_gap d-flex align-items-center mt-3 solu_margin'>
-                                <div className='text-lg-center text-start'><img className='sirlogo' src={`${process.env.PUBLIC_URL}/img/Sir.png`} alt="Sir png" /></div>
-                                <div className='text-lg-center text-start '><img className='cafelogo' src={`${process.env.PUBLIC_URL}/img/Cafe24.png`} alt="Cafe24 png" /></div>
-                            </div>
-                            <div className='logo_gap d-flex align-items-center mt-3 me-1 me-sm-0 git_margin'>
-                                <div className='text-lg-center text-start me-sm-1 me-0 '><img className='gitlogo' src={`${process.env.PUBLIC_URL}/img/Github.png`} alt="Github png" /></div>
-                                <div className='text-lg-center text-start me-1 '><img className='figmalogo' src={`${process.env.PUBLIC_URL}/img/Figma.png`} alt="Figma png" /></div>
-                            </div>
-                            <div className='logo_gap d-flex align-items-center mt-md-3 mt-3 tool_margin'>
-                                <div className='text-lg-center text-start me-1 '><img className='pslogo' src={`${process.env.PUBLIC_URL}/img/Ps.png`} alt="Ps png" /></div>
-                                <div className='text-lg-center text-start'><img className='ailogo' src={`${process.env.PUBLIC_URL}/img/Ai.png`} alt="Ai png" /></div>
-                            </div>   
-                        </div>
+
+            <div className="skills mt-5 mb-0 lg:mb-4">
+              <h2 className="mb-3 text-center sm:text-left">{data[language].skills.title}</h2>
+              <div className="flex flex-col items-stretch">
+                <div className="skills-content">
+                  <div className="mt-1 flex flex-col items-center justify-evenly sm:items-start sm:justify-start lg:items-start">
+                    <div className="logo_gap flex items-center">
+                      <ReactIcon className="text-[2.1rem] text-[#61DAFB]" title="React" />
+                      <TypescriptIcon className="text-[2rem] text-[#3178C6]" title="TypeScript" />
+                      <BootstrapIcon className="text-[2.1rem] text-[#7952B3]" title="Bootstrap" />
+                      <TailwindIcon className="text-[2.1rem] text-[#38BDF8]" title="Tailwind CSS" />
                     </div>
+                    <div className="logo_gap solu_margin mt-3 flex items-center">
+                      <img src={`${process.env.PUBLIC_URL}/img/Sir.png`} alt="SIR png" className="h-7 w-auto" />
+                      <img src={`${process.env.PUBLIC_URL}/img/Cafe24.png`} alt="Cafe24 png" className="h-6 w-auto" />
+                    </div>
+                    <div className="logo_gap git_margin mt-3 mr-1 flex items-center sm:mr-0">
+                      <GithubIcon className="mr-0 text-[2.3rem] text-black sm:mr-1" title="GitHub" />
+                      <img src={`${process.env.PUBLIC_URL}/img/Figma.png`} alt="Figma png" className="mr-1 h-9 w-auto" />
+                      <VercelIcon className="ml-1 text-[2rem] text-black" title="Vercel" />
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
-            <div className='experience mt-lg-5 mt-3'>
-              <div className="d-flex flex-lg-row flex-sm-column flex-column justify-content-sm-start justify-content-between align-items-sm-start align-items-center">
-                <div className='education text-sm-start text-center'>
-                  <h3 className="resume-title text-sm-start text-center">{data[language].education.title}</h3>
+
+            <div className="experience mt-3 lg:mt-5">
+              <div className="flex flex-col items-center justify-between sm:flex-col sm:items-start sm:justify-start lg:flex-row">
+                <div className="education text-center sm:text-left">
+                  <h3 className="resume-title text-center sm:text-left">{data[language].education.title}</h3>
                   {data[language].education.schools.map((school, index) => (
                     <div className="resume-item" key={index}>
                       <h4>{school.name}</h4>
                       <h5>{school.years}</h5>
-                      {school.location && <p className='lo_font'><em>{school.location}</em></p>}
+                      {school.location && (
+                        <p className="lo_font">
+                          <em>{school.location}</em>
+                        </p>
+                      )}
                     </div>
                   ))}
                 </div>
-                <div className="work pt-md-0 ms-lg-5 ms-0 text-sm-start text-center">                                              
+
+                <div className="work pt-0 text-center sm:text-left lg:ml-5">
                   <h3 className="resume-title">{data[language].workExperience.title}</h3>
                   {data[language].workExperience.jobs.map((job, index) => (
                     <div className="resume-item" key={index}>
                       <h4>{job.role}</h4>
-                      <h5 className='pb-2 mb-0'>{job.years}</h5>
-                      <p className='lo_font'><em>{job.company}</em></p>
+                      <h5 className="mb-0 pb-2">{job.years}</h5>
+                      <p className="lo_font">
+                        <em>{job.company}</em>
+                      </p>
                     </div>
                   ))}
                 </div>
@@ -136,6 +164,6 @@ const description = language === 'kr'
       </div>
     </div>
   );
-}
+};
 
 export default Header;
