@@ -37,13 +37,13 @@ const Header: React.FC<HeaderProps> = ({ language, setLanguage }) => {
 
   const typedStrings =
     language === 'kr'
-      ? ['프론트엔드 개발자', '퍼블리셔']
-      : ['Frontend Developer', 'Publisher'];
+      ? ['프론트엔드 개발자']
+      : ['Frontend Developer'];
 
   const description =
     language === 'kr'
-      ? '영국 어학연수를 통해 소통 역량과 유연한 사고를 기르고, | 프론트엔드 개발 경험을 통해 문제 해결력과 구현 역량을 강화했습니다. | 사용자 관점에서 고민하며 완성도 높은 결과물을 만들어내는 개발자로 성장하고 있으며, 프로젝트의 성과에 실질적으로 기여하는 프론트엔드 개발자가 되겠습니다.'
-      : 'Through language study in the UK, I developed communication skills and adaptable thinking, and through front-end development experience I strengthened my problem-solving and implementation capabilities. | I am growing into a developer who thinks from the user’s perspective and delivers high-quality outcomes, and I aim to be a front-end developer who contributes tangibly to project performance.';
+      ? '영국 어학연수를 통해 소통 능력과 유연한 사고를 기르고, 프론트엔드 개발 경험을 통해 문제 해결력과 구현 역량을 강화했습니다. | 사용자 관점에서 고민하고 완성도 높은 결과물을 만들어내는 개발자로 성장하고 있으며, 프로젝트 성과에 실질적으로 기여하는 프론트엔드 개발자가 되고자 합니다.'
+      : "Through language study in the UK, I developed communication skills and adaptable thinking, and through front-end development experience I strengthened my problem-solving and implementation capabilities. | I am growing into a developer who thinks from the user's perspective and delivers high-quality outcomes, and I aim to be a front-end developer who contributes tangibly to project performance.";
 
   return (
     <header id="header" className="ml-2 mr-2 mt-1 flex flex-col sm:ml-4 sm:mr-0 sm:mt-4">
@@ -211,3 +211,5 @@ const Header: React.FC<HeaderProps> = ({ language, setLanguage }) => {
 };
 
 export default Header;
+
+
