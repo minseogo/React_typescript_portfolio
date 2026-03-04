@@ -5,6 +5,8 @@ import {
   SiTypescript,
   SiBootstrap,
   SiVercel,
+  SiMysql,
+  SiTailwindcss,
 } from 'react-icons/si';
 import '../css/main.css';
 import data from '../data/data.json';
@@ -14,6 +16,8 @@ const ReactIcon = SiReact as IconComponent;
 const TypescriptIcon = SiTypescript as IconComponent;
 const BootstrapIcon = SiBootstrap as IconComponent;
 const VercelIcon = SiVercel as IconComponent;
+const MysqlIcon = SiMysql as IconComponent;
+const TailwindIcon = SiTailwindcss as IconComponent;
 
 interface PortfolioProps {
   language: 'kr' | 'en';
@@ -29,13 +33,29 @@ const ITEMS_PER_PAGE = 4;
 const renderStackIcon = (icon: string, index: number) => {
   switch (icon) {
     case 'React.png':
-      return <ReactIcon key={index} className="text-[1.25rem] text-[#61DAFB]" title="React" />;
+      return <ReactIcon key={index} className="text-xl text-[#61DAFB]" title="React" />;
     case 'Type.png':
-      return <TypescriptIcon key={index} className="text-[1.2rem] text-[#3178C6]" title="TypeScript" />;
+      return <TypescriptIcon key={index} className="text-xl text-[#3178C6]" title="TypeScript" />;
     case 'Boots.png':
-      return <BootstrapIcon key={index} className="text-[1.2rem] text-[#7952B3]" title="Bootstrap" />;
+      return <BootstrapIcon key={index} className="text-xl text-[#7952B3]" title="Bootstrap" />;
+    case 'Mysql.png':
+      return <MysqlIcon key={index} className="text-2xl text-[#4479A1]" title="MySQL" />;
+    case 'Tailwind.png':
+      return <TailwindIcon key={index} className="text-xl text-[#06B6D4]" title="Tailwind CSS" />;
     case 'Hard.png':
-      return <VercelIcon key={index} className="text-[1.1rem] text-black" title="Vercel" />;
+      return <VercelIcon key={index} className="text-sm text-black" title="Vercel" />;
+    case 'AiApi.png':
+      return (
+        <span key={index} className="text-sm font-semibold leading-none" title="AI API">
+          AI API
+        </span>
+      );
+    case 'RestApi.png':
+      return (
+        <span key={index} className="text-[11px] font-semibold leading-none text-[#0f172a]" title="REST API">
+          REST API
+        </span>
+      );
     case 'Sir.png':
       return <img key={index} src={`${process.env.PUBLIC_URL}/img/Sir.png`} alt="SIR png" className="h-5 w-auto" />;
     case 'Cafe24.png':
@@ -62,7 +82,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ language, setLanguage }) => {
     <section id="portfolio" className="portfolio section light-background mt-4">
       <div className="ml-4 flex items-center justify-between">
         <div className="dash">
-          <h1>{data[language].portfolio.title}</h1>
+          <h1 className="text-3xl font-medium leading-none md:text-4xl">{data[language].portfolio.title}</h1>
         </div>
         <div className="lang_btns hidden sm:flex">
           <button
@@ -133,33 +153,47 @@ const Portfolio: React.FC<PortfolioProps> = ({ language, setLanguage }) => {
         </nav>
 
         <div className="portfolio-container ml-2 mr-2 grid grid-cols-1 gap-x-4 md:ml-6 sm:grid-cols-2">
-          {paginatedItems.map((item) => (
-            <div key={item.id} className="portfolio-item">
-              <div className="portfolio-content mb-2">
-                <img src={`/img/${item.image}`} className="h-auto w-full" alt={item.title} />
-              </div>
-              <div className="portfolio-info mb-3">
-                <div className="flex flex-row items-center justify-between">
-                  <h4 className="title_nowrap mb-2 flex items-center">
-                    {item.title}
-                    <div className="pt_gap ml-2 flex items-center">
-                      {item.icon.split('|').map((icon, i) => icon && renderStackIcon(icon, i))}
-                    </div>
-                  </h4>
-                  <a
-                    href={item.link}
-                    className="details-link text-black"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`Open ${item.title}`}
-                  >
-                    <Link2 className="h-5 w-5" strokeWidth={2} />
-                  </a>
+          {paginatedItems.map((item) => {
+            const isLinkDisabled = !item.link || item.link === '#';
+
+            return (
+              <div key={item.id} className="portfolio-item">
+                <div className="portfolio-content mb-2">
+                  <img src={`/img/${item.image}`} className="h-auto w-full" alt={item.title} />
                 </div>
-                <p className="des_font">{item.description}</p>
+                <div className="portfolio-info mb-3">
+                  <div className="flex flex-row items-center justify-between">
+                    <h4 className="title_nowrap mb-2 flex items-center">
+                      {item.title}
+                      <div className="pt_gap ml-2 flex items-center">
+                        {item.icon.split('|').map((icon, i) => icon && renderStackIcon(icon, i))}
+                      </div>
+                    </h4>
+                    {isLinkDisabled ? (
+                      <span
+                        className="details-link cursor-not-allowed text-gray-400"
+                        aria-label={`${item.title} link is not available yet`}
+                        aria-disabled="true"
+                      >
+                        <Link2 className="h-5 w-5" strokeWidth={2} />
+                      </span>
+                    ) : (
+                      <a
+                        href={item.link}
+                        className="details-link text-black"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Open ${item.title}`}
+                      >
+                        <Link2 className="h-5 w-5" strokeWidth={2} />
+                      </a>
+                    )}
+                  </div>
+                  <p className="des_font">{item.description}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
         {filteredItems.length > ITEMS_PER_PAGE && (
           <div className="mt-2 flex items-center justify-center gap-2">

@@ -30,6 +30,11 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ language, setLanguage }) => {
+  const notionLinks: Record<'kr' | 'en', string> = {
+    kr: 'https://boggy-forgery-956.notion.site/1014eece51c480a4a96cd75198f2e8c2?source=copy_link',
+    en: 'https://boggy-forgery-956.notion.site/Minseo-Go-Portfolio-3194eece51c48072bbf6e33a19e4dd72?source=copy_link',
+  };
+
   const typedStrings =
     language === 'kr'
       ? ['프론트엔드 개발자', '퍼블리셔']
@@ -37,14 +42,14 @@ const Header: React.FC<HeaderProps> = ({ language, setLanguage }) => {
 
   const description =
     language === 'kr'
-      ? '영국 어학연수와 MD 업무를 통해 소통 능력과 실무 역량을 키웠고, | 프론트엔드 개발에 대한 관심을 확장하며 사용자 중심의 웹 경험을 제공하고자 합니다. | 앞으로도 프로젝트의 성공에 기여하는 개발자가 되겠습니다.'
-      : 'Through studying in the UK and working as an MD, I developed communication skills and practical abilities. I expanded my interest in frontend development and want to contribute to the success of future projects by providing user-centered web experiences.';
+      ? '영국 어학연수를 통해 소통 역량과 유연한 사고를 기르고, | 프론트엔드 개발 경험을 통해 문제 해결력과 구현 역량을 강화했습니다. | 사용자 관점에서 고민하며 완성도 높은 결과물을 만들어내는 개발자로 성장하고 있으며, 프로젝트의 성과에 실질적으로 기여하는 프론트엔드 개발자가 되겠습니다.'
+      : 'Through language study in the UK, I developed communication skills and adaptable thinking, and through front-end development experience I strengthened my problem-solving and implementation capabilities. | I am growing into a developer who thinks from the user’s perspective and delivers high-quality outcomes, and I aim to be a front-end developer who contributes tangibly to project performance.';
 
   return (
     <header id="header" className="ml-2 mr-2 mt-1 flex flex-col sm:ml-4 sm:mr-0 sm:mt-4">
       <div>
         <div className="dash_f ml-0 flex items-baseline justify-between md:ml-4 sm:inline-block">
-          <h1 className="sitename mb-3">{data[language].siteName}</h1>
+          <h1 className="sitename mb-3 text-3xl font-medium leading-none md:text-4xl">{data[language].siteName}</h1>
           <div className="lang_btns flex sm:hidden">
             <button
               className="border-0 bg-white text-black"
@@ -99,9 +104,8 @@ const Header: React.FC<HeaderProps> = ({ language, setLanguage }) => {
             </div>
 
             <div className="personal mt-2 mb-2 text-center sm:text-left lg:mb-5">
-              <ul className="m-0 list-none p-0">
+              <ul className="mb-2 list-none p-0">
                 <li>{data[language].personal.birthdate}</li>
-                <li>{data[language].personal.phone}</li>
                 <li>{data[language].personal.email}</li>
               </ul>
               <button
@@ -129,12 +133,7 @@ const Header: React.FC<HeaderProps> = ({ language, setLanguage }) => {
               */}
               <button
                 className="info_btns ml-2 border border-black bg-white px-2 py-1 text-black"
-                onClick={() =>
-                  window.open(
-                    'https://boggy-forgery-956.notion.site/1014eece51c480a4a96cd75198f2e8c2',
-                    '_blank'
-                  )
-                }
+                onClick={() => window.open(notionLinks[language], '_blank')}
                 type="button"
                 aria-label="Open Notion page in a new tab"
               >
