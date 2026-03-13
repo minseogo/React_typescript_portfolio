@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Portfolio from './components/Portfolio';
 
 const App: React.FC = () => {
-  const [language, setLanguage] = useState<'kr' | 'en'>('kr'); // 언어 상태
+  const [language, setLanguage] = useState<'kr' | 'en'>('en');
 
   return (
     <main className="app-container">

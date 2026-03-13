@@ -119,6 +119,16 @@ const Portfolio: React.FC<PortfolioProps> = ({ language, setLanguage }) => {
                 {language === 'kr' ? '모두' : 'All'}
               </button>
             </li>
+            <li className={filter === PROFESSIONAL_FILTER ? 'filter-active' : ''}>
+              <button
+                type="button"
+                onClick={() => handleFilterChange(PROFESSIONAL_FILTER)}
+                aria-pressed={filter === PROFESSIONAL_FILTER}
+                className="border-0 bg-transparent p-0"
+              >
+                {language === 'kr' ? PROFESSIONAL_FILTER : 'Professional Projects'}
+              </button>
+            </li>
             <li className={filter === PERSONAL_FILTER ? 'filter-active' : ''}>
               <button
                 type="button"
@@ -137,16 +147,6 @@ const Portfolio: React.FC<PortfolioProps> = ({ language, setLanguage }) => {
                 className="border-0 bg-transparent p-0"
               >
                 {language === 'kr' ? TEAM_FILTER : 'Team Projects'}
-              </button>
-            </li>
-            <li className={filter === PROFESSIONAL_FILTER ? 'filter-active' : ''}>
-              <button
-                type="button"
-                onClick={() => handleFilterChange(PROFESSIONAL_FILTER)}
-                aria-pressed={filter === PROFESSIONAL_FILTER}
-                className="border-0 bg-transparent p-0"
-              >
-                {language === 'kr' ? PROFESSIONAL_FILTER : 'Professional Projects'}
               </button>
             </li>
           </ul>

@@ -1,418 +1,400 @@
 ﻿{
-  "kr": {
-    "siteName": "Profile",
-    "hello": "안녕하세요.",
-    "name": "고민서입니다.",
-    "personal": {
-      "birthdate": "1994. 11. 12",
-      "email": "gominseo1112@gmail.com"
-    },
-    "buttons": {
-      "github": "Git Hub",
-      "figma": "Figma"
-    },
-    "skills": {
-      "title": "What I Do"
-    },
-    "education": {
-      "title": "Education",
-      "schools": [
-        {
-          "name": "퍼블리셔(UI/UX)&프론트엔드개발",
-          "years": "2024.03 ~ 2024.09"
-        },
-        {
-          "name": "IH LONDON",
-          "years": "2020.09 ~ 2020.11 / 2019.04 ~ 2019.07",
-          "location": "영국, 런던"
-        },
-        {
-          "name": "수원과학대학교 / 공연연기과",
-          "years": "2014.03 ~ 2018.03"
-        },
-        {
-          "name": "목동고등학교",
-          "years": "2010.03 ~ 2013.03"
-        }
-      ]
-    },
-    "workExperience": {
-      "title": "Work Experience",
-      "jobs": [
-        {
-          "role": "프론트개발자",
-          "years": "2024.10 ~ 2026.03",
-          "company": "아이웹 / 대한민국, 서울"
-        },
-        {
-          "role": "온라인 MD",
-          "years": "2023.10 ~ 2024.01",
-          "company": "웹뜰 / 대한민국, 서울"
-        },
-        {
-          "role": "온라인 마케팅, 바리스타",
-          "years": "2022.10 ~ 2023.05",
-          "company": "Cocomelt / 영국, 런던"
-        },
-        {
-          "role": "온라인MD 인턴",
-          "years": "2021.12 ~ 2022.03",
-          "company": "Globalon / 영국, 런던"
-        },
-        {
-          "role": "온라인MD",
-          "years": "2021.03 ~ 2021.09",
-          "company": "세븐제이스 / 대한민국, 경기도"
-        }
-      ]
-    },
-    "portfolio": {
-      "title": "Project",
-      "items": [
-        {
-          "id": 1,
-          "filter": "개인 프로젝트",
-          "image": "ck.png",
-          "icon": "Boots.png|Sir.png",
-          "title": "CK 그누보드",
-          "description": "브랜드의 고급스러움과 미니멀리즘을 강조하며, 새로운 사용자 경험을 제공하기 위해 리뉴얼하고 그누보드를 기반으로 제작한 웹사이트입니다.",
-          "link": "http://gominseo.dothome.co.kr/ck/"
-        },
-        {
-          "id": 2,
-          "filter": "개인 프로젝트",
-          "image": "ck.png",
-          "icon": "Boots.png|Cafe24.png",
-          "title": "CK 카페24",
-          "description": "브랜드의 고급스러움과 미니멀리즘을 강조하며, 새로운 사용자 경험을 제공하기 위해 리뉴얼하고 카페24를 기반으로 제작한 웹사이트입니다.",
-          "link": "https://minseogo.cafe24.com/"
-        },
-        {
-          "id": 3,
-          "filter": "개인 프로젝트",
-          "image": "ck.png",
-          "icon": "Boots.png|Hard.png",
-          "title": "CK",
-          "description": "브랜드의 고급스러움과 미니멀리즘을 강조하며, 새로운 사용자 경험을 제공하기 위해 리뉴얼하고 vercel 서버를 사용하여 제작한 웹사이트입니다.",
-          "link": "https://gominseo-calvinklein.vercel.app/"
-        },
-        {
-          "id": 4,
-          "filter": "개인 프로젝트",
-          "image": "pr.png",
-          "icon": "React.png|Type.png|Boots.png",
-          "title": "PR",
-          "description": "저를 브랜딩하기 위해 타입스크립트 기반의 리액트 환경에서 제작한 자기소개서입니다. 직관적인 디자인과 반응형으로 설계된 페이지로, 저의 기술 역량과 창의성을 담았습니다.",
-          "link": "https://gominseo-pr.vercel.app/"
-        },
-        {
-          "id": 5,
-          "filter": "팀 프로젝트",
-          "image": "veg.png",
-          "icon": "Boots.png|React.png",
-          "title": "Ugly Us",
-          "description": "리뷰, 스토어 컴포넌트를 개발 및 리뉴얼하여 사용자 맞춤형 경험과 리뷰 서비스를 제공하는 이커머스 웹사이트입니다.",
-          "link": "https://team-project-reactuglyus.vercel.app/"
-        },
-        {
-          "id": 6,
-          "filter": "팀 프로젝트",
-          "image": "eclat.png",
-          "icon": "",
-          "title": "Eclat",
-          "description": "브랜드 아이덴티티를 강화하고 사용자 친화적인 인터페이스를 제공하며, 시즌 추천, 이벤트, 리뷰 컴포넌트와 브랜드 스토리 페이지를 제작한 플랫폼형 웹사이트입니다.",
-          "link": "https://i-web.kr/green05/"
-        },
-        {
-          "id": 14,
-          "filter": "실무 프로젝트",
-          "image": "groupware.png",
-          "icon": "React.png|Tailwind.png|RestApi.png",
-          "title": "Groupware",
-          "description": "실무 프로젝트로 진행한 그룹웨어 서비스에서 React·Tailwind CSS 기반 프론트엔드 구현부터 REST API 연동까지 주도했습니다. 마이페이지, 업무일지, 휴가·품의 결재, 게시판, 출퇴근, 권한 관리 등 핵심 기능을 설계·구현하며 실제 운영 흐름에 맞춘 사용자 경험을 구축했습니다.",
-          "link": "#"
-        },
-        {
-          "id": 13,
-          "filter": "실무 프로젝트",
-          "image": "exhealth.png",
-          "icon": "React.png|Tailwind.png|RestApi.png",
-          "title": "ExHealthCare",
-          "description": "실무 프로젝트로 진행한 헬스케어 서비스 페이지이며, React와 Tailwind CSS 기반 UI를 구현하고 REST API 연동을 통해 데이터 조회/표시 흐름을 구성했습니다.",
-          "link": "#"
-        },
-        {
-          "id": 15,
-          "filter": "실무 프로젝트",
-          "image": "ai-tk.png",
-          "icon": "React.png|Tailwind.png|RestApi.png",
-          "title": "AI-TK",
-          "description": "실무 프로젝트로 진행한 AI 연동 서비스에서 API로 전달받은 AI 결과값을 프론트엔드에 구조화해 시각화하는 기능을 구현했습니다. React·Tailwind CSS 기반 UI와 REST API 연동 흐름을 설계해 결과를 명확하고 빠르게 전달하도록 구성했습니다.",
-          "link": "#"
-        },
-        {
-          "id": 7,
-          "filter": "실무 프로젝트",
-          "image": "markpick.png",
-          "icon": "Boots.png|React.png",
-          "title": "Markpick",
-          "description": "회사 실무 프로젝트로 진행한 웹사이트로, React와 Bootstrap 기반의 UI 구현 및 퍼블리싱 작업에 참여했습니다.",
-          "link": "https://www.markpick.co.kr/"
-        },
-        {
-          "id": 12,
-          "filter": "실무 프로젝트",
-          "image": "honey.png",
-          "icon": "Boots.png|AiApi.png",
-          "title": "Honey",
-          "description": "Gemini API 기반 AI API 챗봇 실무 프로젝트로, 프론트 UI와 PHP 백엔드를 End-to-End로 개발했습니다. 실시간 날짜 기반 응답, 키워드 기반 대화 메모리, 프롬프트 설계·튜닝, 응답 플로우 구현 및 운영 교육을 담당했습니다.",
-          "link": "https://www.xn--3v0bj0a12bq1ad54e.kr/"
-        },
-        {
-          "id": 8,
-          "filter": "실무 프로젝트",
-          "image": "icemecatech.png",
-          "icon": "Boots.png|Mysql.png",
-          "title": "Icemecatech",
-          "description": "PHP·HTML 기반의 사내 프로젝트에서 퍼블리싱과 프론트엔드 개발을 담당했으며, 폼/게시판 UI 설계·구현부터 DB 처리 로직 및 백엔드 연동까지 주도했습니다.",
-          "link": "https://icemeca.com/"
-        },
-        {
-          "id": 11,
-          "filter": "실무 프로젝트",
-          "image": "mediaart.png",
-          "icon": "Boots.png|Mysql.png",
-          "title": "Media Art Nation",
-          "description": "PHP·HTML 기반의 사내 프로젝트에서 퍼블리싱과 프론트엔드 개발을 담당했으며, 폼/게시판 UI 설계·구현부터 DB 처리 로직 및 백엔드 연동까지 주도했습니다.",
-          "link": "http://www.mediaartnation.com/"
-        },
-        {
-          "id": 9,
-          "filter": "실무 프로젝트",
-          "image": "arena.png",
-          "icon": "Boots.png|Mysql.png",
-          "title": "Arena",
-          "description": "PHP·HTML 기반의 사내 프로젝트에서 퍼블리싱과 프론트엔드 개발을 담당했으며, 폼/게시판 UI 설계·구현부터 DB 처리 로직 및 백엔드 연동까지 주도했습니다.",
-          "link": "https://www.arenaparkgolf.com/"
-        },
-        {
-          "id": 10,
-          "filter": "실무 프로젝트",
-          "image": "ysch.png",
-          "icon": "Boots.png|Mysql.png",
-          "title": "YSCH",
-          "description": "PHP·HTML 기반의 사내 프로젝트에서 퍼블리싱과 프론트엔드 개발을 담당했으며, 폼/게시판 UI 설계·구현부터 DB 처리 로직 및 백엔드 연동까지 주도했습니다.",
-          "link": "https://ysch.cleanweb.kr/"
-        }
-      ]
-    }
-  },
-  "en": {
-    "siteName": "Profile",
-    "hello": "Hello,",
-    "name": "Minseo Go.",
-    "personal": {
-      "birthdate": "1994. 11. 12",
-      "email": "gominseo1112@gmail.com"
-    },
-    "buttons": {
-      "github": "Git Hub",
-      "figma": "Figma"
-    },
-    "skills": {
-      "title": "What I Do"
-    },
-    "education": {
-      "title": "Education",
-      "schools": [
-        {
-          "name": "Web Publisher(UI/UX)&Frontend Developer",
-          "years": "2024.03 ~ 2024.09"
-        },
-        {
-          "name": "IH LONDON",
-          "years": "2020.09 ~ 2020.11 / 2019.04 ~ 2019.07",
-          "location": "London, UK"
-        },
-        {
-          "name": "Suwon Science College / Theater & Performance",
-          "years": "2014.03 ~ 2018.03"
-        },
-        {
-          "name": "Mokdong High School",
-          "years": "2010.03 ~ 2013.03"
-        }
-      ]
-    },
-    "workExperience": {
-      "title": "Work Experience",
-      "jobs": [
-        {
-          "role": "Frontend Developer",
-          "years": "2024.10 ~ 2026.03",
-          "company": "IWEB / Seoul, South Korea"
-        },
-        {
-          "role": "Online MD",
-          "years": "2023.10 ~ 2024.01",
-          "company": "Webdeul / Seoul, South Korea"
-        },
-        {
-          "role": "Online Marketing, Barista",
-          "years": "2022.10 ~ 2023.05",
-          "company": "Cocomelt / London, UK"
-        },
-        {
-          "role": "Online MD Intern",
-          "years": "2021.12 ~ 2022.03",
-          "company": "Globalon / London, UK"
-        },
-        {
-          "role": "Online MD",
-          "years": "2021.03 ~ 2021.09",
-          "company": "SevenJays / Gyeonggi, South Korea"
-        }
-      ]
-    },
-    "portfolio": {
-      "title": "Project",
-      "items": [
-        {
-          "id": 1,
-          "filter": "개인 프로젝트",
-          "image": "ck.png",
-          "icon": "Boots.png|Sir.png",
-          "title": "CK Gnuboard",
-          "description": "A renewed website based on Gnuboard that emphasizes the brand’s luxury and minimalism, offering a new user experience.",
-          "link": "http://gominseo.dothome.co.kr/ck/"
-        },
-        {
-          "id": 2,
-          "filter": "개인 프로젝트",
-          "image": "ck.png",
-          "icon": "Boots.png|Cafe24.png",
-          "title": "CK Cafe24",
-          "description": "A renewed website based on Cafe24, emphasizing the brand’s luxury and minimalism, offering a new user experience.",
-          "link": "https://minseogo.cafe24.com/"
-        },
-        {
-          "id": 3,
-          "filter": "개인 프로젝트",
-          "image": "ck.png",
-          "icon": "Boots.png|Hard.png",
-          "title": "CK",
-          "description": "A renewed website emphasizing the brand’s luxury and minimalism, hosted on the Vercel server.",
-          "link": "https://gominseo-calvinklein.vercel.app/"
-        },
-        {
-          "id": 4,
-          "filter": "개인 프로젝트",
-          "image": "pr.png",
-          "icon": "React.png|Type.png|Boots.png",
-          "title": "PR",
-          "description": "A personal introduction website, built in a React environment using TypeScript, showcasing intuitive design and responsive layout.",
-          "link": "https://gominseo-pr.vercel.app/"
-        },
-        {
-          "id": 5,
-          "filter": "팀 프로젝트",
-          "image": "veg.png",
-          "icon": "Boots.png|React.png",
-          "title": "Ugly Us",
-          "description": "An e-commerce website providing tailored experiences and review services, where I contributed by developing and renewing the review and store components.",
-          "link": "https://team-project-reactuglyus.vercel.app/"
-        },
-        {
-          "id": 6,
-          "filter": "팀 프로젝트",
-          "image": "eclat.png",
-          "icon": "",
-          "title": "Eclat",
-          "description": "A platform website built to enhance brand identity, providing user-friendly interfaces with seasonal recommendations, event components, review sections, and a brand story page.",
-          "link": "https://i-web.kr/green05/"
-        },
-        {
-          "id": 14,
-          "filter": "실무 프로젝트",
-          "image": "groupware.png",
-          "icon": "React.png|Tailwind.png|RestApi.png",
-          "title": "Groupware",
-          "description": "A production groupware project where I led front-end implementation with React and Tailwind CSS, from REST API integration to complete UI delivery. I designed and built core features including My Page, work logs, leave requests, purchase approval workflows, bulletin boards, attendance tracking, and user authorisation management, aligning the experience with real operational workflows.",
-          "link": "#"
-        },
-        {
-          "id": 13,
-          "filter": "실무 프로젝트",
-          "image": "exhealth.png",
-          "icon": "React.png|Tailwind.png|RestApi.png",
-          "title": "ExHealthCare",
-          "description": "A professional healthcare service project built with React and Tailwind CSS, with REST API integration for data fetching and rendering flows.",
-          "link": "#"
-        },
-        {
-          "id": 15,
-          "filter": "실무 프로젝트",
-          "image": "ai-tk.png",
-          "icon": "React.png|Tailwind.png|RestApi.png",
-          "title": "AI-TK",
-          "description": "A production AI integration project where I implemented front-end features to present AI output returned via API calls. Using React and Tailwind CSS, I designed the REST API data flow and UI rendering structure to deliver results clearly and quickly to users.",
-          "link": "#"
-        },
-        {
-          "id": 7,
-          "filter": "실무 프로젝트",
-          "image": "markpick.png",
-          "icon": "Boots.png|React.png",
-          "title": "Markpick",
-          "description": "A professional project completed in a company setting, where I contributed to UI implementation and publishing using React and Bootstrap.",
-          "link": "https://www.markpick.co.kr/"
-        },
-        {
-          "id": 12,
-          "filter": "실무 프로젝트",
-          "image": "honey.png",
-          "icon": "Boots.png|AiApi.png",
-          "title": "Honey",
-          "description": "A production project implementing an AI API chatbot with the Gemini API, where I built both the frontend UI and PHP backend logic end-to-end. I delivered real-time date-aware responses, keyword-based conversation memory logic, prompt design/tuning, response output flow implementation, and operational handoff training.",
-          "link": "https://www.xn--3v0bj0a12bq1ad54e.kr/"
-        },
-        {
-          "id": 8,
-          "filter": "실무 프로젝트",
-          "image": "icemecatech.png",
-          "icon": "Boots.png|Mysql.png",
-          "title": "Icemecatech",
-          "description": "In this in-house project built with PHP and HTML, I led publishing and frontend development, covering form/board UI design and implementation, DB handling logic, and backend integration.",
-          "link": "https://icemeca.com/"
-        },
-        {
-          "id": 11,
-          "filter": "실무 프로젝트",
-          "image": "mediaart.png",
-          "icon": "Boots.png|Mysql.png",
-          "title": "Media Art Nation",
-          "description": "In this in-house project built with PHP and HTML, I led publishing and frontend development, covering form/board UI design and implementation, DB handling logic, and backend integration.",
-          "link": "http://www.mediaartnation.com/"
-        },
-        {
-          "id": 9,
-          "filter": "실무 프로젝트",
-          "image": "arena.png",
-          "icon": "Boots.png|Mysql.png",
-          "title": "Arena",
-          "description": "In this in-house project built with PHP and HTML, I led publishing and frontend development, covering form/board UI design and implementation, DB handling logic, and backend integration.",
-          "link": "https://www.arenaparkgolf.com/"
-        },
-        {
-          "id": 10,
-          "filter": "실무 프로젝트",
-          "image": "ysch.png",
-          "icon": "Boots.png|Mysql.png",
-          "title": "YSCH",
-          "description": "In this in-house project built with PHP and HTML, I led publishing and frontend development, covering form/board UI design and implementation, DB handling logic, and backend integration.",
-          "link": "https://ysch.cleanweb.kr/"
-        }
-      ]
-    }
-  }
+    "kr":  {
+               "siteName":  "Profile",
+               "hello":  "안녕하세요.",
+               "name":  "고민서입니다.",
+               "personal":  {
+                                "birthdate":  "",
+                                "email":  "gominseo1112@gmail.com"
+                            },
+               "buttons":  {
+                               "github":  "Git Hub",
+                               "figma":  "Figma"
+                           },
+               "skills":  {
+                              "title":  "What I Do"
+                          },
+               "education":  {
+                                 "title":  "Education",
+                                 "schools":  [
+                                                 {
+                                                     "name":  "퍼블리셔(UI/UX)\u0026프론트엔드개발",
+                                                     "years":  "2024.03 ~ 2024.09"
+                                                 },
+                                                 {
+                                                     "name":  "IH LONDON",
+                                                     "years":  "2020.09 ~ 2020.11 / 2019.04 ~ 2019.07",
+                                                     "location":  "영국, 런던"
+                                                 },
+                                                 {
+                                                     "name":  "수원과학대학교 / 공연연기과",
+                                                     "years":  "2014.03 ~ 2018.03"
+                                                 },
+                                                 {
+                                                     "name":  "목동고등학교",
+                                                     "years":  "2010.03 ~ 2013.03"
+                                                 }
+                                             ]
+                             },
+               "workExperience":  {
+                                      "title":  "Work Experience",
+                                      "jobs":  [
+                                                   {
+                                                       "role":  "프론트개발자",
+                                                       "years":  "2024.10 ~ 2026.03",
+                                                       "company":  "아이웹 / 대한민국, 서울"
+                                                   },
+                                                   {
+                                                       "role":  "온라인 MD",
+                                                       "years":  "2023.10 ~ 2024.01",
+                                                       "company":  "웹뜰 / 대한민국, 서울"
+                                                   },
+                                                   {
+                                                       "role":  "온라인 마케팅, 바리스타",
+                                                       "years":  "2022.10 ~ 2023.05",
+                                                       "company":  "Cocomelt / 영국, 런던"
+                                                   },
+                                                   {
+                                                       "role":  "온라인MD 인턴",
+                                                       "years":  "2021.12 ~ 2022.03",
+                                                       "company":  "Globalon / 영국, 런던"
+                                                   },
+                                                   {
+                                                       "role":  "온라인MD",
+                                                       "years":  "2021.03 ~ 2021.09",
+                                                       "company":  "세븐제이스 / 대한민국, 경기도"
+                                                   }
+                                               ]
+                                  },
+               "portfolio":  {
+                                 "title":  "Project",
+                                 "items":  [
+                                               {
+                                                   "id":  14,
+                                                   "filter":  "실무 프로젝트",
+                                                   "image":  "groupware.png",
+                                                   "icon":  "React.png|Tailwind.png|RestApi.png",
+                                                   "title":  "Groupware",
+                                                   "description":  "실무 프로젝트로 진행한 그룹웨어 서비스에서 React·Tailwind CSS 기반 프론트엔드 구현부터 REST API 연동까지 주도했습니다. 마이페이지, 업무일지, 휴가·품의 결재, 게시판, 출퇴근, 권한 관리 등 핵심 기능을 설계·구현하며 실제 운영 흐름에 맞춘 사용자 경험을 구축했습니다.",
+                                                   "link":  "#"
+                                                },
+                                                {
+                                                   "id":  13,
+                                                   "filter":  "실무 프로젝트",
+                                                   "image":  "exhealth.png",
+                                                   "icon":  "React.png|Tailwind.png|RestApi.png",
+                                                   "title":  "ExHealthCare",
+                                                   "description":  "실무 프로젝트로 진행한 헬스케어 서비스 페이지이며, React와 Tailwind CSS 기반 UI를 구현하고 REST API 연동을 통해 데이터 조회/표시 흐름을 구성했습니다.",
+                                                   "link":  "#"
+                                               },
+                                               {
+                                                   "id":  15,
+                                                   "filter":  "실무 프로젝트",
+                                                   "image":  "ai-tk.png",
+                                                   "icon":  "React.png|Tailwind.png|RestApi.png",
+                                                   "title":  "AI-TK",
+                                                   "description":  "실무 프로젝트로 진행한 AI 연동 서비스에서 API로 전달받은 AI 결과값을 프론트엔드에 구조화해 시각화하는 기능을 구현했습니다. React·Tailwind CSS 기반 UI와 REST API 연동 흐름을 설계해 결과를 명확하고 빠르게 전달하도록 구성했습니다.",
+                                                   "link":  "#"
+                                               },
+                                               {
+                                                   "id":  12,
+                                                   "filter":  "실무 프로젝트",
+                                                   "image":  "honey.png",
+                                                   "icon":  "Boots.png|AiApi.png",
+                                                   "title":  "Honey",
+                                                   "description":  "Gemini API 기반 AI API 챗봇 실무 프로젝트로, 프론트 UI와 PHP 백엔드를 End-to-End로 개발했습니다. 실시간 날짜 기반 응답, 키워드 기반 대화 메모리, 프롬프트 설계·튜닝, 응답 플로우 구현 및 운영 교육을 담당했습니다.",
+                                                   "link":  "https://www.xn--3v0bj0a12bq1ad54e.kr/"
+                                               },
+                                               {
+                                                   "id":  7,
+                                                   "filter":  "실무 프로젝트",
+                                                   "image":  "markpick.png",
+                                                   "icon":  "Boots.png|React.png",
+                                                   "title":  "Markpick",
+                                                   "description":  "회사 실무 프로젝트로 진행한 웹사이트로, React와 Bootstrap 기반의 UI 구현 및 퍼블리싱 작업에 참여했습니다.",
+                                                   "link":  "https://www.markpick.co.kr/"
+                                               },
+                                               {
+                                                   "id":  8,
+                                                   "filter":  "실무 프로젝트",
+                                                   "image":  "icemecatech.png",
+                                                   "icon":  "Boots.png|Mysql.png",
+                                                   "title":  "Icemecatech",
+                                                   "description":  "PHP·HTML 기반의 사내 프로젝트에서 퍼블리싱과 프론트엔드 개발을 담당했으며, 폼/게시판 UI 설계·구현부터 DB 처리 로직 및 백엔드 연동까지 주도했습니다.",
+                                                   "link":  "https://icemeca.com/"
+                                               },
+                                               {
+                                                   "id":  11,
+                                                   "filter":  "실무 프로젝트",
+                                                   "image":  "mediaart.png",
+                                                   "icon":  "Boots.png|Mysql.png",
+                                                   "title":  "Media Art Nation",
+                                                   "description":  "PHP·HTML 기반의 사내 프로젝트에서 퍼블리싱과 프론트엔드 개발을 담당했으며, 폼/게시판 UI 설계·구현부터 DB 처리 로직 및 백엔드 연동까지 주도했습니다.",
+                                                   "link":  "http://www.mediaartnation.com/"
+                                               },
+                                               {
+                                                   "id":  9,
+                                                   "filter":  "실무 프로젝트",
+                                                   "image":  "arena.png",
+                                                   "icon":  "Boots.png|Mysql.png",
+                                                   "title":  "Arena",
+                                                   "description":  "PHP·HTML 기반의 사내 프로젝트에서 퍼블리싱과 프론트엔드 개발을 담당했으며, 폼/게시판 UI 설계·구현부터 DB 처리 로직 및 백엔드 연동까지 주도했습니다.",
+                                                   "link":  "https://www.arenaparkgolf.com/"
+                                               },
+                                               {
+                                                   "id":  10,
+                                                   "filter":  "실무 프로젝트",
+                                                   "image":  "ysch.png",
+                                                   "icon":  "Boots.png|Mysql.png",
+                                                   "title":  "YSCH",
+                                                   "description":  "PHP·HTML 기반의 사내 프로젝트에서 퍼블리싱과 프론트엔드 개발을 담당했으며, 폼/게시판 UI 설계·구현부터 DB 처리 로직 및 백엔드 연동까지 주도했습니다.",
+                                                   "link":  "https://ysch.cleanweb.kr/"
+                                               },
+                                               {
+                                                   "id":  2,
+                                                   "filter":  "개인 프로젝트",
+                                                   "image":  "ck.png",
+                                                   "icon":  "Boots.png|Cafe24.png",
+                                                   "title":  "CK 카페24",
+                                                   "description":  "브랜드의 고급스러움과 미니멀리즘을 강조하며, 새로운 사용자 경험을 제공하기 위해 리뉴얼하고 카페24를 기반으로 제작한 웹사이트입니다.",
+                                                   "link":  "https://minseogo.cafe24.com/"
+                                               },
+                                               {
+                                                   "id":  3,
+                                                   "filter":  "개인 프로젝트",
+                                                   "image":  "ck.png",
+                                                   "icon":  "Boots.png|Hard.png",
+                                                   "title":  "CK",
+                                                   "description":  "브랜드의 고급스러움과 미니멀리즘을 강조하며, 새로운 사용자 경험을 제공하기 위해 리뉴얼하고 vercel 서버를 사용하여 제작한 웹사이트입니다.",
+                                                   "link":  "https://gominseo-calvinklein.vercel.app/"
+                                               },
+                                               {
+                                                   "id":  4,
+                                                   "filter":  "개인 프로젝트",
+                                                   "image":  "pr.png",
+                                                   "icon":  "React.png|Type.png|Boots.png",
+                                                   "title":  "PR",
+                                                   "description":  "저를 브랜딩하기 위해 타입스크립트 기반의 리액트 환경에서 제작한 자기소개서입니다. 직관적인 디자인과 반응형으로 설계된 페이지로, 저의 기술 역량과 창의성을 담았습니다.",
+                                                   "link":  "https://gominseo-pr.vercel.app/"
+                                               },
+                                               {
+                                                   "id":  5,
+                                                   "filter":  "팀 프로젝트",
+                                                   "image":  "veg.png",
+                                                   "icon":  "Boots.png|React.png",
+                                                   "title":  "Ugly Us",
+                                                   "description":  "리뷰, 스토어 컴포넌트를 개발 및 리뉴얼하여 사용자 맞춤형 경험과 리뷰 서비스를 제공하는 이커머스 웹사이트입니다.",
+                                                   "link":  "https://team-project-reactuglyus.vercel.app/"
+                                               },
+                                               {
+                                                   "id":  6,
+                                                   "filter":  "팀 프로젝트",
+                                                   "image":  "eclat.png",
+                                                   "icon":  "",
+                                                   "title":  "Eclat",
+                                                   "description":  "브랜드 아이덴티티를 강화하고 사용자 친화적인 인터페이스를 제공하며, 시즌 추천, 이벤트, 리뷰 컴포넌트와 브랜드 스토리 페이지를 제작한 플랫폼형 웹사이트입니다.",
+                                                   "link":  "https://i-web.kr/green05/"
+                                               }
+                                           ]
+                             }
+           },
+    "en":  {
+               "siteName":  "Profile",
+               "hello":  "Hi, I\u0027m",
+               "name":  "Dani Go",
+               "personal":  {
+                                "birthdate":  "",
+                                "email":  "gominseo1112@gmail.com"
+                            },
+               "buttons":  {
+                               "github":  "Git Hub",
+                               "figma":  "Figma"
+                           },
+               "skills":  {
+                              "title":  "What I Do"
+                          },
+               "education":  {
+                                 "title":  "Education",
+                                 "schools":  [
+                                                 {
+                                                     "name":  "Web Publisher(UI/UX)\u0026Frontend Developer",
+                                                     "years":  "2024.03 ~ 2024.09"
+                                                 },
+                                                 {
+                                                     "name":  "IH LONDON",
+                                                     "years":  "2020.09 ~ 2020.11 / 2019.04 ~ 2019.07",
+                                                     "location":  "London, UK"
+                                                 },
+                                                 {
+                                                     "name":  "Suwon Science College / Theater \u0026 Performance",
+                                                     "years":  "2014.03 ~ 2018.03"
+                                                 },
+                                                 {
+                                                     "name":  "Mokdong High School",
+                                                     "years":  "2010.03 ~ 2013.03"
+                                                 }
+                                             ]
+                             },
+               "workExperience":  {
+                                      "title":  "Work Experience",
+                                      "jobs":  [
+                                                   {
+                                                       "role":  "Frontend Developer",
+                                                       "years":  "2024.10 ~ 2026.03",
+                                                       "company":  "IWEB / Seoul, South Korea"
+                                                   },
+                                                   {
+                                                       "role":  "Online MD",
+                                                       "years":  "2023.10 ~ 2024.01",
+                                                       "company":  "Webdeul / Seoul, South Korea"
+                                                   },
+                                                   {
+                                                       "role":  "Online Marketing, Barista",
+                                                       "years":  "2022.10 ~ 2023.05",
+                                                       "company":  "Cocomelt / London, UK"
+                                                   },
+                                                   {
+                                                       "role":  "Online MD Intern",
+                                                       "years":  "2021.12 ~ 2022.03",
+                                                       "company":  "Globalon / London, UK"
+                                                   },
+                                                   {
+                                                       "role":  "Online MD",
+                                                       "years":  "2021.03 ~ 2021.09",
+                                                       "company":  "SevenJays / Gyeonggi, South Korea"
+                                                   }
+                                               ]
+                                  },
+               "portfolio":  {
+                                 "title":  "Project",
+                                 "items":  [
+                                               {
+                                                   "id":  14,
+                                                   "filter":  "실무 프로젝트",
+                                                   "image":  "groupware.png",
+                                                   "icon":  "React.png|Tailwind.png|RestApi.png",
+                                                   "title":  "Groupware",
+                                                   "description":  "A production groupware project where I led front-end implementation with React and Tailwind CSS, from REST API integration to complete UI delivery. I designed and built core features including My Page, work logs, leave requests, purchase approval workflows, bulletin boards, attendance tracking, and user authorisation management, aligning the experience with real operational workflows.",
+                                                   "link":  "#"
+                                               },
+                                                                                              {
+                                                   "id":  13,
+                                                   "filter":  "실무 프로젝트",
+                                                   "image":  "exhealth.png",
+                                                   "icon":  "React.png|Tailwind.png|RestApi.png",
+                                                   "title":  "ExHealthCare",
+                                                   "description":  "A professional healthcare service project built with React and Tailwind CSS, with REST API integration for data fetching and rendering flows.",
+                                                   "link":  "#"
+                                               },
+                                               {
+                                                   "id":  15,
+                                                   "filter":  "실무 프로젝트",
+                                                   "image":  "ai-tk.png",
+                                                   "icon":  "React.png|Tailwind.png|RestApi.png",
+                                                   "title":  "AI-TK",
+                                                   "description":  "A production AI integration project where I implemented front-end features to present AI output returned via API calls. Using React and Tailwind CSS, I designed the REST API data flow and UI rendering structure to deliver results clearly and quickly to users.",
+                                                   "link":  "#"
+                                               },
+                                               {
+                                                   "id":  12,
+                                                   "filter":  "실무 프로젝트",
+                                                   "image":  "honey.png",
+                                                   "icon":  "Boots.png|AiApi.png",
+                                                   "title":  "Honey",
+                                                   "description":  "A production project implementing an AI API chatbot with the Gemini API, where I built both the frontend UI and PHP backend logic end-to-end. I delivered real-time date-aware responses, keyword-based conversation memory logic, prompt design/tuning, response output flow implementation, and operational handoff training.",
+                                                   "link":  "https://www.xn--3v0bj0a12bq1ad54e.kr/"
+                                               },
+                                               {
+                                                   "id":  7,
+                                                   "filter":  "실무 프로젝트",
+                                                   "image":  "markpick.png",
+                                                   "icon":  "Boots.png|React.png",
+                                                   "title":  "Markpick",
+                                                   "description":  "A professional project completed in a company setting, where I contributed to UI implementation and publishing using React and Bootstrap.",
+                                                   "link":  "https://www.markpick.co.kr/"
+                                               },
+                                               {
+                                                   "id":  8,
+                                                   "filter":  "실무 프로젝트",
+                                                   "image":  "icemecatech.png",
+                                                   "icon":  "Boots.png|Mysql.png",
+                                                   "title":  "Icemecatech",
+                                                   "description":  "In this in-house project built with PHP and HTML, I led publishing and frontend development, covering form/board UI design and implementation, DB handling logic, and backend integration.",
+                                                   "link":  "https://icemeca.com/"
+                                               },
+                                               {
+                                                   "id":  11,
+                                                   "filter":  "실무 프로젝트",
+                                                   "image":  "mediaart.png",
+                                                   "icon":  "Boots.png|Mysql.png",
+                                                   "title":  "Media Art Nation",
+                                                   "description":  "In this in-house project built with PHP and HTML, I led publishing and frontend development, covering form/board UI design and implementation, DB handling logic, and backend integration.",
+                                                   "link":  "http://www.mediaartnation.com/"
+                                               },
+                                               {
+                                                   "id":  9,
+                                                   "filter":  "실무 프로젝트",
+                                                   "image":  "arena.png",
+                                                   "icon":  "Boots.png|Mysql.png",
+                                                   "title":  "Arena",
+                                                   "description":  "In this in-house project built with PHP and HTML, I led publishing and frontend development, covering form/board UI design and implementation, DB handling logic, and backend integration.",
+                                                   "link":  "https://www.arenaparkgolf.com/"
+                                               },
+                                               {
+                                                   "id":  10,
+                                                   "filter":  "실무 프로젝트",
+                                                   "image":  "ysch.png",
+                                                   "icon":  "Boots.png|Mysql.png",
+                                                   "title":  "YSCH",
+                                                   "description":  "In this in-house project built with PHP and HTML, I led publishing and frontend development, covering form/board UI design and implementation, DB handling logic, and backend integration.",
+                                                   "link":  "https://ysch.cleanweb.kr/"
+                                               },
+                                               {
+                                                   "id":  2,
+                                                   "filter":  "개인 프로젝트",
+                                                   "image":  "ck.png",
+                                                   "icon":  "Boots.png|Cafe24.png",
+                                                   "title":  "CK Cafe24",
+                                                   "description":  "A renewed website based on Cafe24, emphasizing the brand’s luxury and minimalism, offering a new user experience.",
+                                                   "link":  "https://minseogo.cafe24.com/"
+                                               },
+                                               {
+                                                   "id":  3,
+                                                   "filter":  "개인 프로젝트",
+                                                   "image":  "ck.png",
+                                                   "icon":  "Boots.png|Hard.png",
+                                                   "title":  "CK",
+                                                   "description":  "A renewed website emphasizing the brand’s luxury and minimalism, hosted on the Vercel server.",
+                                                   "link":  "https://gominseo-calvinklein.vercel.app/"
+                                               },
+                                               {
+                                                   "id":  4,
+                                                   "filter":  "개인 프로젝트",
+                                                   "image":  "pr.png",
+                                                   "icon":  "React.png|Type.png|Boots.png",
+                                                   "title":  "PR",
+                                                   "description":  "A personal introduction website, built in a React environment using TypeScript, showcasing intuitive design and responsive layout.",
+                                                   "link":  "https://gominseo-pr.vercel.app/"
+                                               },
+                                               {
+                                                   "id":  5,
+                                                   "filter":  "팀 프로젝트",
+                                                   "image":  "veg.png",
+                                                   "icon":  "Boots.png|React.png",
+                                                   "title":  "Ugly Us",
+                                                   "description":  "An e-commerce website providing tailored experiences and review services, where I contributed by developing and renewing the review and store components.",
+                                                   "link":  "https://team-project-reactuglyus.vercel.app/"
+                                               },
+                                               {
+                                                   "id":  6,
+                                                   "filter":  "팀 프로젝트",
+                                                   "image":  "eclat.png",
+                                                   "icon":  "",
+                                                   "title":  "Eclat",
+                                                   "description":  "A platform website built to enhance brand identity, providing user-friendly interfaces with seasonal recommendations, event components, review sections, and a brand story page.",
+                                                   "link":  "https://i-web.kr/green05/"
+                                               }
+                                           ]
+                             }
+           }
 }

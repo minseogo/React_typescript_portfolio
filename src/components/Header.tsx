@@ -96,16 +96,23 @@ const Header: React.FC<HeaderProps> = ({ language, setLanguage }) => {
 
           <div className="resume section flex flex-col sm:w-5/12">
             <div className="hello">
-              <h3 className="flex flex-col">
-                {data[language].hello}
-                <ReactTyped strings={typedStrings} typeSpeed={70} backSpeed={50} loop />
-                {data[language].name}
-              </h3>
+              {language === 'en' ? (
+                <h3 className="flex flex-col">
+                  <span>Hi, I'm Dani Go</span>
+                  <ReactTyped strings={typedStrings} typeSpeed={70} backSpeed={50} loop />
+                </h3>
+              ) : (
+                <h3 className="flex flex-col">
+                  {data[language].hello}
+                  <ReactTyped strings={typedStrings} typeSpeed={70} backSpeed={50} loop />
+                  {data[language].name}
+                </h3>
+              )}
             </div>
 
             <div className="personal mt-2 mb-2 text-center sm:text-left lg:mb-5">
               <ul className="mb-2 list-none p-0">
-                <li>{data[language].personal.birthdate}</li>
+                {data[language].personal.birthdate ? <li>{data[language].personal.birthdate}</li> : null}
                 <li>{data[language].personal.email}</li>
               </ul>
               <button
