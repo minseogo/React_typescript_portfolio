@@ -133,15 +133,6 @@
                                                    "link":  "http://www.mediaartnation.com/"
                                                },
                                                {
-                                                   "id":  9,
-                                                   "filter":  "실무 프로젝트",
-                                                   "image":  "arena.png",
-                                                   "icon":  "Boots.png|Mysql.png",
-                                                   "title":  "Arena",
-                                                   "description":  "PHP·HTML 기반의 사내 프로젝트에서 퍼블리싱과 프론트엔드 개발을 담당했으며, 폼/게시판 UI 설계·구현부터 DB 처리 로직 및 백엔드 연동까지 주도했습니다.",
-                                                   "link":  "https://www.arenaparkgolf.com/"
-                                               },
-                                               {
                                                    "id":  10,
                                                    "filter":  "실무 프로젝트",
                                                    "image":  "ysch.png",
@@ -261,7 +252,7 @@
                                                    {
                                                        "role":  "Online MD",
                                                        "years":  "2021.03 ~ 2021.09",
-                                                       "company":  "SevenJays / Gyeonggi, South Korea"
+                                                       "company":  "7Js / Gyeonggi, South Korea"
                                                    }
                                                ]
                                   },
@@ -330,15 +321,6 @@
                                                    "title":  "Media Art Nation",
                                                    "description":  "In this in-house project built with PHP and HTML, I led publishing and frontend development, covering form/board UI design and implementation, DB handling logic, and backend integration.",
                                                    "link":  "http://www.mediaartnation.com/"
-                                               },
-                                               {
-                                                   "id":  9,
-                                                   "filter":  "실무 프로젝트",
-                                                   "image":  "arena.png",
-                                                   "icon":  "Boots.png|Mysql.png",
-                                                   "title":  "Arena",
-                                                   "description":  "In this in-house project built with PHP and HTML, I led publishing and frontend development, covering form/board UI design and implementation, DB handling logic, and backend integration.",
-                                                   "link":  "https://www.arenaparkgolf.com/"
                                                },
                                                {
                                                    "id":  10,
