@@ -86,10 +86,13 @@ const Header: React.FC<HeaderProps> = ({ language, setLanguage }) => {
               </p>
             </div>
             <div
-              className="youtube-player flex flex-col items-center sm:flex-row sm:pr-4"
+              className="youtube-player flex flex-col items-center sm:items-start sm:pr-4"
               role="region"
               aria-label="Introduction video"
             >
+                <h3 className="mb-3 text-center sm:text-left">
+                  {language === 'kr' ? '데이터 플로우 발표' : 'Data Flow Presentation'}
+                </h3>
               <YouTube videoId="wmO7MrHiB2A" opts={{ height: '185', width: '100%' }} />
             </div>
           </div>
@@ -98,7 +101,7 @@ const Header: React.FC<HeaderProps> = ({ language, setLanguage }) => {
             <div className="hello">
               {language === 'en' ? (
                 <h3 className="flex flex-col">
-                  <span>Hi, I'm Dani Go</span>
+                  <span>Hi, I'm Minseo Go</span>
                   <ReactTyped strings={typedStrings} typeSpeed={70} backSpeed={50} loop />
                 </h3>
               ) : (
@@ -204,6 +207,9 @@ const Header: React.FC<HeaderProps> = ({ language, setLanguage }) => {
                       <h5 className="mb-0 pb-2">{job.years}</h5>
                       <p className="lo_font">
                         <em>{job.company}</em>
+                      </p>
+                      <p className="mt-1 text-[11px] leading-4 text-neutral-700">
+                        {job.description}
                       </p>
                     </div>
                   ))}
