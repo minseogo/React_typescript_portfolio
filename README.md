@@ -1,92 +1,104 @@
-# Minseo Go Portfolio
+# 🚀 Minseo Go — Portfolio
 
-Next.js App Router 기반으로 만든 개인 포트폴리오 사이트입니다.  
-React, Next.js, TypeScript를 중심으로 구성했고, 정적 생성(SSG) 기반으로 배포합니다.
+This is a personal portfolio website built with **Next.js App Router** to showcase my frontend development skills and modern web development experience.
 
-## Tech Stack
+The project focuses on **performance, responsive UI/UX design, SEO optimization, and scalable component architecture**, and is deployed on **Vercel**.
 
-- Next.js 15
+---
+
+## 🎯 Purpose
+
+- Showcase modern frontend development skills using Next.js
+- Demonstrate migration from CRA to Next.js App Router
+- Build a responsive and scalable portfolio system
+- Practice component-based architecture
+- Optimize performance and SEO for production
+
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+- Next.js 15 (App Router)
 - React 18
 - TypeScript
 - Tailwind CSS
 - Sass
+
+### UI / Icons
 - Lucide React
 - React Icons
+
+### Data / API
 - Axios
+- REST API integration
 
-## Features
-
-- 한국어 / 영어 전환
-- 프로젝트 카테고리 필터
-- 반응형 레이아웃
-- 포트폴리오 프로젝트 카드 구성
-- SEO 메타데이터 및 Open Graph 설정
-- Next.js SSG 기반 정적 페이지 생성
-
-## Local Development
-
-의존성 설치:
-
-```bash
-npm install
-```
-
-개발 서버 실행:
-
-```bash
-npm run dev
-```
-
-브라우저에서 확인:
-
-```text
-http://127.0.0.1:3000
-```
-
-프로덕션 빌드:
-
-```bash
-npm run build
-```
-
-프로덕션 서버 실행:
-
-```bash
-npm run start
-```
-
-## Project Structure
-
-```text
-src/
-  app/
-    layout.tsx
-    page.tsx
-    globals.css
-  components/
-    Header.tsx
-    HomePage.tsx
-    Portfolio.tsx
-  css/
-    main.css
-  data/
-    data.json
-public/
-  img/
-  og-image.png
-  robots.txt
-```
-
-## Deployment
-
-- GitHub
+### Deployment
 - Vercel
+- GitHub
 
-배포 주소:
+---
 
-- https://gominseo-pr.vercel.app/
+## ✨ Features
 
-## Notes
+- 🌐 Bilingual support (Korean / English)
+- 📱 Fully responsive design (mobile / tablet / desktop)
+- 🗂 Project filtering system
+- ⚡ Static Site Generation (SSG)
+- 🔍 SEO optimization (Meta tags, Open Graph)
+- 🎨 Reusable component-based UI structure
 
-- 이 프로젝트는 기존 CRA 기반 포트폴리오를 Next.js 구조로 전환한 버전입니다.
-- 현재 메인 페이지는 App Router 기준 정적 페이지로 생성됩니다.
+---
+
+## 💡 Highlights
+
+- Migrated from Create React App (CRA) to Next.js App Router
+- Built with scalable and maintainable architecture
+- Focused on performance and UI consistency
+- Production-ready frontend structure
+
+---
+
+## 🚀 Deployment
+
+- Hosted on Vercel
+- CI/CD connected via GitHub
+
+🔗 Live Site:  
+https://gominseo-pr.vercel.app/
+
+---
+
+## 📁 Project Structure
+
+  src/
+    app/
+      layout.tsx
+      page.tsx
+      globals.css
+    components/
+      Header.tsx
+      HomePage.tsx
+      Portfolio.tsx
+    css/
+      main.css
+    data/
+      data.json
+  public/
+
+---
+
+## 📌 Notes
+
+This portfolio is designed as a **production-level frontend project**, focusing on real-world React/Next.js development practices.
+
+---
+
+## 🎯 Goal
+
+Demonstrates ability to:
+
+- Build modern React/Next.js applications
+- Design responsive UI systems
+- Structure scalable frontend architecture
+- Deploy production-ready web applications
