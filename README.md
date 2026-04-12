@@ -1,47 +1,92 @@
-# 자기소개서 웹페이지
+# Minseo Go Portfolio
 
-TypeScript 기반 React로 만든 개인 포트폴리오/자기소개서 웹사이트입니다.  
-한국어/영어 전환, 프로젝트 필터링, 타이핑 애니메이션을 제공합니다.
+Next.js App Router 기반으로 만든 개인 포트폴리오 사이트입니다.  
+React, Next.js, TypeScript를 중심으로 구성했고, 정적 생성(SSG) 기반으로 배포합니다.
 
-## 기술 스택
+## Tech Stack
 
+- Next.js 15
 - React 18
 - TypeScript
 - Tailwind CSS
-- Sass (기존 스타일 유지용)
-- React Typed
-- React YouTube
-- Lucide React (포트폴리오 링크 아이콘)
-- React Icons (브랜드 아이콘: React/TypeScript/Bootstrap/Tailwind/GitHub/Vercel)
+- Sass
+- Lucide React
+- React Icons
 - Axios
 
-## 개발 환경
+## Features
 
-- Node.js
-- Yarn (Corepack)
-
-## 주요 기능
-
-- 언어 전환: 한국어/영어
-- 포트폴리오 필터: 전체/개인 프로젝트/팀 프로젝트
-- 타이핑 애니메이션
+- 한국어 / 영어 전환
+- 프로젝트 카테고리 필터
 - 반응형 레이아웃
-- 기술 스택 아이콘 표시 (브랜드 아이콘 + 일부 이미지 아이콘)
+- 포트폴리오 프로젝트 카드 구성
+- SEO 메타데이터 및 Open Graph 설정
+- Next.js SSG 기반 정적 페이지 생성
 
-## 관련 주소
+## Local Development
 
-- 피그마: https://www.figma.com/design/chnxRjxPKX40REZtT5p6Sl/%EB%AF%BC%EC%84%9C?node-id=0-1&m=dev&t=lQHCrmUGVAdhlWhK-1
-- 배포(버셀): https://gominseo-pr.vercel.app/
+의존성 설치:
 
-## 기타 포트폴리오
+```bash
+npm install
+```
 
-### 개인 프로젝트
+개발 서버 실행:
 
-- CK 카페24: https://minseogo.cafe24.com/
-- CK 그누보드: http://gominseo.dothome.co.kr/ck
-- CK WEB: https://gominseo-calvinklein.vercel.app/
+```bash
+npm run dev
+```
 
-### 팀 프로젝트
+브라우저에서 확인:
 
-- Ugly Us: https://team-project-reactuglyus.vercel.app/
-- Eclat: https://i-web.kr/green05
+```text
+http://127.0.0.1:3000
+```
+
+프로덕션 빌드:
+
+```bash
+npm run build
+```
+
+프로덕션 서버 실행:
+
+```bash
+npm run start
+```
+
+## Project Structure
+
+```text
+src/
+  app/
+    layout.tsx
+    page.tsx
+    globals.css
+  components/
+    Header.tsx
+    HomePage.tsx
+    Portfolio.tsx
+  css/
+    main.css
+  data/
+    data.json
+public/
+  img/
+  og-image.png
+  robots.txt
+```
+
+## Deployment
+
+- GitHub
+- Vercel
+
+배포 주소:
+
+- https://gominseo-pr.vercel.app/
+
+## Notes
+
+- 이 프로젝트는 기존 CRA 기반 포트폴리오를 Next.js 구조로 전환한 버전입니다.
+- 현재 메인 페이지는 App Router 기준 정적 페이지로 생성됩니다.

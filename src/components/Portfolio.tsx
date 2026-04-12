@@ -1,74 +1,120 @@
-import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight, Link2 } from 'lucide-react';
-import {
-  SiReact,
-  SiTypescript,
-  SiBootstrap,
-  SiVercel,
-  SiMysql,
-  SiTailwindcss,
-} from 'react-icons/si';
-import '../css/main.css';
-import data from '../data/data.json';
+'use client';
 
-type IconComponent = React.ComponentType<{ className?: string; title?: string }>;
-const ReactIcon = SiReact as IconComponent;
-const TypescriptIcon = SiTypescript as IconComponent;
-const BootstrapIcon = SiBootstrap as IconComponent;
-const VercelIcon = SiVercel as IconComponent;
-const MysqlIcon = SiMysql as IconComponent;
-const TailwindIcon = SiTailwindcss as IconComponent;
+import type { Dispatch, SetStateAction } from 'react';
+import { useState } from 'react';
+import { ChevronLeft, ChevronRight, Link2 } from 'lucide-react';
+import data from '../data/data.json';
 
 interface PortfolioProps {
   language: 'kr' | 'en';
-  setLanguage: React.Dispatch<React.SetStateAction<'kr' | 'en'>>;
+  setLanguage: Dispatch<SetStateAction<'kr' | 'en'>>;
 }
 
 const ALL_FILTER = 'All';
-const PERSONAL_FILTER = '개인 프로젝트';
-const TEAM_FILTER = '팀 프로젝트';
-const PROFESSIONAL_FILTER = '실무 프로젝트';
+const FILTERS = {
+  kr: {
+    all: '\uBAA8\uB450',
+    professional: '\uC2E4\uBB34 \uD504\uB85C\uC81D\uD2B8',
+    personal: '\uAC1C\uC778 \uD504\uB85C\uC81D\uD2B8',
+    team: '\uD300 \uD504\uB85C\uC81D\uD2B8',
+  },
+  en: {
+    all: 'All',
+    professional: 'Professional Projects',
+    personal: 'Personal Projects',
+    team: 'Team Projects',
+  },
+} as const;
 const ITEMS_PER_PAGE = 4;
 
-const renderStackIcon = (icon: string, index: number) => {
+function renderStackBadge(icon: string, index: number) {
+  const badgeClassName =
+    'rounded-full border border-black/10 px-2 py-1 text-[11px] font-semibold leading-none text-slate-700';
+
   switch (icon) {
     case 'React.png':
-      return <ReactIcon key={index} className="text-xl text-[#61DAFB]" title="React" />;
+      return (
+        <span key={index} className={badgeClassName}>
+          React
+        </span>
+      );
     case 'Type.png':
-      return <TypescriptIcon key={index} className="text-xl text-[#3178C6]" title="TypeScript" />;
+      return (
+        <span key={index} className={badgeClassName}>
+          TypeScript
+        </span>
+      );
+    case 'Next.png':
+      return (
+        <span key={index} className={badgeClassName}>
+          Next.js
+        </span>
+      );
     case 'Boots.png':
-      return <BootstrapIcon key={index} className="text-xl text-[#7952B3]" title="Bootstrap" />;
+      return (
+        <span key={index} className={badgeClassName}>
+          Bootstrap
+        </span>
+      );
     case 'Mysql.png':
-      return <MysqlIcon key={index} className="text-2xl text-[#4479A1]" title="MySQL" />;
+      return (
+        <span key={index} className={badgeClassName}>
+          MySQL
+        </span>
+      );
     case 'Tailwind.png':
-      return <TailwindIcon key={index} className="text-xl text-[#06B6D4]" title="Tailwind CSS" />;
+      return (
+        <span key={index} className={badgeClassName}>
+          Tailwind CSS
+        </span>
+      );
     case 'Hard.png':
-      return <VercelIcon key={index} className="text-sm text-black" title="Vercel" />;
+      return (
+        <span key={index} className={badgeClassName}>
+          Vercel
+        </span>
+      );
     case 'AiApi.png':
       return (
-        <span key={index} className="text-sm font-semibold leading-none" title="AI API">
+        <span key={index} className={badgeClassName}>
           AI API
         </span>
       );
     case 'RestApi.png':
       return (
-        <span key={index} className="text-[11px] font-semibold leading-none text-[#0f172a]" title="REST API">
+        <span key={index} className={badgeClassName}>
           REST API
         </span>
       );
     case 'php.png':
-      return <img key={index} src={`${process.env.PUBLIC_URL}/img/php.png`} alt="php png" className="h-5 w-auto" />;
+      return (
+        <span key={index} className={badgeClassName}>
+          PHP
+        </span>
+      );
     case 'Cafe24.png':
-      return <img key={index} src={`${process.env.PUBLIC_URL}/img/Cafe24.png`} alt="Cafe24 png" className="h-4 w-auto" />;
+      return (
+        <span key={index} className={badgeClassName}>
+          Cafe24
+        </span>
+      );
     default:
       return null;
   }
-};
+}
 
-const Portfolio: React.FC<PortfolioProps> = ({ language, setLanguage }) => {
+export default function Portfolio({ language, setLanguage }: PortfolioProps) {
   const [filter, setFilter] = useState(ALL_FILTER);
   const [page, setPage] = useState(1);
   const langData = data[language].portfolio;
+
+  const filterOptions = [
+    { value: ALL_FILTER, label: FILTERS[language].all },
+    { value: FILTERS.kr.professional, label: FILTERS[language].professional },
+    { value: FILTERS.kr.personal, label: FILTERS[language].personal },
+    { value: FILTERS.kr.team, label: FILTERS[language].team },
+  ];
+
   const filteredItems = langData.items.filter((item) => filter === ALL_FILTER || item.filter === filter);
   const totalPages = Math.max(1, Math.ceil(filteredItems.length / ITEMS_PER_PAGE));
   const paginatedItems = filteredItems.slice((page - 1) * ITEMS_PER_PAGE, page * ITEMS_PER_PAGE);
@@ -82,9 +128,9 @@ const Portfolio: React.FC<PortfolioProps> = ({ language, setLanguage }) => {
     <section id="portfolio" className="portfolio section light-background mt-4">
       <div className="ml-4 flex items-center justify-between">
         <div className="dash">
-          <h1 className="text-3xl font-medium leading-none md:text-4xl">{data[language].portfolio.title}</h1>
+          <h1 className="text-3xl font-medium leading-none md:text-4xl">{langData.title}</h1>
         </div>
-        <div className="lang_btns hidden sm:flex">
+        <div className="lang_btns hidden lg:flex">
           <button
             className="border-0 bg-white text-black"
             onClick={() => setLanguage('kr')}
@@ -109,69 +155,41 @@ const Portfolio: React.FC<PortfolioProps> = ({ language, setLanguage }) => {
       <div>
         <nav aria-label="Project category filters">
           <ul className="portfolio-filters">
-            <li className={filter === ALL_FILTER ? 'filter-active' : ''}>
-              <button
-                type="button"
-                onClick={() => handleFilterChange(ALL_FILTER)}
-                aria-pressed={filter === ALL_FILTER}
-                className="border-0 bg-transparent p-0"
-              >
-                {language === 'kr' ? '모두' : 'All'}
-              </button>
-            </li>
-            <li className={filter === PROFESSIONAL_FILTER ? 'filter-active' : ''}>
-              <button
-                type="button"
-                onClick={() => handleFilterChange(PROFESSIONAL_FILTER)}
-                aria-pressed={filter === PROFESSIONAL_FILTER}
-                className="border-0 bg-transparent p-0"
-              >
-                {language === 'kr' ? PROFESSIONAL_FILTER : 'Professional Projects'}
-              </button>
-            </li>
-            <li className={filter === PERSONAL_FILTER ? 'filter-active' : ''}>
-              <button
-                type="button"
-                onClick={() => handleFilterChange(PERSONAL_FILTER)}
-                aria-pressed={filter === PERSONAL_FILTER}
-                className="border-0 bg-transparent p-0"
-              >
-                {language === 'kr' ? PERSONAL_FILTER : 'Personal Projects'}
-              </button>
-            </li>
-            <li className={filter === TEAM_FILTER ? 'filter-active' : ''}>
-              <button
-                type="button"
-                onClick={() => handleFilterChange(TEAM_FILTER)}
-                aria-pressed={filter === TEAM_FILTER}
-                className="border-0 bg-transparent p-0"
-              >
-                {language === 'kr' ? TEAM_FILTER : 'Team Projects'}
-              </button>
-            </li>
+            {filterOptions.map((option) => (
+              <li key={option.value} className={filter === option.value ? 'filter-active' : ''}>
+                <button
+                  type="button"
+                  onClick={() => handleFilterChange(option.value)}
+                  aria-pressed={filter === option.value}
+                  className="border-0 bg-transparent p-0"
+                >
+                  {option.label}
+                </button>
+              </li>
+            ))}
           </ul>
         </nav>
 
-        <div className="portfolio-container ml-2 mr-2 grid grid-cols-1 gap-x-4 md:ml-6 sm:grid-cols-2">
+        <div className="portfolio-container ml-2 mr-2 grid grid-cols-1 gap-x-4 md:ml-6 lg:grid-cols-2">
           {paginatedItems.map((item) => {
             const isLinkDisabled = !item.link || item.link === '#';
 
             return (
-              <div key={item.id} className="portfolio-item">
+              <article key={item.id} className="portfolio-item">
                 <div className="portfolio-content mb-2">
                   <img src={`/img/${item.image}`} className="h-auto w-full" alt={item.title} />
                 </div>
                 <div className="portfolio-info mb-3">
-                  <div className="flex flex-row items-center justify-between">
-                    <h4 className="title_nowrap mb-2 flex items-center">
-                      {item.title}
-                      <div className="pt_gap ml-2 flex items-center">
-                        {item.icon.split('|').map((icon, i) => icon && renderStackIcon(icon, i))}
+                  <div className="flex flex-row items-start justify-between gap-3">
+                    <div>
+                      <h2 className="mb-2 text-lg font-medium">{item.title}</h2>
+                      <div className="pt_gap mb-3 flex flex-wrap items-center">
+                        {item.icon.split('|').map((icon, index) => icon && renderStackBadge(icon, index))}
                       </div>
-                    </h4>
+                    </div>
                     {isLinkDisabled ? (
                       <span
-                        className="details-link cursor-not-allowed text-gray-400"
+                        className="details-link mt-1 cursor-not-allowed text-gray-400"
                         aria-label={`${item.title} link is not available yet`}
                         aria-disabled="true"
                       >
@@ -180,7 +198,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ language, setLanguage }) => {
                     ) : (
                       <a
                         href={item.link}
-                        className="details-link text-black"
+                        className="details-link mt-1 text-black"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={`Open ${item.title}`}
@@ -191,22 +209,22 @@ const Portfolio: React.FC<PortfolioProps> = ({ language, setLanguage }) => {
                   </div>
                   <p className="des_font">{item.description}</p>
                 </div>
-              </div>
+              </article>
             );
           })}
         </div>
-        {filteredItems.length > ITEMS_PER_PAGE && (
+        {filteredItems.length > ITEMS_PER_PAGE ? (
           <div className="mt-2 flex items-center justify-center gap-2">
             <button
               type="button"
               onClick={() => setPage((prev) => Math.max(1, prev - 1))}
               disabled={page === 1}
-              aria-label={language === 'kr' ? '이전 페이지' : 'Previous page'}
+              aria-label={language === 'kr' ? '\uC774\uC804 \uD398\uC774\uC9C0' : 'Previous page'}
               className="px-2 py-1 text-xs disabled:cursor-not-allowed disabled:opacity-50"
             >
               <ChevronLeft className="h-4 w-4" />
             </button>
-            {Array.from({ length: totalPages }, (_, i) => i + 1).map((num) => (
+            {Array.from({ length: totalPages }, (_, index) => index + 1).map((num) => (
               <button
                 key={num}
                 type="button"
@@ -223,16 +241,14 @@ const Portfolio: React.FC<PortfolioProps> = ({ language, setLanguage }) => {
               type="button"
               onClick={() => setPage((prev) => Math.min(totalPages, prev + 1))}
               disabled={page === totalPages}
-              aria-label={language === 'kr' ? '다음 페이지' : 'Next page'}
+              aria-label={language === 'kr' ? '\uB2E4\uC74C \uD398\uC774\uC9C0' : 'Next page'}
               className="px-2 py-1 text-xs disabled:cursor-not-allowed disabled:opacity-50"
             >
               <ChevronRight className="h-4 w-4" />
             </button>
           </div>
-        )}
+        ) : null}
       </div>
     </section>
   );
-};
-
-export default Portfolio;
+}

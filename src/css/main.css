@@ -1,5 +1,4 @@
-
---------------------------------------------------------------*/
+/* -------------------------------------------------------------- */
 /* Fonts */
 :root {
   font-family: "Roboto Condensed", "Noto Sans KR", sans-serif;
@@ -91,6 +90,25 @@ a:hover {
   font-size: 48px;
   font-weight: 500;
   letter-spacing: -1px;
+}
+
+.typewriter-caret {
+  display: inline-block;
+  width: 1px;
+  height: 0.95em;
+  margin-left: 4px;
+  background: currentColor;
+  animation: blink-caret 1s steps(1) infinite;
+}
+@keyframes blink-caret {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  50.01%,
+  100% {
+    opacity: 0;
+  }
 }
 .personal {
   font-size: 12px;
@@ -498,7 +516,7 @@ a:hover {
     font-size: 17px;
   }
 }
-@media (max-width: 575px) {
+@media (max-width: 1023px) {
   .youtube-player{
     margin-top: 24px;
   }
@@ -508,23 +526,24 @@ a:hover {
   .profile-img {
     position: relative;
   }
-  .hello {
+  .profile-img img {
+    width: 100%;
+    height: auto;
+  }
+  .hello-overlay {
     position: absolute;
-    top: 65%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     width: 100%;
     color: #fff;
-  }
-  .profile-img img {
-    width: 100%;
-    height: auto;
+    z-index: 1;
   }
   .hello > h3{
-    font-size: 40px;
-    letter-spacing: 3px;
-    line-height: 55px;
+    font-size: 30px;
+    letter-spacing: 1px;
+    line-height: 1.25;
   }
   .info_font{
     font-size: 17px;
@@ -607,8 +626,15 @@ a:hover {
     font-size: 13px;
    }
 }
+@media (max-width: 575px) {
+  .hello > h3{
+    font-size: 40px;
+    letter-spacing: 3px;
+    line-height: 55px;
+  }
+}
 @media(min-width:430px) and (max-width:480px){
-  .hello{
+  .hello-overlay{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -620,7 +646,7 @@ a:hover {
 }
 
 @media(min-width:320px) and (max-width:390px){
-  .hello{
+  .hello-overlay{
     position: absolute;
     top: 42%;
     left: 50%;

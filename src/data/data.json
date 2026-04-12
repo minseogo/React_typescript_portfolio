@@ -87,7 +87,7 @@
                                                    "id":  13,
                                                    "filter":  "실무 프로젝트",
                                                    "image":  "exhealth.png",
-                                                   "icon":  "React.png|Tailwind.png|RestApi.png",
+                                                   "icon":  "React.png|Next.png|Tailwind.png|RestApi.png",
                                                    "title":  "ExHealthCare",
                                                    "description":  "실무 프로젝트로 진행한 헬스케어 서비스 페이지이며, React와 Tailwind CSS 기반 UI를 구현하고 REST API 연동을 통해 데이터 조회/표시 흐름을 구성했습니다.",
                                                    "link":  "#"
@@ -168,7 +168,7 @@
                                                    "id":  4,
                                                    "filter":  "개인 프로젝트",
                                                    "image":  "pr.png",
-                                                   "icon":  "React.png|Type.png|Boots.png",
+                                                   "icon":  "React.png||Next.png|Type.png|Tailwind.png",
                                                    "title":  "PR",
                                                    "description":  "저를 브랜딩하기 위해 타입스크립트 기반의 리액트 환경에서 제작한 자기소개서입니다. 직관적인 디자인과 반응형으로 설계된 페이지로, 저의 기술 역량과 창의성을 담았습니다.",
                                                    "link":  "https://gominseo-pr.vercel.app/"
@@ -282,7 +282,7 @@
                                                    "id":  13,
                                                    "filter":  "실무 프로젝트",
                                                    "image":  "exhealth.png",
-                                                   "icon":  "React.png|Tailwind.png|RestApi.png",
+                                                   "icon":  "React.png|Next.png|Tailwind.png|RestApi.png",
                                                    "title":  "ExHealthCare",
                                                    "description":  "A professional healthcare service project built with React and Tailwind CSS, with REST API integration for data fetching and rendering flows.",
                                                    "link":  "#"
@@ -363,7 +363,7 @@
                                                    "id":  4,
                                                    "filter":  "개인 프로젝트",
                                                    "image":  "pr.png",
-                                                   "icon":  "React.png|Type.png|Boots.png",
+                                                   "icon":  "React.png||Next.png|Type.png|Tailwind.png",
                                                    "title":  "PR",
                                                    "description":  "A personal introduction website, built in a React environment using TypeScript, showcasing intuitive design and responsive layout.",
                                                    "link":  "https://gominseo-pr.vercel.app/"

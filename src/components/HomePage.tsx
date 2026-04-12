@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
-import './App.css';
-import Header from './components/Header';
-import Portfolio from './components/Portfolio';
+'use client';
 
-const App: React.FC = () => {
+import { useState } from 'react';
+import Header from './Header';
+import Portfolio from './Portfolio';
+
+export default function HomePage() {
   const [language, setLanguage] = useState<'kr' | 'en'>('en');
 
   return (
@@ -16,6 +17,4 @@ const App: React.FC = () => {
       </div>
     </main>
   );
-};
-
-export default App;
+}
