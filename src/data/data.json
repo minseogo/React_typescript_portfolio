@@ -105,7 +105,7 @@
                                                    "id":  12,
                                                    "filter":  "실무 프로젝트",
                                                    "image":  "honey.png",
-                                                   "icon":  "Boots.png|AiApi.png",
+                                                   "icon":  "php.png|Boots.png|AiApi.png",
                                                    "title":  "Honey",
                                                    "description":  "Gemini API 기반 AI API 챗봇 실무 프로젝트로, 프론트 UI와 PHP 백엔드를 End-to-End로 개발했습니다. 실시간 날짜 기반 응답, 키워드 기반 대화 메모리, 프롬프트 설계·튜닝, 응답 플로우 구현 및 운영 교육을 담당했습니다.",
                                                    "link":  "https://www.xn--3v0bj0a12bq1ad54e.kr/"
@@ -300,7 +300,7 @@
                                                    "id":  12,
                                                    "filter":  "실무 프로젝트",
                                                    "image":  "honey.png",
-                                                   "icon":  "Boots.png|AiApi.png",
+                                                   "icon":  "php.png|Boots.png|AiApi.png",
                                                    "title":  "Honey",
                                                    "description":  "A production project implementing an AI API chatbot with the Gemini API, where I built both the frontend UI and PHP backend logic end-to-end. I delivered real-time date-aware responses, keyword-based conversation memory logic, prompt design/tuning, response output flow implementation, and operational handoff training.",
                                                    "link":  "https://www.xn--3v0bj0a12bq1ad54e.kr/"

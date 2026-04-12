@@ -56,8 +56,8 @@ const renderStackIcon = (icon: string, index: number) => {
           REST API
         </span>
       );
-    case 'Sir.png':
-      return <img key={index} src={`${process.env.PUBLIC_URL}/img/Sir.png`} alt="SIR png" className="h-5 w-auto" />;
+    case 'php.png':
+      return <img key={index} src={`${process.env.PUBLIC_URL}/img/php.png`} alt="php png" className="h-5 w-auto" />;
     case 'Cafe24.png':
       return <img key={index} src={`${process.env.PUBLIC_URL}/img/Cafe24.png`} alt="Cafe24 png" className="h-4 w-auto" />;
     default:

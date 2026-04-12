@@ -168,7 +168,7 @@ const Header: React.FC<HeaderProps> = ({ language, setLanguage }) => {
                       <span className="text-sm font-semibold tracking-wide text-black">REST API</span>
                     </div>
                     <div className="logo_gap solu_margin mt-3 flex items-center">
-                      <img src={`${process.env.PUBLIC_URL}/img/Sir.png`} alt="SIR png" className="h-7 w-auto" />
+                      <img src={`${process.env.PUBLIC_URL}/img/php.png`} alt="php png" className="h-7 w-auto" />
                       <img src={`${process.env.PUBLIC_URL}/img/Cafe24.png`} alt="Cafe24 png" className="h-6 w-auto" />
                     </div>
                     <div className="logo_gap git_margin mt-3 mr-1 flex items-center sm:mr-0">
