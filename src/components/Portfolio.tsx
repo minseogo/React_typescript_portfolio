@@ -98,6 +98,12 @@ function renderStackBadge(icon: string, index: number) {
           Cafe24
         </span>
       );
+    case 'Vite.png':
+      return (
+        <span key={index} className={badgeClassName}>
+          Vite
+        </span>
+      );
     default:
       return null;
   }

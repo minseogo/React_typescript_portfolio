@@ -11,6 +11,9 @@ import {
   SiTailwindcss,
   SiTypescript,
   SiVercel,
+  SiVite,
+  SiPhp,
+  SiNextdotjs
 } from 'react-icons/si';
 import data from '../data/data.json';
 
@@ -29,6 +32,9 @@ const MysqlIcon = SiMysql as IconComponent;
 const GithubIcon = SiGithub as IconComponent;
 const NotionIcon = SiNotion as IconComponent;
 const VercelIcon = SiVercel as IconComponent;
+const VitelIcon = SiVite as IconComponent;
+const SiPhpIcon = SiPhp as IconComponent;
+const NextIcon = SiNextdotjs as IconComponent;
 
 const notionLinks: Record<'kr' | 'en', string> = {
   kr: 'https://boggy-forgery-956.notion.site/1014eece51c480a4a96cd75198f2e8c2?source=copy_link',
@@ -246,7 +252,7 @@ export default function Header({ language, setLanguage }: HeaderProps) {
                       <TypescriptIcon className="text-[2rem] text-[#3178C6]" title="TypeScript" />
                       <BootstrapIcon className="text-[2.1rem] text-[#7952B3]" title="Bootstrap" />
                       <TailwindIcon className="text-[2.1rem] text-[#38BDF8]" title="Tailwind CSS" />
-                      <span className="rounded-full border border-black/10 px-3 py-1 text-sm font-semibold text-black">Next.js</span>
+                      <SiNextdotjs className="text-4xl text-white bg-black rounded" title="Next.js" />
                     </div>
                     <div className="logo_gap mt-3 flex flex-wrap items-center">
                       <MysqlIcon className="text-[2rem] text-[#4479A1]" title="MySQL" />
@@ -258,13 +264,14 @@ export default function Header({ language, setLanguage }: HeaderProps) {
                       </span>
                     </div>
                     <div className="logo_gap solu_margin mt-3 flex flex-wrap items-center">
-                      <img src="/img/php.png" alt="PHP" className="h-7 w-auto" />
+                      <SiPhp className="text-[2rem] text-[#777BB4]" title="PHP" />
                       <img src="/img/Cafe24.png" alt="Cafe24" className="h-6 w-auto" />
                     </div>
                     <div className="logo_gap git_margin mt-3 mr-1 flex flex-wrap items-center sm:mr-0">
                       <GithubIcon className="text-[2.3rem] text-black" title="GitHub" />
                       <NotionIcon className="text-[2rem] text-black" title="Notion" />
                       <VercelIcon className="text-[2rem] text-black" title="Vercel" />
+                      <SiVite className="text-4xl text-[#646CFF]" title="Vite" />
                     </div>
                   </div>
                 </div>

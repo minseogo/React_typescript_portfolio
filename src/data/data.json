@@ -87,7 +87,7 @@
                                                    "id":  13,
                                                    "filter":  "실무 프로젝트",
                                                    "image":  "exhealth.png",
-                                                   "icon":  "React.png|Next.png|Tailwind.png|RestApi.png",
+                                                   "icon":  "React.png|Next.png|Tailwind.png|RestApi.png|Vite.png",
                                                    "title":  "ExHealthCare",
                                                    "description":  "실무 프로젝트로 진행한 헬스케어 서비스 페이지이며, React와 Tailwind CSS 기반 UI를 구현하고 REST API 연동을 통해 데이터 조회/표시 흐름을 구성했습니다.",
                                                    "link":  "#"
@@ -96,7 +96,7 @@
                                                    "id":  15,
                                                    "filter":  "실무 프로젝트",
                                                    "image":  "ai-tk.png",
-                                                   "icon":  "React.png|Tailwind.png|RestApi.png",
+                                                   "icon":  "React.png|Tailwind.png|RestApi.png|Vite.png",
                                                    "title":  "AI-TK",
                                                    "description":  "실무 프로젝트로 진행한 AI 연동 서비스에서 API로 전달받은 AI 결과값을 프론트엔드에 구조화해 시각화하는 기능을 구현했습니다. React·Tailwind CSS 기반 UI와 REST API 연동 흐름을 설계해 결과를 명확하고 빠르게 전달하도록 구성했습니다.",
                                                    "link":  "#"
@@ -282,7 +282,7 @@
                                                    "id":  13,
                                                    "filter":  "실무 프로젝트",
                                                    "image":  "exhealth.png",
-                                                   "icon":  "React.png|Next.png|Tailwind.png|RestApi.png",
+                                                   "icon":  "React.png|Next.png|Tailwind.png|RestApi.png|Vite.png",
                                                    "title":  "ExHealthCare",
                                                    "description":  "A professional healthcare service project built with React and Tailwind CSS, with REST API integration for data fetching and rendering flows.",
                                                    "link":  "#"
@@ -291,7 +291,7 @@
                                                    "id":  15,
                                                    "filter":  "실무 프로젝트",
                                                    "image":  "ai-tk.png",
-                                                   "icon":  "React.png|Tailwind.png|RestApi.png",
+                                                   "icon":  "React.png|Tailwind.png|RestApi.png|Vite.png",
                                                    "title":  "AI-TK",
                                                    "description":  "A production AI integration project where I implemented front-end features to present AI output returned via API calls. Using React and Tailwind CSS, I designed the REST API data flow and UI rendering structure to deliver results clearly and quickly to users.",
                                                    "link":  "#"
