@@ -137,7 +137,7 @@ export default function Header({ language, setLanguage }: HeaderProps) {
               <h3 className="flex flex-col">
                 {language === 'en' ? (
                   <>
-                    <span>Hi, I&apos;m daniela Go</span>
+                    <span>Hi, I&apos;m Daniela Go</span>
                     <span className={typingLineClassName} aria-label={typingTarget}>
                       <span className="typewriter-line__text">
                         {typedText}
@@ -194,7 +194,7 @@ export default function Header({ language, setLanguage }: HeaderProps) {
               <h3 className="flex flex-col">
                 {language === 'en' ? (
                   <>
-                    <span>Hi, I&apos;m daniela Go</span>
+                    <span>Hi, I&apos;m Daniela Go</span>
                     <span className={typingLineClassName} aria-label={typingTarget}>
                       <span className="typewriter-line__text">
                         {typedText}

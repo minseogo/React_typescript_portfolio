@@ -17,11 +17,11 @@ const robotoCondensed = Roboto_Condensed({
 });
 
 export const metadata: Metadata = {
-  title: 'daniela Go - Frontend Developer',
+  title: 'Daniela Go - Frontend Developer',
   description: 'Frontend Developer specializing in React, TypeScript, and Tailwind CSS',
   metadataBase: new URL('https://go-daniela-dev.vercel.app/'),
   openGraph: {
-    title: 'daniela Go - Frontend Developer',
+    title: 'Daniela Go - Frontend Developer',
     description: 'Frontend Developer specializing in React, TypeScript, and Tailwind CSS',
     url: 'https://go-daniela-dev.vercel.app/',
     type: 'website',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'daniela Go portfolio preview',
+        alt: 'Daniela Go portfolio preview',
       },
     ],
   },
