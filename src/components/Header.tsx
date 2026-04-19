@@ -38,7 +38,7 @@ const NextIcon = SiNextdotjs as IconComponent;
 
 const notionLinks: Record<'kr' | 'en', string> = {
   kr: 'https://boggy-forgery-956.notion.site/1014eece51c480a4a96cd75198f2e8c2?source=copy_link',
-  en: 'https://boggy-forgery-956.notion.site/Minseo-Go-Portfolio-3194eece51c48072bbf6e33a19e4dd72?source=copy_link',
+  en: 'https://boggy-forgery-956.notion.site/Daniela-Go-Portfolio-3194eece51c48072bbf6e33a19e4dd72?source=copy_link',
 };
 
 const introDescription: Record<'kr' | 'en', string[]> = {
@@ -132,12 +132,12 @@ export default function Header({ language, setLanguage }: HeaderProps) {
 
         <div className="flex flex-col lg:flex-row">
           <div className="profile-img lg:w-1/2">
-            <img src="/img/me.jpg" alt="Profile portrait of Minseo Go" className="h-auto w-full" />
+            <img src="/img/me.jpg" alt="Profile portrait of daniela Go" className="h-auto w-full" />
             <div className="hello hello-overlay lg:hidden">
               <h3 className="flex flex-col">
                 {language === 'en' ? (
                   <>
-                    <span>Hi, I&apos;m Minseo Go</span>
+                    <span>Hi, I&apos;m daniela Go</span>
                     <span className={typingLineClassName} aria-label={typingTarget}>
                       <span className="typewriter-line__text">
                         {typedText}
@@ -194,7 +194,7 @@ export default function Header({ language, setLanguage }: HeaderProps) {
               <h3 className="flex flex-col">
                 {language === 'en' ? (
                   <>
-                    <span>Hi, I&apos;m Minseo Go</span>
+                    <span>Hi, I&apos;m daniela Go</span>
                     <span className={typingLineClassName} aria-label={typingTarget}>
                       <span className="typewriter-line__text">
                         {typedText}
@@ -224,7 +224,7 @@ export default function Header({ language, setLanguage }: HeaderProps) {
               </ul>
               <a
                 className="info_btns inline-block border border-black bg-white px-2 py-1 text-black"
-                href="https://github.com/minseogo"
+                href="https://github.com/go-daniela-dev"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Open GitHub profile in a new tab"

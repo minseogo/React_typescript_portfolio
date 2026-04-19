@@ -1,4 +1,4 @@
-# 🚀 Minseo Go — Portfolio
+# 🚀 Daniela Go — Portfolio
 
 This is a personal portfolio website built with **Next.js App Router** to showcase my frontend development skills and modern web development experience.
 
@@ -65,7 +65,7 @@ The project focuses on **performance, responsive UI/UX design, SEO optimization,
 - CI/CD connected via GitHub
 
 🔗 Live Site:  
-https://gominseo-pr.vercel.app/
+https://go-daniela-dev.vercel.app/
 
 ---
 

@@ -5,7 +5,7 @@
                "name":  "고민서입니다.",
                "personal":  {
                                 "birthdate":  "",
-                                "email":  "gominseo1112@gmail.com"
+                                "email":  "go.daniela.dev@gmail.com"
                             },
                "buttons":  {
                                "github":  "Git Hub",
@@ -171,7 +171,7 @@
                                                    "icon":  "React.png||Next.png|Type.png|Tailwind.png",
                                                    "title":  "PR",
                                                    "description":  "저를 브랜딩하기 위해 타입스크립트 기반의 리액트 환경에서 제작한 자기소개서입니다. 직관적인 디자인과 반응형으로 설계된 페이지로, 저의 기술 역량과 창의성을 담았습니다.",
-                                                   "link":  "https://gominseo-pr.vercel.app/"
+                                                   "link":  "https://go-daniela-dev.vercel.app/"
                                                },
                                                {
                                                    "id":  5,
@@ -197,10 +197,10 @@
     "en":  {
                "siteName":  "Profile",
                "hello":  "Hi, I\u0027m",
-               "name":  "Minseo Go",
+               "name":  "daniela Go",
                "personal":  {
                                 "birthdate":  "",
-                                "email":  "gominseo1112@gmail.com"
+                                "email":  "go.daniela.dev@gmail.com"
                             },
                "buttons":  {
                                "github":  "Git Hub",
@@ -366,7 +366,7 @@
                                                    "icon":  "React.png||Next.png|Type.png|Tailwind.png",
                                                    "title":  "PR",
                                                    "description":  "A personal introduction website, built in a React environment using TypeScript, showcasing intuitive design and responsive layout.",
-                                                   "link":  "https://gominseo-pr.vercel.app/"
+                                                   "link":  "https://go-daniela-dev.vercel.app/"
                                                },
                                                {
                                                    "id":  5,

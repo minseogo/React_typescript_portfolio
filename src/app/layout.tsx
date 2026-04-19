@@ -17,20 +17,20 @@ const robotoCondensed = Roboto_Condensed({
 });
 
 export const metadata: Metadata = {
-  title: 'Minseo Go - Frontend Developer',
+  title: 'daniela Go - Frontend Developer',
   description: 'Frontend Developer specializing in React, TypeScript, and Tailwind CSS',
-  metadataBase: new URL('https://gominseo-pr.vercel.app'),
+  metadataBase: new URL('https://go-daniela-dev.vercel.app/'),
   openGraph: {
-    title: 'Minseo Go - Frontend Developer',
+    title: 'daniela Go - Frontend Developer',
     description: 'Frontend Developer specializing in React, TypeScript, and Tailwind CSS',
-    url: 'https://gominseo-pr.vercel.app/',
+    url: 'https://go-daniela-dev.vercel.app/',
     type: 'website',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Minseo Go portfolio preview',
+        alt: 'daniela Go portfolio preview',
       },
     ],
   },
