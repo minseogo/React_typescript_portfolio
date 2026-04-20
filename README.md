@@ -65,7 +65,7 @@ The project focuses on **performance, responsive UI/UX design, SEO optimization,
 - CI/CD connected via GitHub
 
 🔗 Live Site:  
-https://go-daniela-dev.vercel.app/
+https://imdanieladev.vercel.app/
 
 ---
 

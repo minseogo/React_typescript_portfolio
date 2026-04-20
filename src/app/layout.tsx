@@ -19,11 +19,11 @@ const robotoCondensed = Roboto_Condensed({
 export const metadata: Metadata = {
   title: 'Daniela Go - Frontend Developer',
   description: 'Frontend Developer specializing in React, TypeScript, and Tailwind CSS',
-  metadataBase: new URL('https://go-daniela-dev.vercel.app/'),
+  metadataBase: new URL('https://imdanieladev.vercel.app/'),
   openGraph: {
     title: 'Daniela Go - Frontend Developer',
     description: 'Frontend Developer specializing in React, TypeScript, and Tailwind CSS',
-    url: 'https://go-daniela-dev.vercel.app/',
+    url: 'https://imdanieladev.vercel.app/',
     type: 'website',
     images: [
       {

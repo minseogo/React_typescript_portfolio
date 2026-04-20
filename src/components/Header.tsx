@@ -224,7 +224,7 @@ export default function Header({ language, setLanguage }: HeaderProps) {
               </ul>
               <a
                 className="info_btns inline-block border border-black bg-white px-2 py-1 text-black"
-                href="https://github.com/go-daniela-dev"
+                href="https://github.com/imdanieladev"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Open GitHub profile in a new tab"
