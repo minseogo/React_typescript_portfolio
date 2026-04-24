@@ -104,7 +104,7 @@ export default function Header({ language, setLanguage }: HeaderProps) {
   }, [typingTarget]);
 
   return (
-    <header id="header" className="ml-2 mr-2 mt-1 flex flex-col lg:ml-4 lg:mr-0 lg:mt-4">
+    <header id="header" className="ml-2 mr-2 mt-1 flex flex-col lg:ml-4 lg:mr-0 lg:mt-0">
       <div>
         <div className="dash_f ml-0 flex items-baseline justify-between md:ml-4 lg:inline-block">
           <h1 className="sitename mb-3 text-3xl font-medium leading-none md:text-4xl">{data[language].siteName}</h1>

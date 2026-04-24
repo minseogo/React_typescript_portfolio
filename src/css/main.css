@@ -206,17 +206,33 @@ a:hover {
 .portfolio .portfolio-filters li:last-child {
   margin-right: 0;
 }
+.portfolio-results {
+  display: flex;
+  flex-direction: column;
+}
 .portfolio-container {
   align-items: start;
+  align-content: start;
+  min-height: 980px;
   transition: opacity 0.18s ease, transform 0.18s ease;
   will-change: opacity, transform;
+}
+.portfolio-container--compact {
+  min-height: auto;
 }
 .portfolio-container--switching {
   opacity: 0.32;
   transform: translateY(6px);
 }
 .portfolio-item {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   animation: portfolio-card-enter 0.26s ease;
+}
+.portfolio-pagination {
+  margin-top: auto;
+  padding-top: 18px;
 }
 @keyframes portfolio-card-enter {
   from {
@@ -229,6 +245,9 @@ a:hover {
   }
 }
 @media (max-width: 575px) {
+  .portfolio-container {
+    min-height: auto;
+  }
   .portfolio .portfolio-filters li {
     font-size: 14px;
     margin: 0 5px;
@@ -539,6 +558,9 @@ a:hover {
   }
 }
 @media (max-width: 1023px) {
+  .portfolio-container {
+    min-height: auto;
+  }
   .youtube-player{
     margin-top: 24px;
   }
@@ -647,6 +669,11 @@ a:hover {
   .info_btns {
     font-size: 13px;
    }
+  }
+@media (min-width: 1024px) and (max-width: 1399px) {
+  .portfolio-container {
+    min-height: 900px;
+  }
 }
 @media (max-width: 575px) {
   .hello > h3{

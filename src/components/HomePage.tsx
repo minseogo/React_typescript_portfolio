@@ -8,7 +8,7 @@ export default function HomePage() {
   const [language, setLanguage] = useState<'kr' | 'en'>('en');
 
   return (
-    <main className="app-container">
+    <main className="app-container my-4">
       <div className="header-section" role="region" aria-label="Profile section">
         <Header language={language} setLanguage={setLanguage} />
       </div>

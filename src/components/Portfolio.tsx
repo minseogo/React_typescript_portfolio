@@ -134,6 +134,7 @@ export default function Portfolio({ language, setLanguage }: PortfolioProps) {
   );
   const [displayedItems, setDisplayedItems] = useState(paginatedItems);
   const [isSwitching, setIsSwitching] = useState(false);
+  const isSparseLastPage = page === totalPages && displayedItems.length < ITEMS_PER_PAGE;
 
   useEffect(() => {
     setDisplayedItems(paginatedItems);
@@ -173,8 +174,8 @@ export default function Portfolio({ language, setLanguage }: PortfolioProps) {
   };
 
   return (
-    <section id="portfolio" className="portfolio section light-background mt-4">
-      <div className="ml-4 flex items-center justify-between">
+    <section id="portfolio" className="portfolio section light-background">
+      <div className="ml-4 flex items-center justify-between lg:mt-0 mt-4">
         <div className="dash">
           <h1 className="text-3xl font-medium leading-none md:text-4xl">{langData.title}</h1>
         </div>
@@ -200,7 +201,7 @@ export default function Portfolio({ language, setLanguage }: PortfolioProps) {
         </div>
       </div>
 
-      <div>
+      <div className="portfolio-results">
         <nav aria-label="Project category filters">
           <ul className="portfolio-filters">
             {filterOptions.map((option) => (
@@ -220,6 +221,8 @@ export default function Portfolio({ language, setLanguage }: PortfolioProps) {
 
         <div
           className={`portfolio-container ml-2 mr-2 grid grid-cols-1 gap-x-4 md:ml-6 lg:grid-cols-2 ${
+            isSparseLastPage ? 'portfolio-container--compact' : ''
+          } ${
             isSwitching ? 'portfolio-container--switching' : ''
           }`}
         >
@@ -272,7 +275,7 @@ export default function Portfolio({ language, setLanguage }: PortfolioProps) {
           })}
         </div>
         {filteredItems.length > ITEMS_PER_PAGE ? (
-          <div className="mt-2 flex items-center justify-center gap-2">
+          <div className="portfolio-pagination mt-2 flex items-center justify-center gap-2">
             <button
               type="button"
               onClick={() =>
