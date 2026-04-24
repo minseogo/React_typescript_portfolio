@@ -18,7 +18,7 @@
                                  "title":  "Education",
                                  "schools":  [
                                                  {
-                                                     "name":  "퍼블리셔(UI/UX)\u0026프론트엔드개발",
+                                                     "name":  "프론트엔드 개발",
                                                      "years":  "2024.03 ~ 2024.09"
                                                  },
                                                  {
@@ -43,31 +43,19 @@
                                                        "role":  "프론트개발자",
                                                        "years":  "2024.10 ~ 2026.03",
                                                        "company":  "아이웹 / 대한민국, 서울",
-                                                       "description":  "Gemini API 기반 AI 챗봇 구현, 오버라이드 아키텍처를 활용한 엔터프라이즈 웹 플랫폼 개발, Figma 디자인을 처음부터 끝까지 프로덕션 페이지로 구현."
+                                                       "description":  "Gemini API 기반 AI 챗봇 구현, 오버라이드 아키텍처를 활용한 엔터프라이즈 웹 플랫폼 개발, Figma 디자인을 처음부터 끝까지 프로덕션 페이지로 구현하였습니다."
                                                    },
                                                    {
                                                        "role":  "온라인 MD",
                                                        "years":  "2023.10 ~ 2024.01",
                                                        "company":  "웹뜰 / 대한민국, 서울",
-                                                       "description":  "삼성물산 브랜드팀과 협업하여 토리버치 상품을 온라인 이커머스 플랫폼에 진열하고 프로모션 운영."
-                                                   },
-                                                   {
-                                                       "role":  "온라인 마케팅, 바리스타",
-                                                       "years":  "2022.10 ~ 2023.05",
-                                                       "company":  "Cocomelt / 영국, 런던",
-                                                       "description":  "온라인 마케팅을 지원하는 동시에 매장 운영 및 고객 경험 향상에 기여."
+                                                       "description":  "삼성물산과 협력하여 전자상거래 플랫폼 전반에 걸쳐 브랜드 페이지를 디자인, 마케팅 및 상품화했습니다."
                                                    },
                                                    {
                                                        "role":  "온라인MD",
                                                        "years":  "2021.12 ~ 2022.03",
                                                        "company":  "Globalon / 영국, 런던",
-                                                       "description":  "해외 온라인 리테일 운영에서 재고 관리 및 주문 처리 지원."
-                                                   },
-                                                   {
-                                                       "role":  "온라인MD",
-                                                       "years":  "2021.03 ~ 2021.09",
-                                                       "company":  "세븐제이스 / 대한민국, 경기도",
-                                                       "description":  "국내 이커머스 브랜드의 재고, 마크다운, 시즌 프로모션 모니터링."
+                                                       "description":  "영국에 기반을 두고 재고 및 주문 처리 프로세스를 최적화하여 국제 사업 운영을 지원했습니다."
                                                    }
                                                ]
                                   },
@@ -213,7 +201,7 @@
                                  "title":  "Education",
                                  "schools":  [
                                                  {
-                                                     "name":  "Web Publisher(UI/UX)\u0026Frontend Developer",
+                                                     "name":  "Frontend Development",
                                                      "years":  "2024.03 ~ 2024.09"
                                                  },
                                                  {
@@ -244,25 +232,13 @@
                                                        "role":  "Online MD",
                                                        "years":  "2023.10 ~ 2024.01",
                                                        "company":  "Webddle / Seoul, South Korea",
-                                                       "description":  "Managed product listings and promotions for Tory Burch across online e-commerce platforms in collaboration with Samsung C&T's brand team."
-                                                   },
-                                                   {
-                                                       "role":  "Online Marketing, Barista",
-                                                       "years":  "2022.10 ~ 2023.05",
-                                                       "company":  "Cocomelt / London, UK",
-                                                       "description":  "Supported online marketing while contributing to in-store operations and customer experience for the brand."
+                                                       "description":  "Collaborated with Samsung C&T to design, market, and merchandise brand pages across e-commerce platforms."
                                                    },
                                                    {
                                                        "role":  "Online MD",
                                                        "years":  "2021.12 ~ 2022.03",
                                                        "company":  "Globalon / London, UK",
-                                                       "description":  "Supported inventory and order fulfillment for an international online retail operation."
-                                                   },
-                                                   {
-                                                       "role":  "Online MD",
-                                                       "years":  "2021.03 ~ 2021.09",
-                                                       "company":  "7Js / Gyeonggi, South Korea",
-                                                       "description":  "Monitored stock, markdowns, and seasonal promotions for a Korean e-commerce brand."
+                                                       "description":  "Supported international operations by optimizing inventory and order fulfillment processes in a UK-based role."
                                                    }
                                                ]
                                   },

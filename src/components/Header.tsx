@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import type { Dispatch, SetStateAction } from 'react';
 import { useEffect, useState } from 'react';
 import {
@@ -75,7 +76,6 @@ export default function Header({ language, setLanguage }: HeaderProps) {
     const typingChars = Array.from(typingTarget);
     let charIndex = 0;
     let isDeleting = false;
-
     const intervalId = window.setInterval(() => {
       if (!isDeleting) {
         charIndex += 1;
@@ -132,7 +132,15 @@ export default function Header({ language, setLanguage }: HeaderProps) {
 
         <div className="flex flex-col lg:flex-row">
           <div className="profile-img lg:w-1/2">
-            <img src="/img/me.jpg" alt="Profile portrait of daniela Go" className="h-auto w-full" />
+            <Image
+              src="/img/me.jpg"
+              alt="Profile portrait of daniela Go"
+              width={4390}
+              height={6585}
+              priority
+              sizes="(max-width: 1023px) 100vw, 50vw"
+              className="h-auto w-full"
+            />
             <div className="hello hello-overlay lg:hidden">
               <h3 className="flex flex-col">
                 {language === 'en' ? (
@@ -278,7 +286,7 @@ export default function Header({ language, setLanguage }: HeaderProps) {
               </div>
             </div>
 
-            <div className="experience mt-3 lg:mt-5">
+            <div className="experience mt-3 lg:mt-5 lg:ms-5">
               <div className="flex flex-col items-center justify-between lg:flex-row lg:items-start lg:justify-start">
                 <div className="education text-center lg:text-left">
                   <h3 className="resume-title text-center lg:text-left">{data[language].education.title}</h3>

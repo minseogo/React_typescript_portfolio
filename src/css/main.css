@@ -206,6 +206,28 @@ a:hover {
 .portfolio .portfolio-filters li:last-child {
   margin-right: 0;
 }
+.portfolio-container {
+  align-items: start;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  will-change: opacity, transform;
+}
+.portfolio-container--switching {
+  opacity: 0.32;
+  transform: translateY(6px);
+}
+.portfolio-item {
+  animation: portfolio-card-enter 0.26s ease;
+}
+@keyframes portfolio-card-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 @media (max-width: 575px) {
   .portfolio .portfolio-filters li {
     font-size: 14px;

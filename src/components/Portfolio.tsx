@@ -1,7 +1,8 @@
 'use client';
 
+import Image from 'next/image';
 import type { Dispatch, SetStateAction } from 'react';
-import { useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { ChevronLeft, ChevronRight, Link2 } from 'lucide-react';
 import data from '../data/data.json';
 
@@ -113,6 +114,7 @@ export default function Portfolio({ language, setLanguage }: PortfolioProps) {
   const [filter, setFilter] = useState(ALL_FILTER);
   const [page, setPage] = useState(1);
   const langData = data[language].portfolio;
+  const switchTimeoutRef = useRef<number | null>(null);
 
   const filterOptions = [
     { value: ALL_FILTER, label: FILTERS[language].all },
@@ -121,13 +123,53 @@ export default function Portfolio({ language, setLanguage }: PortfolioProps) {
     { value: FILTERS.kr.team, label: FILTERS[language].team },
   ];
 
-  const filteredItems = langData.items.filter((item) => filter === ALL_FILTER || item.filter === filter);
-  const totalPages = Math.max(1, Math.ceil(filteredItems.length / ITEMS_PER_PAGE));
-  const paginatedItems = filteredItems.slice((page - 1) * ITEMS_PER_PAGE, page * ITEMS_PER_PAGE);
+  const filteredItems = useMemo(
+    () => langData.items.filter((item) => filter === ALL_FILTER || item.filter === filter),
+    [filter, langData.items]
+  );
+  const totalPages = useMemo(() => Math.max(1, Math.ceil(filteredItems.length / ITEMS_PER_PAGE)), [filteredItems.length]);
+  const paginatedItems = useMemo(
+    () => filteredItems.slice((page - 1) * ITEMS_PER_PAGE, page * ITEMS_PER_PAGE),
+    [filteredItems, page]
+  );
+  const [displayedItems, setDisplayedItems] = useState(paginatedItems);
+  const [isSwitching, setIsSwitching] = useState(false);
+
+  useEffect(() => {
+    setDisplayedItems(paginatedItems);
+  }, [paginatedItems]);
+
+  useEffect(() => {
+    return () => {
+      if (switchTimeoutRef.current !== null) {
+        window.clearTimeout(switchTimeoutRef.current);
+      }
+    };
+  }, []);
+
+  const startViewSwitch = (callback: () => void) => {
+    if (switchTimeoutRef.current !== null) {
+      window.clearTimeout(switchTimeoutRef.current);
+    }
+
+    setIsSwitching(true);
+    switchTimeoutRef.current = window.setTimeout(() => {
+      callback();
+      switchTimeoutRef.current = window.setTimeout(() => {
+        setIsSwitching(false);
+      }, 180);
+    }, 110);
+  };
 
   const handleFilterChange = (nextFilter: string) => {
-    setFilter(nextFilter);
-    setPage(1);
+    if (nextFilter === filter) {
+      return;
+    }
+
+    startViewSwitch(() => {
+      setFilter(nextFilter);
+      setPage(1);
+    });
   };
 
   return (
@@ -176,14 +218,24 @@ export default function Portfolio({ language, setLanguage }: PortfolioProps) {
           </ul>
         </nav>
 
-        <div className="portfolio-container ml-2 mr-2 grid grid-cols-1 gap-x-4 md:ml-6 lg:grid-cols-2">
-          {paginatedItems.map((item) => {
+        <div
+          className={`portfolio-container ml-2 mr-2 grid grid-cols-1 gap-x-4 md:ml-6 lg:grid-cols-2 ${
+            isSwitching ? 'portfolio-container--switching' : ''
+          }`}
+        >
+          {displayedItems.map((item) => {
             const isLinkDisabled = !item.link || item.link === '#';
 
             return (
               <article key={item.id} className="portfolio-item">
                 <div className="portfolio-content mb-2">
-                  <img src={`/img/${item.image}`} className="h-auto w-full" alt={item.title} />
+                  <Image
+                    src={`/img/${item.image}`}
+                    alt={item.title}
+                    fill
+                    sizes="(max-width: 1023px) 100vw, 50vw"
+                    className="h-auto w-full"
+                  />
                 </div>
                 <div className="portfolio-info mb-3">
                   <div className="flex flex-row items-start justify-between gap-3">
@@ -223,7 +275,11 @@ export default function Portfolio({ language, setLanguage }: PortfolioProps) {
           <div className="mt-2 flex items-center justify-center gap-2">
             <button
               type="button"
-              onClick={() => setPage((prev) => Math.max(1, prev - 1))}
+              onClick={() =>
+                startViewSwitch(() => {
+                  setPage((prev) => Math.max(1, prev - 1));
+                })
+              }
               disabled={page === 1}
               aria-label={language === 'kr' ? '\uC774\uC804 \uD398\uC774\uC9C0' : 'Previous page'}
               className="px-2 py-1 text-xs disabled:cursor-not-allowed disabled:opacity-50"
@@ -234,7 +290,11 @@ export default function Portfolio({ language, setLanguage }: PortfolioProps) {
               <button
                 key={num}
                 type="button"
-                onClick={() => setPage(num)}
+                onClick={() =>
+                  startViewSwitch(() => {
+                    setPage(num);
+                  })
+                }
                 aria-current={page === num ? 'page' : undefined}
                 className={`px-2 py-1 text-xs ${
                   page === num ? 'font-semibold text-blue-600' : 'text-gray-400 hover:text-gray-600'
@@ -245,7 +305,11 @@ export default function Portfolio({ language, setLanguage }: PortfolioProps) {
             ))}
             <button
               type="button"
-              onClick={() => setPage((prev) => Math.min(totalPages, prev + 1))}
+              onClick={() =>
+                startViewSwitch(() => {
+                  setPage((prev) => Math.min(totalPages, prev + 1));
+                })
+              }
               disabled={page === totalPages}
               aria-label={language === 'kr' ? '\uB2E4\uC74C \uD398\uC774\uC9C0' : 'Next page'}
               className="px-2 py-1 text-xs disabled:cursor-not-allowed disabled:opacity-50"
